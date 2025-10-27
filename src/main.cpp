@@ -57,9 +57,12 @@ int main() {
 
     ConstructiveHeuristic constructiveHeuristic(instance);
     //solution = constructiveHeuristic.executeLookahead(4);
-    solution = constructiveHeuristic.executeC();
+    solution = constructiveHeuristic.executeBackward();
+
+
 
     RefinementHeuristic refinementHeuristic(instance);
+    //solution = refinementHeuristic.executeMCTS(solution);
     //solution = refinementHeuristic.executeA(solution);
     //for(int i =0; i<106; i++)
         //solution = refinementHeuristic.executeA(solution);
@@ -76,11 +79,10 @@ int main() {
     cout << "---------------------------------------------------------------"<<endl;
 
 
-    /*
+/*
     CSVExporter exporter;
     SolutionProcessor sp;
-    exporter.exportToCSV(sp.processSolution(instance, exactSol), "result.csv");
-
+    exporter.exportToCSV(sp.processSolution(instance, solution), "result.csv");
     Measurer measurer(instance);
     std::vector<int> validationSolution = {
         10, 10, 10,  1, 10, 10, 10,  0,  1,  1,

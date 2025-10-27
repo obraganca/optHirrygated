@@ -74,6 +74,8 @@ namespace opthirrygated {
         bool isFeasible(const Solution &solution, int d) const;
 
         bool recalculateADF(Solution &solution, int startDay);
+
+        Solution randomizedPertubation(Solution solution, int n);
     };
 
 } // namespace opthirrygated

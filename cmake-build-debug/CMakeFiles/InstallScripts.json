@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/cmake_install.cmake",
+		"/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/cmake_install.cmake",
+		"/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX/cmake_install.cmake",
+		"/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Documentation/cmake_install.cmake",
+		"/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples/cmake_install.cmake",
+		"/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

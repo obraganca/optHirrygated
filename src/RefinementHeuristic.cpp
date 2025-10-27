@@ -17,26 +17,49 @@ namespace opthirrygated {
     Solution RefinementHeuristic::executeA(Solution &solution) {
         int totalSize = solution.getSolution().size();
         if (totalSize == 0) return solution; // Safety check
-
-        int numBlocks = (totalSize + LEN - 1) / LEN; // Ceiling division
         Measurer measurer(inst);
         int k = 1;
 
-        while (k <= numBlocks) {
-            int startIdx = (k - 1) * LEN;
-            int endIdx = std::min(k * LEN - 1, totalSize - 1);
-
-            //Solution aux = findBestNeighbor(solution, startIdx, endIdx);
-            Solution aux = executeMCTS(solution);
+        while (k++ <= totalSize) {
+            Solution aux = randomizedPertubation(solution, k++);
+            aux = executeMCTS(solution);
             if (measurer.evaluate(aux) < measurer.evaluate(solution)) {
                 solution = aux;
                 k = 1; // Reset to first block when improvement found
-            } else {
-                ++k;
             }
         }
         return solution;
     }
+
+    Solution RefinementHeuristic::randomizedPertubation(Solution solution, int n) {
+        int totalSize = solution.getSolution().size();
+        if (totalSize == 0) return solution;
+
+        std::uniform_int_distribution<int> dayDist(0, totalSize - 1);
+        std::uniform_int_distribution<int> percDist(0, inst.getPerc().size() - 1);
+
+        int minDay = totalSize + 1;
+        int startDay = dayDist(rng);
+
+        for (int d = startDay; d < std::min(n, totalSize); d++) {
+            Solution candidate = solution;
+
+            float perc = inst.getPerc()[percDist(rng)];
+            minDay = std::min(minDay, d);
+
+            candidate.updateSolution(d, perc);
+
+            if (perc == candidate.getSolution()[d]) continue;
+
+            propagate(candidate, d, 0);
+            if (!isFeasible(candidate, d)) continue;
+
+            solution = candidate;
+        }
+
+        return solution;
+    }
+
 
     Solution RefinementHeuristic::executeB(Solution &solution) {
         int totalSize = solution.getSolution().size();
@@ -205,12 +228,12 @@ namespace opthirrygated {
             return; // Safety check
         }
 
-        for (int i = d; i < static_cast<int>(adfSolutions.size()); ++i) {
-            float auxVal = val + adfSolutions[i];
-            solution.updateAdfSolution(i, auxVal);
+        for (int day = d; day < static_cast<int>(adfSolutions.size()); ++day) {
+            float adi = day == 0 ? inst.getCad()[0] : solution.getAdfSolutions()[day-1];
+            float auxAdf = adi - inst.getEtc()[day] + inst.getPrec()[day] + inst.getLamp()[solution.getSolution()[day]];
+            solution.updateAdfSolution(day, auxAdf);
         }
     }
-
 
     Solution RefinementHeuristic::executeMCTS(const Solution &rootSolution) {
         //std::cout << "\n=== IMPROVED MCTS EXECUTION START ===" << std::endl;
@@ -266,6 +289,10 @@ namespace opthirrygated {
         return globalBest;
     }
 
+
+    /*
+     * Seleção
+     * */
     MCTSNode* RefinementHeuristic::treePolicy(MCTSNode* node) {
         int maxDepth = 50;
         int depth = 0;
@@ -281,7 +308,6 @@ namespace opthirrygated {
         }
         return node;
     }
-
 
     bool RefinementHeuristic::isValidCandidate(const Solution& candidate, const Solution& original) {
         // Check if candidate is different and feasible
@@ -302,6 +328,9 @@ namespace opthirrygated {
         return isFeasible(candidate, 0);
     }
 
+    /*
+     * UCT
+     * */
     MCTSNode* RefinementHeuristic::bestChild(MCTSNode* node, double c) {
         if (!node || node->children.empty()) return nullptr;
 
@@ -324,9 +353,10 @@ namespace opthirrygated {
         return best;
     }
 
+
     double RefinementHeuristic::defaultPolicy(const Solution& sol,
-                                                      std::unordered_map<int, int>& irrigationFreq,
-                                                      std::unordered_map<std::string, double>& patternRewards) {
+                                              std::unordered_map<int, int>& irrigationFreq,
+                                              std::unordered_map<std::string, double>& patternRewards) {
         Solution sim = sol;
         Measurer measurer(inst);
         float initialCost = measurer.evaluate(sim);
@@ -335,10 +365,10 @@ namespace opthirrygated {
         int D = sim.getAdfSolutions().size();
         if (D == 0) return -initialCost;
 
-        // Strategy: Aggressive reduction of high irrigation
+        // Strategy: Aggressive reduction of high irrigation (>= 3 and < 10)
         std::vector<int> highIrrigationDays;
         for (int day = 0; day < D; ++day) {
-            if (sol.getSolution()[day] < 10 && sol.getSolution()[day] > 2 ) {
+            if (sol.getSolution()[day] >= 3 && sol.getSolution()[day] < 10) {
                 highIrrigationDays.push_back(day);
             }
         }
@@ -356,8 +386,8 @@ namespace opthirrygated {
             int dayIdx = dayDist(rng);
             int day = highIrrigationDays[dayIdx];
 
-            // Try reducing to minimal irrigation levels
-            std::vector<int> reductionLevels = {0, 1, 2};
+            // Try reducing to minimal irrigation levels (including ID 10 = no irrigation)
+            std::vector<int> reductionLevels = {0, 1, 2, 10};
             std::shuffle(reductionLevels.begin(), reductionLevels.end(), rng);
 
             bool foundValidMove = false;
@@ -409,17 +439,17 @@ namespace opthirrygated {
         const auto& solution = sol.getSolution();
         double bonus = 0.0;
 
-        // Bonus for consecutive low irrigation levels
+        // Bonus for consecutive low irrigation levels (including ID 10)
         int consecutiveLow = 0;
         int maxConsecutiveLow = 0;
 
-        // Bonus for reducing high irrigation (10s)
+        // Bonus for reducing high irrigation (>= 3 and < 10)
         int reducedHighCount = 0;
 
         for (int day = 0; day < static_cast<int>(solution.size()); ++day) {
             int level = solution[day];
 
-            // Count consecutive low irrigation (0, 1, 2)
+            // Count consecutive low irrigation (0, 1, 2, 10)
             if (level <= 2 || level == 10) {
                 consecutiveLow++;
                 maxConsecutiveLow = std::max(maxConsecutiveLow, consecutiveLow);
@@ -428,7 +458,7 @@ namespace opthirrygated {
             }
 
             // Count reduced high irrigation
-            if (level <= 2 || level==10) {
+            if (level <= 2 || level == 10) {
                 reducedHighCount++;
             }
         }
@@ -440,6 +470,9 @@ namespace opthirrygated {
         return bonus;
     }
 
+    /*
+     * Expansion
+     * */
     MCTSNode* RefinementHeuristic::expand(MCTSNode* node) {
         if (!node) return nullptr;
 
@@ -447,81 +480,88 @@ namespace opthirrygated {
         int D = s.getAdfSolutions().size();
         if (D == 0) return node;
 
-        // Strategy 1: Focus on days with high irrigation (>= 10)
+        // Strategy 1: Focus on days with high irrigation (>= 3 and < 10)
         std::vector<int> highIrrigationDays;
         for (int day = 0; day < D; ++day) {
-            if (s.getSolution()[day] < 10 && s.getSolution()[day] > 2) {
+            if (s.getSolution()[day] >= 3 && s.getSolution()[day] < 10) {
                 highIrrigationDays.push_back(day);
             }
         }
 
         // Strategy 2: Try different expansion approaches
         std::vector<std::function<Solution()>> strategies = {
-                // Reduce high irrigation to minimal levels
+                // Reduce high irrigation to minimal levels (including ID 10)
                 [&]() {
                     Solution cand = s;
                     if (!highIrrigationDays.empty()) {
                         std::uniform_int_distribution<int> dayDist(0, highIrrigationDays.size() - 1);
                         int day = highIrrigationDays[dayDist(rng)];
-                        std::uniform_int_distribution<int> levelDist(0, 2); // Try 0, 1, 2
-                        int newLevel = levelDist(rng);
+                        std::vector<int> lowLevels = {0, 1, 2, 10};
+                        std::uniform_int_distribution<int> levelDist(0, lowLevels.size() - 1);
+                        int newLevel = lowLevels[levelDist(rng)];
                         cand.updateSolution(day, newLevel);
+
+                        propagate(cand, day, 0);
                     }
                     return cand;
                 },
 
-                // Pattern-based: create sequences of low irrigation
+                // Pattern-based: create sequences of low irrigation (including ID 10)
                 [&]() {
                     Solution cand = s;
                     std::uniform_int_distribution<int> dayDist(0, D - 5);
                     int startDay = dayDist(rng);
-                    std::uniform_int_distribution<int> levelDist(1, 2); // Focus on 1 and 2
-                    int level = levelDist(rng);
+                    std::vector<int> lowLevels = {0,1, 2, 10}; // Focus on 1, 2 and 10
+                    std::uniform_int_distribution<int> levelDist(0, lowLevels.size() - 1);
+                    int level = lowLevels[levelDist(rng)];
 
                     // Apply to a sequence of 3-5 days
                     int seqLength = std::uniform_int_distribution<int>(3, 5)(rng);
                     for (int i = 0; i < seqLength && (startDay + i) < D; ++i) {
                         cand.updateSolution(startDay + i, level);
                     }
+
+                    propagate(cand, startDay, 0);
                     return cand;
                 },
 
-                // Gradual reduction: step down irrigation levels
+                // Gradual reduction: step down irrigation levels (including to ID 10)
                 [&]() {
                     Solution cand = s;
                     std::uniform_int_distribution<int> dayDist(0, D - 1);
                     int day = dayDist(rng);
                     int current = cand.getSolution()[day];
 
-                    if (current > 2) {
-                        // Step down towards minimal irrigation
-                        int newLevel = std::max(0, current - std::uniform_int_distribution<int>(1, 5)(rng));
+                    if (current >= 3 && current < 10) {
+                        // Options for reduction including ID 10
+                        std::vector<int> reductionOptions = {0, 1, 2, 10};
+                        std::uniform_int_distribution<int> optionDist(0, reductionOptions.size() - 1);
+                        int newLevel = reductionOptions[optionDist(rng)];
                         cand.updateSolution(day, newLevel);
+
+                        propagate(cand, day, 0);
                     }
                     return cand;
                 },
 
-                // Smart replacement: replace 10s with optimal low levels
+                // Smart replacement: replace high levels with optimal low levels (including ID 10)
                 [&]() {
                     Solution cand = s;
                     for (int day = 0; day < D; ++day) {
-                        if (cand.getSolution()[day] == 10) {
+                        if (cand.getSolution()[day] >= 3 && cand.getSolution()[day] < 10) {
                             // Try to find the best low-level replacement
                             float bestCost = std::numeric_limits<float>::max();
-                            int bestLevel = 10;
+                            int bestLevel = cand.getSolution()[day];
 
-                            for (int level : { 1, 2}) {
+                            for (int level : {0, 1, 2, 10}) {
                                 Solution temp = cand;
                                 temp.updateSolution(day, level);
 
                                 // Quick feasibility check
-                                float oldAdf = cand.getAdfSolutions()[day];
-                                float newAdf = temp.getAdfSolutions()[day];
-                                float delta = newAdf - oldAdf;
-                                propagate(temp, day, delta);
-                                if (isFeasible(temp, day)) {
+                                propagate(cand, day, 0);
+                                if (isFeasible(cand, day)) {
                                     Measurer measurer(inst);
-                                    float cost = measurer.evaluate(temp);
+                                    float cost = measurer.evaluate(cand);
                                     if (cost < bestCost) {
                                         bestCost = cost;
                                         bestLevel = level;
@@ -529,7 +569,7 @@ namespace opthirrygated {
                                 }
                             }
 
-                            if (bestLevel != 10) {
+                            if (bestLevel != cand.getSolution()[day]) {
                                 cand.updateSolution(day, bestLevel);
                                 break; // Only change one day per expansion
                             }

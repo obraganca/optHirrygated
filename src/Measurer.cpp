@@ -43,13 +43,14 @@ bool Measurer::validation(Solution& solution) {
     for (size_t day = 0; day < numDays; day++) {
         float auxAdf = adi - inst.getEtc()[day] + inst.getPrec()[day] + inst.getLamp()[solution.getSolution()[day]];
         float e = 0.0001;
-        if (auxAdf + e < inst.getLc()[day]) {
-            cout << endl << "A planta está com a hidratação inferior o limite critico no dia: " << day << endl;
-            printf("%f", auxAdf+e);
+        if (auxAdf + e < inst.getLc()[day] ){//|| auxAdf != solution.getAdfSolutions()[day]) {
+            cout << endl<<"---------------------------------------------------------------"<<endl;
+            cout << "Solução invalida no dia: " << day << endl;
             cout << "Limite critico: " << setprecision(4) <<(inst.getLc()[day]) << endl;
             cout << "Precipitação : " << inst.getPrec()[day] << endl;
-            cout << "Agua disponivel no fim do dia: "<< auxAdf << endl;
-
+            cout << "Agua disponivel no fim do dia esperado: "<< auxAdf << endl;
+            cout << "Agua disponivel no fim do dia:" << solution.getAdfSolutions()[day]<<endl;
+            cout << "---------------------------------------------------------------"<<endl;
             return 0;
         }
 

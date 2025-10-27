@@ -1,0 +1,306 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "lib/OpenXLSX",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.OpenXLSX-Debug-42f3a925471672dcff3d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "lib/OpenXLSX"
+				},
+				{
+					"build" : "lib/OpenXLSX/OpenXLSX",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.OpenXLSX.OpenXLSX-Debug-b7d0ff134b84705b0b07.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "lib/OpenXLSX/OpenXLSX",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "lib/OpenXLSX/Documentation",
+					"jsonFile" : "directory-lib.OpenXLSX.Documentation-Debug-4670b92d2ee15533c041.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "lib/OpenXLSX/Documentation"
+				},
+				{
+					"build" : "lib/OpenXLSX/Examples",
+					"jsonFile" : "directory-lib.OpenXLSX.Examples-Debug-b6d9535e8bb48390e889.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 4,
+					"source" : "lib/OpenXLSX/Examples",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				},
+				{
+					"build" : "lib/OpenXLSX/Tests",
+					"jsonFile" : "directory-lib.OpenXLSX.Tests-Debug-f863282b43a1bcc264b8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 5,
+					"source" : "lib/OpenXLSX/Tests",
+					"targetIndexes" : 
+					[
+						11
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "optHirrygated",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "OpenXLSX",
+					"parentIndex" : 0
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "OpenXLSX.Library",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "OpenXLSX.Documentation",
+					"parentIndex" : 1
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "OpenXLSX.Examples",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "OpenXLSX.Tests",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo1::@2f223d29da4819c19ab3",
+					"jsonFile" : "target-Demo1-Debug-228e818546ac4900b07b.json",
+					"name" : "Demo1",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo10::@2f223d29da4819c19ab3",
+					"jsonFile" : "target-Demo10-Debug-7bcf6531926868dfb044.json",
+					"name" : "Demo10",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo2::@2f223d29da4819c19ab3",
+					"jsonFile" : "target-Demo2-Debug-980930507f584879a50a.json",
+					"name" : "Demo2",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo3::@2f223d29da4819c19ab3",
+					"jsonFile" : "target-Demo3-Debug-8f765828c60f7a2f8436.json",
+					"name" : "Demo3",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo4::@2f223d29da4819c19ab3",
+					"jsonFile" : "target-Demo4-Debug-d0bcf62f7867861b5651.json",
+					"name" : "Demo4",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo5::@2f223d29da4819c19ab3",
+					"jsonFile" : "target-Demo5-Debug-02d65515e240445a64dd.json",
+					"name" : "Demo5",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo6::@2f223d29da4819c19ab3",
+					"jsonFile" : "target-Demo6-Debug-5285e2c34d979ee2e07b.json",
+					"name" : "Demo6",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo7::@2f223d29da4819c19ab3",
+					"jsonFile" : "target-Demo7-Debug-bf6762e8e9adb2bdeb92.json",
+					"name" : "Demo7",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo8::@2f223d29da4819c19ab3",
+					"jsonFile" : "target-Demo8-Debug-be33ab6ec4c0f6edd4c5.json",
+					"name" : "Demo8",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Demo9::@2f223d29da4819c19ab3",
+					"jsonFile" : "target-Demo9-Debug-aefb90759a77a79283fa.json",
+					"name" : "Demo9",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "OpenXLSX::@8b02f60756ed76f535d4",
+					"jsonFile" : "target-OpenXLSX-Debug-f374c8839d527385fb68.json",
+					"name" : "OpenXLSX",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "OpenXLSXTests::@22205d44c3a8c7c1889d",
+					"jsonFile" : "target-OpenXLSXTests-Debug-3da2186dd0d6f1dd8857.json",
+					"name" : "OpenXLSXTests",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "optHirrygated::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-optHirrygated-Debug-08c9110459d609c5b1c5.json",
+					"name" : "optHirrygated",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+		"source" : "/home/obraganca/Documents/IC/optHirrygated"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

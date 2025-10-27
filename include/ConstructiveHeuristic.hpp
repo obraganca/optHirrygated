@@ -7,16 +7,29 @@
 using namespace std;
 
 namespace opthirrygated{
-    class ConstructiveHeuristic{
+    // Adicionar no ConstructiveHeuristic.hpp
+
+    class ConstructiveHeuristic {
     private:
-        Instance& inst;
+        opthirrygated::Instance &inst;
     public:
-        ConstructiveHeuristic(Instance &instance);
-        virtual Solution executeA();
-        virtual Solution executeB();
-        virtual Solution executeC();
-        virtual Solution executeLookahead(int);
+        ConstructiveHeuristic(opthirrygated::Instance &instance);
+
+        Solution executeA();
+        Solution executeB();
+        Solution executeC();
+        Solution executeLookahead(int lookaheadDepth);
+
+        // Nova heurística backward
+        Solution executeBackward();
+        void normalizerAdf(vector<int> &solution, vector<float> &solutionAdf);
+
+    private:
         float simulateLookahead(size_t day, float adi, int depth);
+
+        bool isFeasible(vector<int> &solution, vector<float> &solutionAdf, int d) const;
+
+        void recalculatePerc(vector<int> &solution, vector<float> &solutionAdf, int d);
     };
 }
 

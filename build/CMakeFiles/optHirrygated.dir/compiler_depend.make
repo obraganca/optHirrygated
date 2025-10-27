@@ -399,7 +399,15 @@ CMakeFiles/optHirrygated.dir/src/ConstructiveHeuristic.cpp.o: /home/obraganca/Do
   /usr/include/c++/12/bits/enable_special_members.h \
   /usr/include/c++/12/bits/node_handle.h \
   /usr/include/c++/12/bits/unordered_map.h \
-  /usr/include/c++/12/bits/erase_if.h
+  /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/pstl/execution_defs.h
 
 CMakeFiles/optHirrygated.dir/src/Exact.cpp.o: /home/obraganca/Documents/IC/optHirrygated/src/Exact.cpp \
   /usr/include/stdc-predef.h \
@@ -2411,8 +2419,6 @@ CMakeFiles/optHirrygated.dir/src/main.cpp.o: /home/obraganca/Documents/IC/optHir
 
 /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers/XLXmlFile.hpp:
 
-/usr/include/c++/12/bits/stl_algo.h:
-
 /usr/include/c++/12/compare:
 
 /usr/include/c++/12/array:
@@ -2426,10 +2432,6 @@ CMakeFiles/optHirrygated.dir/src/main.cpp.o: /home/obraganca/Documents/IC/optHir
 /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
 
 /usr/include/x86_64-linux-gnu/bits/statx-generic.h:
-
-/usr/include/c++/12/bits/stl_heap.h:
-
-/usr/include/asm-generic/posix_types.h:
 
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
 
@@ -2463,8 +2465,6 @@ CMakeFiles/optHirrygated.dir/src/main.cpp.o: /home/obraganca/Documents/IC/optHir
 
 lib/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp:
 
-/usr/include/c++/12/pstl/execution_defs.h:
-
 /usr/include/c++/12/pstl/glue_memory_defs.h:
 
 /usr/include/c++/12/backward/auto_ptr.h:
@@ -2487,19 +2487,11 @@ lib/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp:
 
 /usr/include/c++/12/bits/stl_raw_storage_iter.h:
 
-/usr/include/c++/12/bits/stl_tempbuf.h:
-
 /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers/XLCell.hpp:
 
 /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/OpenXLSX.hpp:
 
 /home/obraganca/Documents/IC/optHirrygated/src/Instance.cpp:
-
-/usr/include/c++/12/bits/random.tcc:
-
-/usr/include/c++/12/algorithm:
-
-/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include/ilcplex/iloCPXCALLBACKSOLUTIONSTRATEGYenum.h:
 
 /opt/ibm/ILOG/CPLEX_Studio2211/cplex/include/ilcplex/iloCPXCALLBACKINFOenum.h:
 
@@ -2579,6 +2571,18 @@ lib/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
+/usr/include/strings.h:
+
+/usr/include/string.h:
+
+/opt/ibm/ILOG/CPLEX_Studio2211/concert/include/ilconcert/ilomemmgr.h:
+
+/opt/ibm/ILOG/CPLEX_Studio2211/concert/include/ilconcert/ilortti.h:
+
+/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers/XLZipArchive.hpp:
+
+/usr/include/setjmp.h:
+
 /usr/include/alloca.h:
 
 /usr/include/c++/12/bit:
@@ -2590,8 +2594,6 @@ lib/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp:
 /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers/XLCellIterator.hpp:
 
 /usr/include/c++/12/string:
-
-/usr/include/strings.h:
 
 /usr/include/c++/12/functional:
 
@@ -2649,10 +2651,6 @@ lib/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
-/usr/include/c++/12/pstl/glue_algorithm_defs.h:
-
-/usr/include/c++/12/bits/localefwd.h:
-
 /usr/include/locale.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
@@ -2667,10 +2665,6 @@ lib/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp:
 
 /usr/include/unistd.h:
 
-/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers/XLZipArchive.hpp:
-
-/usr/include/setjmp.h:
-
 /usr/include/c++/12/bits/std_abs.h:
 
 /usr/include/c++/12/debug/assertions.h:
@@ -2680,8 +2674,6 @@ lib/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp:
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /home/obraganca/Documents/IC/optHirrygated/include/Instance.hpp:
-
-/opt/ibm/ILOG/CPLEX_Studio2211/concert/include/ilconcert/ilortti.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h:
 
@@ -2709,17 +2701,17 @@ lib/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/usr/include/c++/12/bits/algorithmfwd.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/opt/ibm/ILOG/CPLEX_Studio2211/concert/include/ilconcert/ilomodel.h:
-
 /usr/include/c++/12/tr1/bessel_function.tcc:
 
 /usr/include/c++/12/cwchar:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/c++/12/bits/random.tcc:
+
+/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include/ilcplex/iloCPXCALLBACKSOLUTIONSTRATEGYenum.h:
+
+/usr/include/c++/12/algorithm:
 
 /opt/ibm/ILOG/CPLEX_Studio2211/concert/include/ilconcert/ilohash.h:
 
@@ -2771,9 +2763,13 @@ lib/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
-/usr/include/string.h:
-
 /usr/include/c++/12/bits/stl_vector.h:
+
+/usr/include/c++/12/cstring:
+
+/usr/lib/gcc/x86_64-linux-gnu/12/include/float.h:
+
+/usr/include/ctype.h:
 
 /opt/ibm/ILOG/CPLEX_Studio2211/concert/include/ilconcert/iloexpressioni.h:
 
@@ -2943,8 +2939,6 @@ lib/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/opt/ibm/ILOG/CPLEX_Studio2211/concert/include/ilconcert/ilomemmgr.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
 
 /usr/include/c++/12/bits/stringfwd.h:
@@ -3109,6 +3103,8 @@ lib/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp:
 
 /usr/include/c++/12/bits/streambuf.tcc:
 
+/usr/include/c++/12/pstl/execution_defs.h:
+
 /usr/include/c++/12/string_view:
 
 /usr/include/c++/12/bits/locale_facets.h:
@@ -3183,6 +3179,24 @@ lib/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp:
 
 /usr/include/assert.h:
 
+/usr/include/c++/12/bits/stl_algo.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/opt/ibm/ILOG/CPLEX_Studio2211/concert/include/ilconcert/ilomodel.h:
+
+/usr/include/c++/12/bits/algorithmfwd.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/c++/12/bits/stl_heap.h:
+
+/usr/include/c++/12/bits/stl_tempbuf.h:
+
+/usr/include/c++/12/bits/localefwd.h:
+
+/usr/include/c++/12/pstl/glue_algorithm_defs.h:
+
 /opt/ibm/ILOG/CPLEX_Studio2211/cplex/include/ilcplex/ilocplex.h:
 
 /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers/XLSharedStrings.hpp:
@@ -3230,9 +3244,3 @@ lib/OpenXLSX/OpenXLSX/OpenXLSX-Exports.hpp:
 /usr/include/c++/12/bits/basic_ios.h:
 
 /usr/include/c++/12/sstream:
-
-/usr/lib/gcc/x86_64-linux-gnu/12/include/float.h:
-
-/usr/include/ctype.h:
-
-/usr/include/c++/12/cstring:
