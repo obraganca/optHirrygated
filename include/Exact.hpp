@@ -21,14 +21,17 @@ namespace opthirrygated {
     private:
 
         Instance& p;
+        vector<float> limitDay;
         IloConstraintArray constraints;
         IloEnv env;
         IloModel modelo;
-        IloCplex pirr;	
+        IloCplex pirr;
         bool LBdefined;
-        IloNumVarMatrix x;
-        IloNumVarArray adf;
-        IloNumVarArray adi;
+
+        IloNumVar3Matrix x;
+        IloArray<IloNumVarArray> adf;
+        IloArray<IloNumVarArray> adi;
+
         double timelimit;
 
         void addConstraint_Percentimetro(IloEnv& env, IloModel& modelo);
@@ -36,10 +39,10 @@ namespace opthirrygated {
         void addConstraint_AguaInicialRestante(IloEnv& env, IloModel& modelo);
         void addConstraint_AguaFinal(IloEnv& env, IloModel& modelo);
         void addConstraint_LimiteCritico(IloEnv& env, IloModel& modelo);
-        
+        void addConstraint_IrrigationLimit(); // irrigation_tc <= dailyLimit[c] (se dailyLimit não vazio)
 
     public:
-        Exact(Instance& _p, double _timelimit);
+        Exact(Instance& _p, double _timelimit, vector<float> limitDay);
 
         ~Exact();
 
@@ -50,6 +53,8 @@ namespace opthirrygated {
         Solution getSolution();
         void showVars();
 
+        void addConstraint_IrrigationLimit(IloEnv &env, IloModel &modelo);
+        bool isFeasible();
     };
 }
 

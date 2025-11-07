@@ -1,3 +1,4 @@
+#if 0
 #include "../include/SolutionProcessor.hpp"
 #include "../include/CSVExporter.hpp"
 #include "../include/Solution.hpp"
@@ -52,3 +53,4 @@ std::vector<DayResult> SolutionProcessor::processSolution(const Instance &inst, 
 }
 
 } // namespace opthirrygated
+#endif

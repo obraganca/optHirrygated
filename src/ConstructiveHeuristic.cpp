@@ -1,3 +1,4 @@
+#if 0
 #include "../include/ConstructiveHeuristic.hpp"
 #include "../include/Solution.hpp"
 #include "../include/Measurer.hpp"
@@ -336,3 +337,4 @@ float ConstructiveHeuristic::simulateLookahead( size_t day, float adi, int depth
 
     return bestCost;
 }
+#endif

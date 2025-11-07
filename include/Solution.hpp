@@ -2,28 +2,49 @@
 #define SOLUTION_HPP
 
 #include <vector>
+#include <iostream>
 
 using namespace std;
+
 namespace opthirrygated {
+
     class Solution {
     private:
-        vector<int> solution;
-        vector<float> adfSolutions;
+        vector<vector<int>> solutions;
+        vector<vector<float>> adfSolutions;
     public:
-        void setSolution(const vector<int>& newSolution) { solution = newSolution; }
-        vector<int> getSolution() const { return solution; }
+        const vector<vector<int>>& getSolutions() const { return solutions; }
+        const vector<vector<float>>& getAdfSolutions() const { return adfSolutions; }
 
+        void setSolutions(const vector<vector<int>>& newSolutions) { solutions = newSolutions; }
+        void setAdfSolutions(const vector<vector<float>>& newAdfSolutions) { adfSolutions = newAdfSolutions; }
 
-        void updateSolution(int index, int val) { solution[index]=val; }
+        void addPivoSolution(const vector<int>& sol) { solutions.push_back(sol); }
+        void addPivoAdfSolution(const vector<float>& adf) { adfSolutions.push_back(adf); }
 
-        void setAdfSolution(const vector<float>& newAdfSolution) { adfSolutions = newAdfSolution; }
-        vector<float> getAdfSolutions() const { return adfSolutions; }
+        vector<int> getPivoSolution(int pivoIndex) const { return solutions.at(pivoIndex); }
+        vector<float> getPivoAdfSolution(int pivoIndex) const { return adfSolutions.at(pivoIndex); }
 
+        void updateSolution(int pivoIndex, int elemIndex, int val) {
+            if (pivoIndex < (int)solutions.size() && elemIndex < (int)solutions[pivoIndex].size())
+                solutions[pivoIndex][elemIndex] = val;
+        }
 
-        void updateAdfSolution(int index, float val) { adfSolutions[index]=val; }
+        void updateAdfSolution(int pivoIndex, int elemIndex, float val) {
+            if (pivoIndex < (int)adfSolutions.size() && elemIndex < (int)adfSolutions[pivoIndex].size())
+                adfSolutions[pivoIndex][elemIndex] = val;
+        }
 
+        void show() const {
+            for (size_t i = 0; i < solutions.size(); i++) {
+                cout << "=== Pivo " << i+1 << " ===" << endl;
+                cout << "Solution: ";
+                for (auto val : solutions[i]) cout << val << " ";
+                cout<<endl;
+            }
+        }
     };
-}
 
+}
 
 #endif

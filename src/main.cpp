@@ -12,25 +12,28 @@ using namespace std;
 using namespace opthirrygated;
 int main() {
     // Create an Instance object
+
     Instance instance("../datasource/planilha.xlsx");
+
 
 
     //Running exact method
 
-    Solution exactSol;
-    Exact exato(instance, 3600);
+    vector<float> limit;
+    limit.push_back(20.0f); // mesma para todos os dias
+
+    Exact exato(instance, 3600.0, limit);
     exato.solve();
-    if(exato.getStatus() == status::SOLUTIONFOUND)
-    {
-        cout << "Solucao encontrada!"<<endl;
-        cout << "FO: " << exato.getFO() << endl;
+
+    if (exato.isFeasible()) {
+        cout << "Solucao encontrada! FO = " << exato.getFO() << endl;
         exato.showSolution();
-        exactSol = exato.getSolution();
+        Solution sol = exato.getSolution();
+        sol.show();
+    } else {
+        cout << "Modelo inviavel ou sem solução ótima." << endl;
     }
-    else
-    {
-        cout << "Verificar!!!" <<endl;
-    }
+
 
 
     //CSVExporter exporter;
@@ -38,6 +41,7 @@ int main() {
     //exporter.exportToCSV(sp.processSolution(instance, exato.getSolution()), "result.csv");
 
 
+    /*
     Solution solution;
     cout << endl;
     Measurer measurer(instance);
@@ -79,7 +83,6 @@ int main() {
     cout << "---------------------------------------------------------------"<<endl;
 
 
-/*
     CSVExporter exporter;
     SolutionProcessor sp;
     exporter.exportToCSV(sp.processSolution(instance, solution), "result.csv");
@@ -109,6 +112,5 @@ int main() {
         cout << "Solution not valid" <<endl;
     }
     */
-
     return 0;
 }

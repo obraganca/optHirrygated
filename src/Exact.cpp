@@ -7,27 +7,28 @@ using namespace opthirrygated;
 
 void Exact::addConstraint_Percentimetro(IloEnv& env, IloModel& modelo)
 {
-
-	for (unsigned int c = 0; c < p.getCicle().size(); c++) // para cada dia do Ciclo
-	{
-
-		//criando restrição
-		IloExpr temp(env);
-
-		for (unsigned int perc = 0; perc < p.getPerc().size(); perc++) // a soma das escolhas dos percentimetros usados para o dia c
+	for(int t=0; t<p.getPivots().size(); t++){
+		for (unsigned int c = 0; c < p.getPivots()[t].getCicle().size(); c++) // para cada dia do Ciclo
 		{
-			temp += x[perc][c];
+
+			//criando restrição
+			IloExpr temp(env);
+
+			for (unsigned int perc = 0; perc < p.getPivots()[t].getPerc().size(); perc++) // a soma das escolhas dos percentimetros usados para o dia c
+			{
+				temp += x[t][perc][c];
+
+			}
+
+			IloConstraint constr = (temp) == 1; // deve ser igual a 1
+			stringstream name;
+			name << "PERC dia("<<t << c << ") : ";
+
+			constr.setName(name.str().c_str());
+			modelo.add(constr);
+			constraints.add(constr);
 
 		}
-
-		IloConstraint constr = (temp) == 1; // deve ser igual a 1
-		stringstream name;
-		name << "PERC dia(" << c << ") : ";
-
-		constr.setName(name.str().c_str());
-		modelo.add(constr);
-		constraints.add(constr);
-
 	}
 
 }
@@ -35,36 +36,42 @@ void Exact::addConstraint_Percentimetro(IloEnv& env, IloModel& modelo)
 void Exact::addConstraint_AguaInicial(IloEnv& env, IloModel& modelo)
 {
 	//a quantidade de água disponível no primeiro dia é igual a CAD do primeiro dia
+
 	IloExpr temp(env);
 
-	temp = adi[0] - p.getCad().at(0);
+	for(int t=0; t< p.getPivots().size(); t++){
+		temp = adi[t][0] - p.getPivots()[t].getCad().at(0);
 
-	IloConstraint constr = (temp) == 0;
-	stringstream name;
-	name << "Dia0: ";
-	constr.setName(name.str().c_str());
-	modelo.add(constr);
-	constraints.add(constr);
+		IloConstraint constr = (temp) == 0;
+		stringstream name;
+		name << "Dia"<<t<<"0:";
+		constr.setName(name.str().c_str());
+		modelo.add(constr);
+		constraints.add(constr);
+	}
 
 }
 
 
 void Exact::addConstraint_AguaInicialRestante(IloEnv& env, IloModel& modelo)
 {
-	for(unsigned int c = 1; c < p.getCicle().size(); c++) // para todos os dias do ciclo, exceto o primeiro (0)
-	{
-		IloExpr temp(env);
 
-		temp = adi[c] - adf[c-1];
+	for(int t=0; t<p.getPivots().size(); t++) {
+		for (unsigned int c = 1; c < p.getPivots()[t].getCicle().size(); c++) // para todos os dias do ciclo, exceto o primeiro (0)
+		{
+			IloExpr temp(env);
 
-		IloConstraint constr = temp == 0;
+			temp = adi[t][c] - adf[t][c - 1];
 
-		stringstream name;
-		name << "Dia(c): ";
-		constr.setName(name.str().c_str());
-		modelo.add(constr);
-		constraints.add(constr);
+			IloConstraint constr = temp == 0;
 
+			stringstream name;
+			name << "Dia[t](c): ";
+			constr.setName(name.str().c_str());
+			modelo.add(constr);
+			constraints.add(constr);
+
+		}
 	}
 }
 
@@ -72,26 +79,27 @@ void Exact::addConstraint_AguaInicialRestante(IloEnv& env, IloModel& modelo)
 void Exact::addConstraint_AguaFinal(IloEnv& env, IloModel& modelo)
 {
 	//para cada dia do ciclo
-	for(unsigned int c = 0 ; c < p.getCicle().size(); c++)
-	{
-		IloExpr temp(env);
-
-		//pegando o valor da lamina dágua utilizada no dia c para somar
-		IloExpr lamina(env);
-		for(unsigned int perc = 0; perc < p.getPerc().size(); perc++)
+	for(int t=0; t<p.getPivots().size(); t++){
+		for(unsigned int c = 0 ; c < p.getPivots()[t].getCicle().size(); c++)
 		{
-			lamina += p.getLamp().at(perc) * x[perc][c];
-		}
+			IloExpr temp(env);
 
-		temp = adf[c] - adi[c] + p.getEtc().at(c) - p.getPrec().at(c) - lamina;
-	
-		IloConstraint constr = (temp) == 0;
-		stringstream name;
-		name << "AguaF(" << c << ") : ";
-		constr.setName(name.str().c_str());
-		modelo.add(constr);
-		constraints.add(constr);
-		
+			IloExpr lamina(env);
+			for(unsigned int perc = 0; perc < p.getPivots()[t].getPerc().size(); perc++)
+			{
+				lamina += p.getPivots()[t].getLamp().at(perc) * x[t][perc][c];
+			}
+
+			temp = adf[t][c] - adi[t][c] + p.getPivots()[t].getEtc().at(c) - p.getPivots()[t].getPrec().at(c) - lamina;
+
+			IloConstraint constr = (temp) == 0;
+			stringstream name;
+			name << "AguaF(" << t<<c << ") : ";
+			constr.setName(name.str().c_str());
+			modelo.add(constr);
+			constraints.add(constr);
+
+		}
 	}
 
 }
@@ -99,84 +107,117 @@ void Exact::addConstraint_AguaFinal(IloEnv& env, IloModel& modelo)
 
 void Exact::addConstraint_LimiteCritico(IloEnv& env, IloModel& modelo)
 {
-	//para cada dia do ciclo
-	for(unsigned int c = 0 ; c < p.getCicle().size(); c++)
-	{
-		IloExpr temp(env);		
+	for(int t=0; t<p.getPivots().size(); t++){
+		for(unsigned int c = 0 ; c < p.getPivots()[t].getCicle().size(); c++)
+		{
+			IloExpr temp(env);
 
-		temp = adf[c] - p.getLc().at(c);
-	
-		IloConstraint constr = (temp) >= 0;
-		stringstream name;
-		name << "Lc(" << c << ") : ";
-		constr.setName(name.str().c_str());
-		modelo.add(constr);
-		constraints.add(constr);
-		
+			temp = adf[t][c] - p.getPivots()[t].getLc().at(c);
+
+			IloConstraint constr = (temp) >= 0;
+			stringstream name;
+			name << "Lc(" << t <<c << ") : ";
+			constr.setName(name.str().c_str());
+			modelo.add(constr);
+			constraints.add(constr);
+
+		}
 	}
 
 }
 
-Exact::Exact(Instance& _p, double _timelimit) :
-		p(_p), timelimit(_timelimit)
+void Exact::addConstraint_IrrigationLimit(IloEnv& env, IloModel& modelo)
+{
+	if (limitDay.empty()) return;
+
+    for(unsigned int c = 0; c < 120 /*p.getPivots()[t].getCicle().size()*/; c++){
+        IloExpr irrigation(env);
+        for (int t = 0; t < p.getPivots().size(); t++) {
+            for(unsigned int perc = 0; perc < p.getPivots()[t].getPerc().size(); perc++) {
+                irrigation += p.getPivots()[t].getLamp().at(perc) * x[t][perc][c];
+            }
+        }
+        float limit_val = (c < limitDay.size()) ? limitDay[c] : limitDay.back();
+        IloConstraint limConstr = (irrigation <= limit_val);
+        stringstream n;
+        n << "IrrLimit(" << c << ") <= " << limit_val;
+        limConstr.setName(n.str().c_str());
+        modelo.add(limConstr);
+        constraints.add(limConstr);
+
+        irrigation.end();
+    }
+}
+
+Exact::Exact(Instance& _p, double _timelimit, vector<float> limitDay) :
+		p(_p), timelimit(_timelimit), limitDay(limitDay)
 {
 	modelo = IloModel(env);
 	constraints = IloConstraintArray(env);
 	LBdefined = false;
 
-	//definindo a variavel x_pc
-	//  - binária, representa se o percentímetro p foi utilizado no dia c do Ciclo
+	//definindo a variavel x_tpc
+	//  - binária, representa se o percentímetro p foi utilizado no dia c do Ciclo do pivot t
 
-	x = IloNumVarMatrix(env, p.getPerc().size());
 
-	for (unsigned int perc = 0; perc < p.getPerc().size(); perc++)
-	{
-		x[perc] = IloNumVarArray(env, p.getCicle().size(), 0, 1, ILOINT);	
-		for(unsigned int c = 0; c < p.getCicle().size(); c++)
-		{
-			stringstream var;
-			var << "x[" << perc <<","<<c<<"]";
+    x = IloNumVar3Matrix (env, p.getPivots().size());
 
-			x[perc][c].setName(var.str().c_str());
+    for(unsigned int t = 0; t<p.getPivots().size(); t++){
+        x[t] = IloNumVarMatrix(env, p.getPivots()[t].getPerc().size());
 
-			modelo.add(x[perc][c]);
+        for (unsigned int perc = 0; perc < p.getPivots()[t].getPerc().size(); perc++)
+        {
+            x[t][perc] = IloNumVarArray(env, p.getPivots()[t].getCicle().size(), 0, 1, ILOINT);
+            for(unsigned int c = 0; c < p.getPivots()[t].getCicle().size(); c++)
+            {
+                stringstream var;
+                var << "x[" << t<<","<< perc <<","<<c<<"]";
 
-		}
-	}
+                x[t][perc][c].setName(var.str().c_str());
+
+                modelo.add(x[t][perc][c]);
+
+            }
+        }
+
+    }
 
 	//definindo variavel adf_c
-	//  - quantidade de água disponível no solo no final do dia c do Ciclo
-	adf = IloNumVarArray(env, p.getCicle().size(), 0, IloInfinity, ILOFLOAT);
+	//  - quantidade de água disponível no solo no final do dia c do Ciclo do pivô t
+    // inicializa membros adf e adi
+    adf = IloNumVarMatrix(env, (IloInt)p.getPivots().size()); // typedef IloNumVarMatrix = IloArray<IloNumVarArray>
+    for (int t = 0; t < (int)p.getPivots().size(); ++t) {
+        adf[t] = IloNumVarArray(env, (IloInt)p.getPivots()[t].getCicle().size(), 0.0, IloInfinity, ILOFLOAT);
+        for (unsigned int c = 0; c < p.getPivots()[t].getCicle().size(); ++c) {
+            stringstream var;
+            var << "adf[" << t << "," << c << "]";
+            adf[t][c].setName(var.str().c_str());
+            modelo.add(adf[t][c]);
+        }
+    }
 
-	for(unsigned int c = 0; c < p.getCicle().size(); c++)
-	{
-		stringstream var;
-		var << "adf["<<c<<"]";
-		adf[c].setName(var.str().c_str());
-		modelo.add(adf[c]);
-	}
-
-	//definindo variavel adi_c
-	//  - quantidade de água diponível no solo no início do dia c do Ciclo
-	adi = IloNumVarArray(env, p.getCicle().size(), 0, IloInfinity, ILOFLOAT);
-
-	for(unsigned int c = 0; c < p.getCicle().size(); c++)
-	{
-		stringstream var;
-		var << "adi["<<c<<"]";
-		adi[c].setName(var.str().c_str());
-		modelo.add(adi[c]);
-	}
+    adi = IloNumVarMatrix(env, (IloInt)p.getPivots().size());
+    for (int t = 0; t < (int)p.getPivots().size(); ++t) {
+        adi[t] = IloNumVarArray(env, (IloInt)p.getPivots()[t].getCicle().size(), 0.0, IloInfinity, ILOFLOAT);
+        for (unsigned int c = 0; c < p.getPivots()[t].getCicle().size(); ++c) {
+            stringstream var;
+            var << "adi[" << t << "," << c << "]";
+            adi[t][c].setName(var.str().c_str());
+            modelo.add(adi[t][c]);
+        }
+    }
 
 
-	// função objetivo
+    // função objetivo
 	IloExpr FO(env);
 
-	for (int perc = 0; perc < p.getPerc().size(); perc++)
-	{
-		for (int c = 0; c < p.getCicle().size(); c++)
+	for(int t=0; t<p.getPivots().size(); t++){
+		for (int perc = 0; perc < p.getPivots()[t].getPerc().size(); perc++)
 		{
-			FO += p.getCost().at(perc)*x[perc][c];
+			for (int c = 0; c < p.getPivots()[t].getCicle().size(); c++)
+			{
+				FO += p.getPivots()[t].getCost().at(perc)*x[t][perc][c];
+			}
 		}
 	}
 
@@ -188,7 +229,7 @@ Exact::Exact(Instance& _p, double _timelimit) :
 	addConstraint_AguaInicialRestante(env, modelo);
 	addConstraint_AguaFinal(env, modelo);
 	addConstraint_LimiteCritico(env, modelo);
-	
+    addConstraint_IrrigationLimit(env, modelo);
 }
 
 Exact::~Exact()
@@ -235,18 +276,20 @@ void Exact::solve()
 
 void Exact::showSolution()
 {
-    cout << "Solution Output: [ ";
-    for(unsigned int c = 0; c < p.getCicle().size(); c++)
-    {
-        for(unsigned int perc = 0; perc < p.getPerc().size(); perc++)
-        {
-            if( pirr.getValue(x[perc][c] == 1) )
-            {
-                cout << perc << " ";
-            }
-        }
-    }
-    cout << "]" << endl;
+	for(int t=0; t<p.getPivots().size(); t++){
+		cout << "Solution Output: [ ";
+		for(unsigned int c = 0; c < p.getPivots()[t].getCicle().size(); c++)
+		{
+			for(unsigned int perc = 0; perc < p.getPivots()[t].getPerc().size(); perc++)
+			{
+				if( pirr.getValue(x[t][perc][c]) >= 0.5 )
+				{
+					cout << perc << " ";
+				}
+			}
+		}
+		cout << "]" << endl;
+	}
 
 }
 
@@ -254,18 +297,27 @@ Solution Exact::getSolution()
 {
     Solution sol;
     vector<int> v;
-    for(unsigned int c = 0; c < p.getCicle().size(); c++)
-    {
-        for(unsigned int perc = 0; perc < p.getPerc().size(); perc++)
-        {
-            if( pirr.getValue(x[perc][c] >= 0.5) )
-            {
-                v.push_back(perc);
-            }
-        }
-    }
+	vector<vector<int>> vv;
 
-    sol.setSolution(v);
+	for(int t=0; t<p.getPivots().size(); t++){
+        v.clear();
+		for(unsigned int c = 0; c < p.getPivots()[t].getCicle().size(); c++)
+		{
+			for(unsigned int perc = 0; perc < p.getPivots()[t].getPerc().size(); perc++)
+			{
+				if( pirr.getValue(x[t][perc][c]) >= 0.5 )
+				{
+					v.push_back(perc);
+				}
+			}
+		}
+
+		vv.push_back(v);
+
+
+	}
+
+	sol.setSolutions(vv);
 
     return sol;
 }
@@ -297,13 +349,24 @@ status Exact::getStatus()
 
 void Exact::showVars()
 {
-	for(unsigned int c=0; c< p.getCicle().size(); c++)
-	{
-		printf("D[%d] - Ai: %.2f Af: %.2f Lc: %.2f\n",c,  pirr.getValue(adi[c]), pirr.getValue(adf[c]), p.getLc().at(c));
+
+	for(int t=0; t<p.getPivots().size(); t++){
+		for(unsigned int c=0; c< p.getPivots()[t].getCicle().size(); c++)
+		{
+			printf("D[%d] - Ai: %.2f Af: %.2f Lc: %.2f\n",c,  pirr.getValue(adi[t][c]), pirr.getValue(adf[t][c]), p.getPivots()[t].getLc().at(c));
+		}
 	}
 
 }
 
 
+bool Exact::isFeasible()
+{
+    try {
+        return pirr.isPrimalFeasible();
+    } catch (...) {
+        return false;
+    }
+}
 
 #endif //EXACT_CPP_
