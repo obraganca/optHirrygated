@@ -255,4 +255,5 @@ CMakeFiles/optHirrygated.dir/src/Exact.cpp.o: \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
  /usr/include/c++/12/bits/vector.tcc \
+ /home/obraganca/Documents/IC/optHirrygated/include/./Pivot.hpp \
  /home/obraganca/Documents/IC/optHirrygated/include/Solution.hpp

@@ -1,7 +1,7 @@
 CMakeFiles/optHirrygated.dir/src/Measurer.cpp.o: \
  /home/obraganca/Documents/IC/optHirrygated/src/Measurer.cpp \
  /usr/include/stdc-predef.h \
- /home/obraganca/Documents/IC/optHirrygated/src/../include/RefinementHeuristic.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/src/../include/Measurer.hpp \
  /home/obraganca/Documents/IC/optHirrygated/src/../include/Instance.hpp \
  /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -155,7 +155,10 @@ CMakeFiles/optHirrygated.dir/src/Measurer.cpp.o: \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
  /usr/include/c++/12/bits/istream.tcc \
+ /home/obraganca/Documents/IC/optHirrygated/src/../include/./Pivot.hpp \
  /home/obraganca/Documents/IC/optHirrygated/src/../include/Solution.hpp \
+ /usr/include/c++/12/cstddef /usr/include/c++/12/limits \
+ /home/obraganca/Documents/IC/optHirrygated/src/../include/RefinementHeuristic.hpp \
  /home/obraganca/Documents/IC/optHirrygated/src/../include/Measurer.hpp \
  /usr/include/c++/12/memory /usr/include/c++/12/bits/stl_tempbuf.h \
  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
@@ -183,8 +186,7 @@ CMakeFiles/optHirrygated.dir/src/Measurer.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/c++/12/bits/specfun.h /usr/include/c++/12/limits \
- /usr/include/c++/12/tr1/gamma.tcc \
+ /usr/include/c++/12/bits/specfun.h /usr/include/c++/12/tr1/gamma.tcc \
  /usr/include/c++/12/tr1/special_function_util.h \
  /usr/include/c++/12/tr1/bessel_function.tcc \
  /usr/include/c++/12/tr1/beta_function.tcc \
@@ -212,7 +214,6 @@ CMakeFiles/optHirrygated.dir/src/Measurer.cpp.o: \
  /usr/include/c++/12/compare /usr/include/c++/12/bits/stl_algo.h \
  /usr/include/c++/12/bits/algorithmfwd.h \
  /usr/include/c++/12/bits/stl_heap.h \
- /home/obraganca/Documents/IC/optHirrygated/src/../include/Measurer.hpp \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/float.h \
  /usr/include/c++/12/iomanip /usr/include/c++/12/locale \
  /usr/include/c++/12/bits/locale_facets_nonio.h /usr/include/c++/12/ctime \

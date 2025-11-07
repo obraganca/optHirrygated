@@ -154,6 +154,7 @@ CMakeFiles/optHirrygated.dir/src/Instance.cpp.o: \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
  /usr/include/c++/12/bits/istream.tcc \
+ /home/obraganca/Documents/IC/optHirrygated/src/../include/./Pivot.hpp \
  /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/OpenXLSX.hpp \
  /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers/XLCell.hpp \
  /usr/include/c++/12/memory /usr/include/c++/12/bits/stl_tempbuf.h \
