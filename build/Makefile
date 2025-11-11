@@ -354,30 +354,6 @@ src/CSVExporter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/CSVExporter.cpp.s
 .PHONY : src/CSVExporter.cpp.s
 
-src/ConstructiveHeuristic.o: src/ConstructiveHeuristic.cpp.o
-.PHONY : src/ConstructiveHeuristic.o
-
-# target to build an object file
-src/ConstructiveHeuristic.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/ConstructiveHeuristic.cpp.o
-.PHONY : src/ConstructiveHeuristic.cpp.o
-
-src/ConstructiveHeuristic.i: src/ConstructiveHeuristic.cpp.i
-.PHONY : src/ConstructiveHeuristic.i
-
-# target to preprocess a source file
-src/ConstructiveHeuristic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/ConstructiveHeuristic.cpp.i
-.PHONY : src/ConstructiveHeuristic.cpp.i
-
-src/ConstructiveHeuristic.s: src/ConstructiveHeuristic.cpp.s
-.PHONY : src/ConstructiveHeuristic.s
-
-# target to generate assembly for a file
-src/ConstructiveHeuristic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/ConstructiveHeuristic.cpp.s
-.PHONY : src/ConstructiveHeuristic.cpp.s
-
 src/Exact.o: src/Exact.cpp.o
 .PHONY : src/Exact.o
 
@@ -522,6 +498,150 @@ src/SolutionProcessor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/SolutionProcessor.cpp.s
 .PHONY : src/SolutionProcessor.cpp.s
 
+src/constructive/ConstructiveHeuristicB.o: src/constructive/ConstructiveHeuristicB.cpp.o
+.PHONY : src/constructive/ConstructiveHeuristicB.o
+
+# target to build an object file
+src/constructive/ConstructiveHeuristicB.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicB.cpp.o
+.PHONY : src/constructive/ConstructiveHeuristicB.cpp.o
+
+src/constructive/ConstructiveHeuristicB.i: src/constructive/ConstructiveHeuristicB.cpp.i
+.PHONY : src/constructive/ConstructiveHeuristicB.i
+
+# target to preprocess a source file
+src/constructive/ConstructiveHeuristicB.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicB.cpp.i
+.PHONY : src/constructive/ConstructiveHeuristicB.cpp.i
+
+src/constructive/ConstructiveHeuristicB.s: src/constructive/ConstructiveHeuristicB.cpp.s
+.PHONY : src/constructive/ConstructiveHeuristicB.s
+
+# target to generate assembly for a file
+src/constructive/ConstructiveHeuristicB.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicB.cpp.s
+.PHONY : src/constructive/ConstructiveHeuristicB.cpp.s
+
+src/constructive/ConstructiveHeuristicBackward.o: src/constructive/ConstructiveHeuristicBackward.cpp.o
+.PHONY : src/constructive/ConstructiveHeuristicBackward.o
+
+# target to build an object file
+src/constructive/ConstructiveHeuristicBackward.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicBackward.cpp.o
+.PHONY : src/constructive/ConstructiveHeuristicBackward.cpp.o
+
+src/constructive/ConstructiveHeuristicBackward.i: src/constructive/ConstructiveHeuristicBackward.cpp.i
+.PHONY : src/constructive/ConstructiveHeuristicBackward.i
+
+# target to preprocess a source file
+src/constructive/ConstructiveHeuristicBackward.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicBackward.cpp.i
+.PHONY : src/constructive/ConstructiveHeuristicBackward.cpp.i
+
+src/constructive/ConstructiveHeuristicBackward.s: src/constructive/ConstructiveHeuristicBackward.cpp.s
+.PHONY : src/constructive/ConstructiveHeuristicBackward.s
+
+# target to generate assembly for a file
+src/constructive/ConstructiveHeuristicBackward.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicBackward.cpp.s
+.PHONY : src/constructive/ConstructiveHeuristicBackward.cpp.s
+
+src/constructive/ConstructiveHeuristicC.o: src/constructive/ConstructiveHeuristicC.cpp.o
+.PHONY : src/constructive/ConstructiveHeuristicC.o
+
+# target to build an object file
+src/constructive/ConstructiveHeuristicC.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicC.cpp.o
+.PHONY : src/constructive/ConstructiveHeuristicC.cpp.o
+
+src/constructive/ConstructiveHeuristicC.i: src/constructive/ConstructiveHeuristicC.cpp.i
+.PHONY : src/constructive/ConstructiveHeuristicC.i
+
+# target to preprocess a source file
+src/constructive/ConstructiveHeuristicC.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicC.cpp.i
+.PHONY : src/constructive/ConstructiveHeuristicC.cpp.i
+
+src/constructive/ConstructiveHeuristicC.s: src/constructive/ConstructiveHeuristicC.cpp.s
+.PHONY : src/constructive/ConstructiveHeuristicC.s
+
+# target to generate assembly for a file
+src/constructive/ConstructiveHeuristicC.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicC.cpp.s
+.PHONY : src/constructive/ConstructiveHeuristicC.cpp.s
+
+src/constructive/ConstructiveHeuristicFoward.o: src/constructive/ConstructiveHeuristicFoward.cpp.o
+.PHONY : src/constructive/ConstructiveHeuristicFoward.o
+
+# target to build an object file
+src/constructive/ConstructiveHeuristicFoward.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicFoward.cpp.o
+.PHONY : src/constructive/ConstructiveHeuristicFoward.cpp.o
+
+src/constructive/ConstructiveHeuristicFoward.i: src/constructive/ConstructiveHeuristicFoward.cpp.i
+.PHONY : src/constructive/ConstructiveHeuristicFoward.i
+
+# target to preprocess a source file
+src/constructive/ConstructiveHeuristicFoward.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicFoward.cpp.i
+.PHONY : src/constructive/ConstructiveHeuristicFoward.cpp.i
+
+src/constructive/ConstructiveHeuristicFoward.s: src/constructive/ConstructiveHeuristicFoward.cpp.s
+.PHONY : src/constructive/ConstructiveHeuristicFoward.s
+
+# target to generate assembly for a file
+src/constructive/ConstructiveHeuristicFoward.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicFoward.cpp.s
+.PHONY : src/constructive/ConstructiveHeuristicFoward.cpp.s
+
+src/constructive/ConstructiveHeuristicLookahead.o: src/constructive/ConstructiveHeuristicLookahead.cpp.o
+.PHONY : src/constructive/ConstructiveHeuristicLookahead.o
+
+# target to build an object file
+src/constructive/ConstructiveHeuristicLookahead.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp.o
+.PHONY : src/constructive/ConstructiveHeuristicLookahead.cpp.o
+
+src/constructive/ConstructiveHeuristicLookahead.i: src/constructive/ConstructiveHeuristicLookahead.cpp.i
+.PHONY : src/constructive/ConstructiveHeuristicLookahead.i
+
+# target to preprocess a source file
+src/constructive/ConstructiveHeuristicLookahead.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp.i
+.PHONY : src/constructive/ConstructiveHeuristicLookahead.cpp.i
+
+src/constructive/ConstructiveHeuristicLookahead.s: src/constructive/ConstructiveHeuristicLookahead.cpp.s
+.PHONY : src/constructive/ConstructiveHeuristicLookahead.s
+
+# target to generate assembly for a file
+src/constructive/ConstructiveHeuristicLookahead.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp.s
+.PHONY : src/constructive/ConstructiveHeuristicLookahead.cpp.s
+
+src/local_search/BestImprovementLocalSearch.o: src/local_search/BestImprovementLocalSearch.cpp.o
+.PHONY : src/local_search/BestImprovementLocalSearch.o
+
+# target to build an object file
+src/local_search/BestImprovementLocalSearch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o
+.PHONY : src/local_search/BestImprovementLocalSearch.cpp.o
+
+src/local_search/BestImprovementLocalSearch.i: src/local_search/BestImprovementLocalSearch.cpp.i
+.PHONY : src/local_search/BestImprovementLocalSearch.i
+
+# target to preprocess a source file
+src/local_search/BestImprovementLocalSearch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.i
+.PHONY : src/local_search/BestImprovementLocalSearch.cpp.i
+
+src/local_search/BestImprovementLocalSearch.s: src/local_search/BestImprovementLocalSearch.cpp.s
+.PHONY : src/local_search/BestImprovementLocalSearch.s
+
+# target to generate assembly for a file
+src/local_search/BestImprovementLocalSearch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.s
+.PHONY : src/local_search/BestImprovementLocalSearch.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -545,6 +665,150 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/metaheuristic/MonteCarloTreeSearch.o: src/metaheuristic/MonteCarloTreeSearch.cpp.o
+.PHONY : src/metaheuristic/MonteCarloTreeSearch.o
+
+# target to build an object file
+src/metaheuristic/MonteCarloTreeSearch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.o
+.PHONY : src/metaheuristic/MonteCarloTreeSearch.cpp.o
+
+src/metaheuristic/MonteCarloTreeSearch.i: src/metaheuristic/MonteCarloTreeSearch.cpp.i
+.PHONY : src/metaheuristic/MonteCarloTreeSearch.i
+
+# target to preprocess a source file
+src/metaheuristic/MonteCarloTreeSearch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.i
+.PHONY : src/metaheuristic/MonteCarloTreeSearch.cpp.i
+
+src/metaheuristic/MonteCarloTreeSearch.s: src/metaheuristic/MonteCarloTreeSearch.cpp.s
+.PHONY : src/metaheuristic/MonteCarloTreeSearch.s
+
+# target to generate assembly for a file
+src/metaheuristic/MonteCarloTreeSearch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.s
+.PHONY : src/metaheuristic/MonteCarloTreeSearch.cpp.s
+
+src/neighborhood/NeighborhoodGradualReduction.o: src/neighborhood/NeighborhoodGradualReduction.cpp.o
+.PHONY : src/neighborhood/NeighborhoodGradualReduction.o
+
+# target to build an object file
+src/neighborhood/NeighborhoodGradualReduction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.o
+.PHONY : src/neighborhood/NeighborhoodGradualReduction.cpp.o
+
+src/neighborhood/NeighborhoodGradualReduction.i: src/neighborhood/NeighborhoodGradualReduction.cpp.i
+.PHONY : src/neighborhood/NeighborhoodGradualReduction.i
+
+# target to preprocess a source file
+src/neighborhood/NeighborhoodGradualReduction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.i
+.PHONY : src/neighborhood/NeighborhoodGradualReduction.cpp.i
+
+src/neighborhood/NeighborhoodGradualReduction.s: src/neighborhood/NeighborhoodGradualReduction.cpp.s
+.PHONY : src/neighborhood/NeighborhoodGradualReduction.s
+
+# target to generate assembly for a file
+src/neighborhood/NeighborhoodGradualReduction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.s
+.PHONY : src/neighborhood/NeighborhoodGradualReduction.cpp.s
+
+src/neighborhood/NeighborhoodPatternBased.o: src/neighborhood/NeighborhoodPatternBased.cpp.o
+.PHONY : src/neighborhood/NeighborhoodPatternBased.o
+
+# target to build an object file
+src/neighborhood/NeighborhoodPatternBased.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.o
+.PHONY : src/neighborhood/NeighborhoodPatternBased.cpp.o
+
+src/neighborhood/NeighborhoodPatternBased.i: src/neighborhood/NeighborhoodPatternBased.cpp.i
+.PHONY : src/neighborhood/NeighborhoodPatternBased.i
+
+# target to preprocess a source file
+src/neighborhood/NeighborhoodPatternBased.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.i
+.PHONY : src/neighborhood/NeighborhoodPatternBased.cpp.i
+
+src/neighborhood/NeighborhoodPatternBased.s: src/neighborhood/NeighborhoodPatternBased.cpp.s
+.PHONY : src/neighborhood/NeighborhoodPatternBased.s
+
+# target to generate assembly for a file
+src/neighborhood/NeighborhoodPatternBased.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.s
+.PHONY : src/neighborhood/NeighborhoodPatternBased.cpp.s
+
+src/neighborhood/NeighborhoodReduceHighIrrigation.o: src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o
+.PHONY : src/neighborhood/NeighborhoodReduceHighIrrigation.o
+
+# target to build an object file
+src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o
+.PHONY : src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o
+
+src/neighborhood/NeighborhoodReduceHighIrrigation.i: src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.i
+.PHONY : src/neighborhood/NeighborhoodReduceHighIrrigation.i
+
+# target to preprocess a source file
+src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.i
+.PHONY : src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.i
+
+src/neighborhood/NeighborhoodReduceHighIrrigation.s: src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.s
+.PHONY : src/neighborhood/NeighborhoodReduceHighIrrigation.s
+
+# target to generate assembly for a file
+src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.s
+.PHONY : src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.s
+
+src/neighborhood/NeighborhoodSmartReplacement.o: src/neighborhood/NeighborhoodSmartReplacement.cpp.o
+.PHONY : src/neighborhood/NeighborhoodSmartReplacement.o
+
+# target to build an object file
+src/neighborhood/NeighborhoodSmartReplacement.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.o
+.PHONY : src/neighborhood/NeighborhoodSmartReplacement.cpp.o
+
+src/neighborhood/NeighborhoodSmartReplacement.i: src/neighborhood/NeighborhoodSmartReplacement.cpp.i
+.PHONY : src/neighborhood/NeighborhoodSmartReplacement.i
+
+# target to preprocess a source file
+src/neighborhood/NeighborhoodSmartReplacement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.i
+.PHONY : src/neighborhood/NeighborhoodSmartReplacement.cpp.i
+
+src/neighborhood/NeighborhoodSmartReplacement.s: src/neighborhood/NeighborhoodSmartReplacement.cpp.s
+.PHONY : src/neighborhood/NeighborhoodSmartReplacement.s
+
+# target to generate assembly for a file
+src/neighborhood/NeighborhoodSmartReplacement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.s
+.PHONY : src/neighborhood/NeighborhoodSmartReplacement.cpp.s
+
+src/refinement/RefinementHeuristicVND.o: src/refinement/RefinementHeuristicVND.cpp.o
+.PHONY : src/refinement/RefinementHeuristicVND.o
+
+# target to build an object file
+src/refinement/RefinementHeuristicVND.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.o
+.PHONY : src/refinement/RefinementHeuristicVND.cpp.o
+
+src/refinement/RefinementHeuristicVND.i: src/refinement/RefinementHeuristicVND.cpp.i
+.PHONY : src/refinement/RefinementHeuristicVND.i
+
+# target to preprocess a source file
+src/refinement/RefinementHeuristicVND.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.i
+.PHONY : src/refinement/RefinementHeuristicVND.cpp.i
+
+src/refinement/RefinementHeuristicVND.s: src/refinement/RefinementHeuristicVND.cpp.s
+.PHONY : src/refinement/RefinementHeuristicVND.s
+
+# target to generate assembly for a file
+src/refinement/RefinementHeuristicVND.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.s
+.PHONY : src/refinement/RefinementHeuristicVND.cpp.s
 
 # Help Target
 help:
@@ -574,9 +838,6 @@ help:
 	@echo "... src/CSVExporter.o"
 	@echo "... src/CSVExporter.i"
 	@echo "... src/CSVExporter.s"
-	@echo "... src/ConstructiveHeuristic.o"
-	@echo "... src/ConstructiveHeuristic.i"
-	@echo "... src/ConstructiveHeuristic.s"
 	@echo "... src/Exact.o"
 	@echo "... src/Exact.i"
 	@echo "... src/Exact.s"
@@ -595,9 +856,45 @@ help:
 	@echo "... src/SolutionProcessor.o"
 	@echo "... src/SolutionProcessor.i"
 	@echo "... src/SolutionProcessor.s"
+	@echo "... src/constructive/ConstructiveHeuristicB.o"
+	@echo "... src/constructive/ConstructiveHeuristicB.i"
+	@echo "... src/constructive/ConstructiveHeuristicB.s"
+	@echo "... src/constructive/ConstructiveHeuristicBackward.o"
+	@echo "... src/constructive/ConstructiveHeuristicBackward.i"
+	@echo "... src/constructive/ConstructiveHeuristicBackward.s"
+	@echo "... src/constructive/ConstructiveHeuristicC.o"
+	@echo "... src/constructive/ConstructiveHeuristicC.i"
+	@echo "... src/constructive/ConstructiveHeuristicC.s"
+	@echo "... src/constructive/ConstructiveHeuristicFoward.o"
+	@echo "... src/constructive/ConstructiveHeuristicFoward.i"
+	@echo "... src/constructive/ConstructiveHeuristicFoward.s"
+	@echo "... src/constructive/ConstructiveHeuristicLookahead.o"
+	@echo "... src/constructive/ConstructiveHeuristicLookahead.i"
+	@echo "... src/constructive/ConstructiveHeuristicLookahead.s"
+	@echo "... src/local_search/BestImprovementLocalSearch.o"
+	@echo "... src/local_search/BestImprovementLocalSearch.i"
+	@echo "... src/local_search/BestImprovementLocalSearch.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/metaheuristic/MonteCarloTreeSearch.o"
+	@echo "... src/metaheuristic/MonteCarloTreeSearch.i"
+	@echo "... src/metaheuristic/MonteCarloTreeSearch.s"
+	@echo "... src/neighborhood/NeighborhoodGradualReduction.o"
+	@echo "... src/neighborhood/NeighborhoodGradualReduction.i"
+	@echo "... src/neighborhood/NeighborhoodGradualReduction.s"
+	@echo "... src/neighborhood/NeighborhoodPatternBased.o"
+	@echo "... src/neighborhood/NeighborhoodPatternBased.i"
+	@echo "... src/neighborhood/NeighborhoodPatternBased.s"
+	@echo "... src/neighborhood/NeighborhoodReduceHighIrrigation.o"
+	@echo "... src/neighborhood/NeighborhoodReduceHighIrrigation.i"
+	@echo "... src/neighborhood/NeighborhoodReduceHighIrrigation.s"
+	@echo "... src/neighborhood/NeighborhoodSmartReplacement.o"
+	@echo "... src/neighborhood/NeighborhoodSmartReplacement.i"
+	@echo "... src/neighborhood/NeighborhoodSmartReplacement.s"
+	@echo "... src/refinement/RefinementHeuristicVND.o"
+	@echo "... src/refinement/RefinementHeuristicVND.i"
+	@echo "... src/refinement/RefinementHeuristicVND.s"
 .PHONY : help
 
 

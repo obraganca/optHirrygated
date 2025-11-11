@@ -22,6 +22,7 @@ namespace opthirrygated {
 
         void updateAdfSolution(int index, float val) { adfSolutions[index]=val; }
 
+        void propagate(int d, float val);
     };
 }
 

@@ -1,8 +1,9 @@
-CMakeFiles/optHirrygated.dir/src/ConstructiveHeuristic.cpp.o: \
- /home/obraganca/Documents/IC/optHirrygated/src/ConstructiveHeuristic.cpp \
+CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicBackward.cpp.o: \
+ /home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicBackward.cpp \
  /usr/include/stdc-predef.h \
- /home/obraganca/Documents/IC/optHirrygated/src/../include/ConstructiveHeuristic.hpp \
- /home/obraganca/Documents/IC/optHirrygated/src/../include/Instance.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/constructive/ConstructiveHeuristicBackward.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/constructive/AbstractConstructiveHeuristic.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/Instance.hpp \
  /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
@@ -155,20 +156,13 @@ CMakeFiles/optHirrygated.dir/src/ConstructiveHeuristic.cpp.o: \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
  /usr/include/c++/12/bits/istream.tcc \
- /home/obraganca/Documents/IC/optHirrygated/src/../include/Solution.hpp \
- /home/obraganca/Documents/IC/optHirrygated/src/../include/Solution.hpp \
- /home/obraganca/Documents/IC/optHirrygated/src/../include/Measurer.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/Solution.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/Instance.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/interface/IConstructiveHeuristic.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/../include/Instance.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/../include/Solution.hpp \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/float.h \
- /usr/include/c++/12/unordered_map \
- /usr/include/c++/12/ext/aligned_buffer.h \
- /usr/include/c++/12/bits/hashtable.h \
- /usr/include/c++/12/bits/hashtable_policy.h /usr/include/c++/12/tuple \
- /usr/include/c++/12/bits/uses_allocator.h \
- /usr/include/c++/12/bits/enable_special_members.h \
- /usr/include/c++/12/bits/node_handle.h \
- /usr/include/c++/12/bits/unordered_map.h \
- /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/algorithm \
- /usr/include/c++/12/bits/stl_algo.h \
+ /usr/include/c++/12/algorithm /usr/include/c++/12/bits/stl_algo.h \
  /usr/include/c++/12/bits/algorithmfwd.h \
  /usr/include/c++/12/bits/stl_heap.h \
  /usr/include/c++/12/bits/stl_tempbuf.h \

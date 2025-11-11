@@ -214,6 +214,10 @@ CMakeFiles/optHirrygated.dir/src/RefinementHeuristic.cpp.o: \
  /usr/include/c++/12/bits/stl_heap.h \
  /home/obraganca/Documents/IC/optHirrygated/src/../include/ConstructiveHeuristic.hpp \
  /home/obraganca/Documents/IC/optHirrygated/src/../include/Measurer.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/src/../include/interface/INeighborhood.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/Solution.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/Instance.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/Measurer.hpp \
  /usr/include/c++/12/algorithm \
  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
  /usr/include/c++/12/iomanip /usr/include/c++/12/locale \
