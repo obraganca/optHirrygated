@@ -1,18 +1,23 @@
-#ifndef CONSTRUCTIVE_HEURISTIC_C_HPP
-#define CONSTRUCTIVE_HEURISTIC_C_HPP
+#ifndef CONSTRUCTIVE_HEURISTIC_LOOKAHEAD_HPP
+#define CONSTRUCTIVE_HEURISTIC_LOOKAHEAD_HPP
 
 #include "AbstractConstructiveHeuristic.hpp"
 
 namespace opthirrygated {
 
-    class ConstructiveHeuristicC : public AbstractConstructiveHeuristic {
+    class ConstructiveHeuristicLookahead : public AbstractConstructiveHeuristic {
+    private:
+        int lookaheadDepth;
     public:
-        explicit ConstructiveHeuristicC(Instance &instance)
-                : AbstractConstructiveHeuristic(instance) {}
+        explicit ConstructiveHeuristicLookahead(Instance &instance, int depth = 1)
+                : AbstractConstructiveHeuristic(instance), lookaheadDepth(depth) {}
 
         Solution execute() override;
+
+    private:
+        float simulateLookahead(size_t day, float adi, int depth);
     };
 
-} // namespace opthirrygated
+}
 
-#endif // CONSTRUCTIVE_HEURISTIC_C_HPP
+#endif // CONSTRUCTIVE_HEURISTIC_LOOKAHEAD_HPP

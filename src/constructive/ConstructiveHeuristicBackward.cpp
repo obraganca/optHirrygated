@@ -1,52 +1,73 @@
-#include "constructive/ConstructiveHeuristicC.hpp"
+#include "constructive/ConstructiveHeuristicBackward.hpp"
 #include "../include/Instance.hpp"
 #include "../include/Solution.hpp"
 #include <float.h>
 
+#include <algorithm>
 using namespace std;
 using namespace opthirrygated;
 
-Solution ConstructiveHeuristicC::execute() {
-    Solution objSolution;
+Solution ConstructiveHeuristicBackward::execute() {Solution objSolution;
     vector<int> solution;
     vector<float> adfSol;
 
-    float adi = inst.getCad()[0], adf = 0;
+    float adi=0 , adf = 0;
 
-    size_t numDays = inst.getCicle().size();
-    for (size_t day = 0; day < numDays; day++) {
-        float bestPrice = FLT_MAX;
-        int bestPerc = 10;
+    int numDays = inst.getCicle().size();
+    for (int day = numDays-1; day >= 0; day--) {
+        float bestScore = FLT_MAX;
+        int bestPerc = -1;
 
-        float preAdf = adi - inst.getEtc()[day] + inst.getPrec()[day];
+        if(day == 0){
+            adi = inst.getCad()[0];
+        }else{
+            adi = inst.getPrec()[day-1] - inst.getEtc()[day-1];
+        }
 
-        bestPerc=-1;
         for (int perc : inst.getPerc()) {
-            float auxAdf = preAdf + inst.getLamp()[perc];
+            float auxAdf = adi - inst.getEtc()[day] + inst.getPrec()[day] + inst.getLamp()[perc];
             float percCost = inst.getCost()[perc];
 
-            if (auxAdf <= inst.getCad()[day] && auxAdf >= inst.getLc()[day]) {
-                bestPrice = percCost;
+            if (percCost < bestScore && auxAdf >= inst.getLc()[day]) {
+                bestScore = percCost;
                 bestPerc = perc;
                 adf = auxAdf;
             }
         }
 
-        if(adf<inst.getLc()[day]){
-            cout<<"ERROR"<<endl;
+        if(bestPerc == -1){
+            bestPerc = inst.getPerc()[inst.getPerc().size()-2];
+            adf = adi - inst.getEtc()[day] + inst.getPrec()[day] + inst.getLamp()[bestPerc];
         }
 
-        if (bestPerc != -1) {
-            solution.push_back(bestPerc);
-        } else {
-            adf = adi;
-        }
-
+        solution.push_back(bestPerc);
         adi = adf;
         adfSol.push_back(adf);
     }
+    reverse(solution.begin(), solution.end());
+    reverse(adfSol.begin(), adfSol.end());
 
-    objSolution.setSolution(std::move(solution));
-    objSolution.setAdfSolution(std::move(adfSol));
+    normalizerAdf(solution, adfSol);
+
+    objSolution.setSolution(move(solution));
+    objSolution.setAdfSolution(move(adfSol));
     return objSolution;
+}
+
+void ConstructiveHeuristicBackward::normalizerAdf(
+        vector<int> &solution,
+        vector<float> &solutionAdf
+) {
+
+    vector<int> auxSolution = solution;
+    vector<float> auxSolutionAdf = solutionAdf;
+
+    for(int day =0; day< solution.size(); day++){
+
+        float adi = day == 0 ? inst.getCad()[0] : auxSolutionAdf[day-1];
+        float auxAdf = adi - inst.getEtc()[day] + inst.getPrec()[day] + inst.getLamp()[auxSolution[day]];
+        auxSolutionAdf[day] = auxAdf;
+    }
+    solution    = move(auxSolution);
+    solutionAdf = move(auxSolutionAdf);
 }

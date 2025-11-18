@@ -2,6 +2,7 @@
 #define SOLUTION_HPP
 
 #include <vector>
+#include "Instance.hpp"
 
 using namespace std;
 namespace opthirrygated {
@@ -22,7 +23,9 @@ namespace opthirrygated {
 
         void updateAdfSolution(int index, float val) { adfSolutions[index]=val; }
 
-        void propagate(int d, float val);
+        void propagate(const opthirrygated::Instance &inst, int d);
+
+        std::vector<int> getHighIrrigationDays();
     };
 }
 

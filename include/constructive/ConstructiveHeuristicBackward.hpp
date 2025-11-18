@@ -1,13 +1,14 @@
-#ifndef CONSTRUCTIVE_HEURISTIC_A_HPP
-#define CONSTRUCTIVE_HEURISTIC_A_HPP
+#ifndef CONSTRUCTIVE_HEURISTIC_BACKWARD_HPP
+#define CONSTRUCTIVE_HEURISTIC_BACKWARD_HPP
 
 #include "AbstractConstructiveHeuristic.hpp"
 
 namespace opthirrygated {
 
-    class ConstructiveHeuristicA : public AbstractConstructiveHeuristic {
+    class ConstructiveHeuristicBackward : public AbstractConstructiveHeuristic {
+        void normalizerAdf(vector<int> &solution, vector<float> &solutionAdf);
     public:
-        ConstructiveHeuristicA(Instance &instance)
+        explicit ConstructiveHeuristicBackward(Instance &instance)
                 : AbstractConstructiveHeuristic(instance) {}
 
         Solution execute() override;
@@ -15,4 +16,4 @@ namespace opthirrygated {
 
 } // namespace opthirrygated
 
-#endif // CONSTRUCTIVE_HEURISTIC_A_HPP
+#endif // CONSTRUCTIVE_HEURISTIC_BACKWARD_HPP

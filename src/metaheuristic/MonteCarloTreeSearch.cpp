@@ -7,6 +7,7 @@ Solution MonteCarloTreeSearch::execute(opthirrygated::Solution &rootSolution) {
 
     float initialCost = measurer.evaluate(const_cast<Solution &>(rootSolution));
 
+    // Initialize the root node
     MCTSNode root(rootSolution, nullptr);
     Solution globalBest = rootSolution;
     float globalBestCost = initialCost;

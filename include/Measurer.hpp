@@ -16,6 +16,8 @@ namespace opthirrygated {
         bool validation(Solution& solution);
         bool validationRange(Solution& solution, int startIdx, int endIdx);
         float evaluateRange(Solution& solution, int startIdx, int endIdx);
+
+        bool isFeasible(const Solution &solution, int d) const;
     };
 }
 

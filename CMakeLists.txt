@@ -21,6 +21,7 @@ set(CONCERT_LIB_DIR "${CONCERTDIR}/lib/${SYSTEM}/${LIBFORMAT}")
 # Find OpenXLSX in lib/OpenXLSX
 add_subdirectory(lib/OpenXLSX)
 
+
 # Include directories
 include_directories(
         ${INCLUDE_DIR}
@@ -41,7 +42,7 @@ link_directories(
 add_definitions(-DIL_STD)
 
 # Find all .cpp files in src/
-file(GLOB SOURCES "${SRC_DIR}/*.cpp")
+file(GLOB_RECURSE SOURCES "${SRC_DIR}/*.cpp")
 
 # Add executable
 add_executable(${PROJECT_NAME} ${SOURCES})

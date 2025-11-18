@@ -94,6 +94,7 @@ bool Measurer::validationRange(Solution& solution, int startIdx, int endIdx) {
 
     return true;
 }
+
 float Measurer::evaluateRange(Solution& solution, int startIdx, int endIdx) {
     float costSolution = 0.0;
     const auto& costVec = inst.getCost();
@@ -117,4 +118,48 @@ float Measurer::evaluateRange(Solution& solution, int startIdx, int endIdx) {
 
     return costSolution;
 }
+
+bool Measurer::isFeasible(const Solution &solution, int d) const {
+    auto adfSolutions = solution.getAdfSolutions();
+    const auto& solutionVec = solution.getSolution();
+
+    // Safety checks
+    if (d < 0 || adfSolutions.empty() || solutionVec.empty() || adfSolutions.size() < d) {
+        return false;
+    }
+
+    float adi = adfSolutions[d-1], adf;
+    if (d == 0) {
+        if (inst.getCad().empty()) return false; // Safety check
+        adi = inst.getCad()[0];
+    }
+
+    // Fixed loop condition - should be < not <=
+    for (int day = d; day < static_cast<int>(adfSolutions.size()); day++) {
+        // Safety checks for array access
+        if (day >= static_cast<int>(inst.getEtc().size()) ||
+            day >= static_cast<int>(inst.getPrec().size()) ||
+            day >= static_cast<int>(inst.getLc().size()) ||
+            day >= static_cast<int>(solutionVec.size())) {
+            return false;
+        }
+
+        if (solutionVec[day] >= static_cast<int>(inst.getLamp().size())) {
+            return false;
+        }
+
+        float auxAdf = adi - inst.getEtc()[day] + inst.getPrec()[day] + inst.getLamp()[solutionVec[day]];
+        float e = 0.0001;
+
+        if (auxAdf + e < inst.getLc()[day]) {
+            return false;
+        }
+
+        // Note: This modifies a copy, not the original
+        adfSolutions[day] = auxAdf;
+        adi = auxAdf;
+    }
+    return true;
+}
+
 

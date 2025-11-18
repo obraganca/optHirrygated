@@ -175,18 +175,10 @@ CMakeFiles/optHirrygated.dir/src/main.cpp.o: \
  /home/obraganca/Documents/IC/optHirrygated/src/../include/Solution.hpp \
  /home/obraganca/Documents/IC/optHirrygated/src/../include/constructive/ConstructiveHeuristicBackward.hpp \
  /home/obraganca/Documents/IC/optHirrygated/src/../include/constructive/AbstractConstructiveHeuristic.hpp \
- /home/obraganca/Documents/IC/optHirrygated/include/Instance.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/../include/Instance.hpp \
  /home/obraganca/Documents/IC/optHirrygated/include/Solution.hpp \
  /home/obraganca/Documents/IC/optHirrygated/include/interface/IConstructiveHeuristic.hpp \
- /home/obraganca/Documents/IC/optHirrygated/src/../include/refinement/RefinementHeuristicVND.hpp \
- /home/obraganca/Documents/IC/optHirrygated/src/../include/refinement/AbstractRefinementHeuristic.hpp \
- /home/obraganca/Documents/IC/optHirrygated/include/interface/IRefinementHeuristic.hpp \
- /home/obraganca/Documents/IC/optHirrygated/include/interface/INeighborhood.hpp \
- /home/obraganca/Documents/IC/optHirrygated/include/Measurer.hpp \
- /home/obraganca/Documents/IC/optHirrygated/include/interface/ILocalSearch.hpp \
- /home/obraganca/Documents/IC/optHirrygated/include/interface/INeighborhood.hpp \
- /home/obraganca/Documents/IC/optHirrygated/src/../include/RefinementHeuristic.hpp \
- /home/obraganca/Documents/IC/optHirrygated/src/../include/Measurer.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/src/../include/constructive/ConstructiveHeuristicSemiGreedy.hpp \
  /usr/include/c++/12/random /usr/include/c++/12/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -216,6 +208,18 @@ CMakeFiles/optHirrygated.dir/src/main.cpp.o: \
  /usr/include/c++/12/bits/random.tcc /usr/include/c++/12/numeric \
  /usr/include/c++/12/bits/stl_numeric.h \
  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+ /home/obraganca/Documents/IC/optHirrygated/src/../include/constructive/ConstructiveHeuristicFoward.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/src/../include/constructive/ConstructiveHeuristicLookahead.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/src/../include/refinement/RefinementHeuristicVND.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/src/../include/refinement/AbstractRefinementHeuristic.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/Instance.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/interface/IRefinementHeuristic.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/interface/INeighborhood.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/Measurer.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/interface/ILocalSearch.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/include/interface/INeighborhood.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/src/../include/RefinementHeuristic.hpp \
+ /home/obraganca/Documents/IC/optHirrygated/src/../include/Measurer.hpp \
  /usr/include/c++/12/unordered_map /usr/include/c++/12/bits/hashtable.h \
  /usr/include/c++/12/bits/hashtable_policy.h \
  /usr/include/c++/12/bits/enable_special_members.h \
@@ -306,6 +310,7 @@ CMakeFiles/optHirrygated.dir/src/main.cpp.o: \
  /opt/ibm/ILOG/CPLEX_Studio2211/cplex/include/ilcplex/iloCPXCALLBACKINFOenum.h \
  /opt/ibm/ILOG/CPLEX_Studio2211/cplex/include/ilcplex/iloCPXCALLBACKSOLUTIONSTRATEGYenum.h \
  /opt/ibm/ILOG/CPLEX_Studio2211/cplex/include/ilcplex/ilogoals.h \
+ /home/obraganca/Documents/IC/optHirrygated/src/../include/./Instance.hpp \
  /home/obraganca/Documents/IC/optHirrygated/src/../include/SolutionProcessor.hpp \
  /home/obraganca/Documents/IC/optHirrygated/src/../include/CSVExporter.hpp \
  /home/obraganca/Documents/IC/optHirrygated/src/../include/CSVExporter.hpp \

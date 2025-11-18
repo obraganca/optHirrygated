@@ -4,13 +4,14 @@
 #include <iostream>
 #include "Solution.hpp"
 #include "Instance.hpp"
+#include "Measurer.hpp"
 
 namespace opthirrygated {
 
     class INeighborhood {
     public:
         virtual ~INeighborhood() = default;
-        virtual Solution execute() = 0;
+        virtual Solution execute(const Solution& s,  Instance& inst) = 0;
     };
 
 } // namespace opthirrygated

@@ -1,21 +1,40 @@
 #include <iostream>
+#include <vector>
+#include <memory>
+
 #include "../include/Instance.hpp"
 #include "../include/Measurer.hpp"
 #include "../include/Solution.hpp"
-#include "../include/ConstructiveHeuristic.hpp"
+#include "../include/constructive/ConstructiveHeuristicBackward.hpp"
+#include "../include/constructive/ConstructiveHeuristicSemiGreedy.hpp"
+#include "../include/constructive/ConstructiveHeuristicFoward.hpp"
+#include "../include/constructive/ConstructiveHeuristicLookahead.hpp"
+#include "../include/refinement/RefinementHeuristicVND.hpp"
 #include "../include/RefinementHeuristic.hpp"
 #include "../include/Exact.hpp"
 #include "../include/SolutionProcessor.hpp"
 #include "../include/CSVExporter.hpp"
-
+#include "neighborhood/NeighborhoodGradualReduction.hpp"
+#include "neighborhood/NeighborhoodSmartReplacement.hpp"
+#include "neighborhood/NeighborhoodReduceHighIrrigation.hpp"
+#include "neighborhood/NeighborhoodPatternBased.hpp"
+#include "local_search/BestImprovementLocalSearch.hpp"
+#include "metaheuristic/MonteCarloTreeSearch.hpp"
 using namespace std;
 using namespace opthirrygated;
+
+std::vector<std::unique_ptr<INeighborhood>> getNeighborhoods() {
+    std::vector<std::unique_ptr<INeighborhood>> vNeighborhood;
+    vNeighborhood.push_back(make_unique<NeighborhoodGradualReduction>());
+    vNeighborhood.push_back(make_unique<NeighborhoodSmartReplacement>());
+    vNeighborhood.push_back(make_unique<NeighborhoodReduceHighIrrigation>());
+    vNeighborhood.push_back(make_unique<NeighborhoodPatternBased>());
+    return vNeighborhood;
+}
+
+
 int main() {
-    // Create an Instance object
     Instance instance("../datasource/planilha.xlsx");
-
-
-    //Running exact method
 
     Solution exactSol;
     Exact exato(instance, 3600);
@@ -31,12 +50,6 @@ int main() {
     {
         cout << "Verificar!!!" <<endl;
     }
-
-
-    //CSVExporter exporter;
-    //SolutionProcessor sp;
-    //exporter.exportToCSV(sp.processSolution(instance, exato.getSolution()), "result.csv");
-
 
     Solution solution;
     cout << endl;
@@ -55,17 +68,18 @@ int main() {
 
     cout << "---------------------------------------------------------------"<<endl;
 
-    ConstructiveHeuristic constructiveHeuristic(instance);
-    //solution = constructiveHeuristic.executeLookahead(4);
-    solution = constructiveHeuristic.executeBackward();
+    ConstructiveHeuristicFoward constructiveHeuristic(instance);
+    BestImprovementLocalSearch bestLocalSearch;
+    RefinementHeuristicVND refinementHeuristic(instance);
+    MonteCarloTreeSearch metaheuristic(instance, measurer, getNeighborhoods());
+
+    solution = constructiveHeuristic.execute();
+    //solution = refinementHeuristic.execute(solution, getNeighborhoods(), bestLocalSearch);
+    //for(int i =0; i<36; i++)
+        //solution = refinementHeuristic.execute(solution, getNeighborhoods(), bestLocalSearch);
+        // solution = metaheuristic.execute(solution);
 
 
-
-    RefinementHeuristic refinementHeuristic(instance);
-    //solution = refinementHeuristic.executeMCTS(solution);
-    //solution = refinementHeuristic.executeA(solution);
-    //for(int i =0; i<106; i++)
-        //solution = refinementHeuristic.executeA(solution);
     cout << "Solution validation: " << (measurer.validation(solution) ? "is valid": "is invalid") << endl;
 
     cout << "Total day evaluated: " << instance.getCicle().size() <<endl;

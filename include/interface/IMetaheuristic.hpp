@@ -1,14 +1,14 @@
-#ifndef I_METAHEURISTICA_HPP
-#define I_METAHEURISTICA_HPP
+#ifndef I_METAHEURISTIC_HPP
+#define I_METAHEURISTIC_HPP
 
 #include "Solution.hpp"
 
 using namespace std;
 namespace opthirrygated{
-    class IMetaheuristica{
+    class IMetaheuristic{
     public:
-        ~IMetaheuristica()=default;
-        virtual Solution execute() = 0;
+        virtual ~IMetaheuristic()=default;
+        virtual Solution execute(Solution& solution) = 0;
     };
 }
 

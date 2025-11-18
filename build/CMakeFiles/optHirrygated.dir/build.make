@@ -237,10 +237,24 @@ CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicLookahead.cpp -o CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp.s
 
+CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.o: CMakeFiles/optHirrygated.dir/flags.make
+CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.o: /home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicSemiGreedy.cpp
+CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.o: CMakeFiles/optHirrygated.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.o -MF CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.o.d -o CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicSemiGreedy.cpp
+
+CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicSemiGreedy.cpp > CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.i
+
+CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicSemiGreedy.cpp -o CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.s
+
 CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o: CMakeFiles/optHirrygated.dir/flags.make
 CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o: /home/obraganca/Documents/IC/optHirrygated/src/local_search/BestImprovementLocalSearch.cpp
 CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o: CMakeFiles/optHirrygated.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o -MF CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o.d -o CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/local_search/BestImprovementLocalSearch.cpp
 
 CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.i: cmake_force
@@ -254,7 +268,7 @@ CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.s: 
 CMakeFiles/optHirrygated.dir/src/main.cpp.o: CMakeFiles/optHirrygated.dir/flags.make
 CMakeFiles/optHirrygated.dir/src/main.cpp.o: /home/obraganca/Documents/IC/optHirrygated/src/main.cpp
 CMakeFiles/optHirrygated.dir/src/main.cpp.o: CMakeFiles/optHirrygated.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/optHirrygated.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/optHirrygated.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/optHirrygated.dir/src/main.cpp.o -MF CMakeFiles/optHirrygated.dir/src/main.cpp.o.d -o CMakeFiles/optHirrygated.dir/src/main.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/main.cpp
 
 CMakeFiles/optHirrygated.dir/src/main.cpp.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/optHirrygated.dir/src/main.cpp.s: cmake_force
 CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.o: CMakeFiles/optHirrygated.dir/flags.make
 CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.o: /home/obraganca/Documents/IC/optHirrygated/src/metaheuristic/MonteCarloTreeSearch.cpp
 CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.o: CMakeFiles/optHirrygated.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.o -MF CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.o.d -o CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/metaheuristic/MonteCarloTreeSearch.cpp
 
 CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.i: cmake_force
@@ -282,7 +296,7 @@ CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.s: cmake
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.o: CMakeFiles/optHirrygated.dir/flags.make
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.o: /home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodGradualReduction.cpp
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.o: CMakeFiles/optHirrygated.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.o -MF CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.o.d -o CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodGradualReduction.cpp
 
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.i: cmake_force
@@ -296,7 +310,7 @@ CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.s
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.o: CMakeFiles/optHirrygated.dir/flags.make
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.o: /home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodPatternBased.cpp
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.o: CMakeFiles/optHirrygated.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.o -MF CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.o.d -o CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodPatternBased.cpp
 
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.i: cmake_force
@@ -310,7 +324,7 @@ CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.s: cm
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o: CMakeFiles/optHirrygated.dir/flags.make
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o: /home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o: CMakeFiles/optHirrygated.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o -MF CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o.d -o CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp
 
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.i: cmake_force
@@ -324,7 +338,7 @@ CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.c
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.o: CMakeFiles/optHirrygated.dir/flags.make
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.o: /home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodSmartReplacement.cpp
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.o: CMakeFiles/optHirrygated.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.o -MF CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.o.d -o CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodSmartReplacement.cpp
 
 CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.i: cmake_force
@@ -338,7 +352,7 @@ CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.s
 CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.o: CMakeFiles/optHirrygated.dir/flags.make
 CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.o: /home/obraganca/Documents/IC/optHirrygated/src/refinement/RefinementHeuristicVND.cpp
 CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.o: CMakeFiles/optHirrygated.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.o -MF CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.o.d -o CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/refinement/RefinementHeuristicVND.cpp
 
 CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.i: cmake_force
@@ -363,6 +377,7 @@ optHirrygated_OBJECTS = \
 "CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicC.cpp.o" \
 "CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicFoward.cpp.o" \
 "CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp.o" \
+"CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.o" \
 "CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o" \
 "CMakeFiles/optHirrygated.dir/src/main.cpp.o" \
 "CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.o" \
@@ -387,6 +402,7 @@ optHirrygated: CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeurist
 optHirrygated: CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicC.cpp.o
 optHirrygated: CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicFoward.cpp.o
 optHirrygated: CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp.o
+optHirrygated: CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.o
 optHirrygated: CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o
 optHirrygated: CMakeFiles/optHirrygated.dir/src/main.cpp.o
 optHirrygated: CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.o
@@ -398,7 +414,7 @@ optHirrygated: CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVN
 optHirrygated: CMakeFiles/optHirrygated.dir/build.make
 optHirrygated: output/libOpenXLSX.a
 optHirrygated: CMakeFiles/optHirrygated.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable optHirrygated"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable optHirrygated"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/optHirrygated.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

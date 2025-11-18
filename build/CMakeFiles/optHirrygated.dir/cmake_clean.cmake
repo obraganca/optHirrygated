@@ -23,6 +23,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicFoward.cpp.o.d"
   "CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp.o"
   "CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp.o.d"
+  "CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.o"
+  "CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicSemiGreedy.cpp.o.d"
   "CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o"
   "CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o.d"
   "CMakeFiles/optHirrygated.dir/src/main.cpp.o"

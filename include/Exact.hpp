@@ -5,7 +5,7 @@ enum status {SOLUTIONFOUND, INFEASIBLE};
 
 #include <ilcplex/ilocplex.h>
 
-#include "Instance.hpp"
+#include "./Instance.hpp"
 #include "Solution.hpp"
 
 typedef IloArray<IloNumVarArray> IloNumVarMatrix;
