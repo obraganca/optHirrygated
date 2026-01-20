@@ -92,7 +92,7 @@ Demo1_EXTERNAL_OBJECTS =
 
 output/Demo1: lib/OpenXLSX/Examples/CMakeFiles/Demo1.dir/Demo1.cpp.o
 output/Demo1: lib/OpenXLSX/Examples/CMakeFiles/Demo1.dir/build.make
-output/Demo1: output/libOpenXLSX.a
+output/Demo1: output/libOpenXLSXd.a
 output/Demo1: lib/OpenXLSX/Examples/CMakeFiles/Demo1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../output/Demo1"
 	cd /home/obraganca/Documents/IC/optHirrygated/build/lib/OpenXLSX/Examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Demo1.dir/link.txt --verbose=$(VERBOSE)

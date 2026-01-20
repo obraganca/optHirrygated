@@ -6,5 +6,5 @@ CXX_DEFINES = -DOPENXLSX_STATIC_DEFINE
 
 CXX_INCLUDES = -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/build/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch
 
-CXX_FLAGS = -fvisibility=hidden -fvisibility-inlines-hidden -std=c++17
+CXX_FLAGS = -g -fvisibility=hidden -fvisibility-inlines-hidden -std=c++17
 

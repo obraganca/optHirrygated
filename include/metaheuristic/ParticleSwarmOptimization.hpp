@@ -1,0 +1,13 @@
+//
+// Created by obraganca on 12/9/25.
+//
+
+#ifndef OPTHIRRYGATED_PARTICLESWARMOPTIMIZATION_H
+#define OPTHIRRYGATED_PARTICLESWARMOPTIMIZATION_H
+
+
+class ParticleSwarmOptimization {
+};
+
+
+#endif //OPTHIRRYGATED_PARTICLESWARMOPTIMIZATION_H

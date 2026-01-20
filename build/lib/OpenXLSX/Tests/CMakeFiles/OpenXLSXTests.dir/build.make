@@ -268,7 +268,7 @@ output/OpenXLSXTests: lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLForm
 output/OpenXLSXTests: lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLRow.cpp.o
 output/OpenXLSXTests: lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLSheet.cpp.o
 output/OpenXLSXTests: lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/build.make
-output/OpenXLSXTests: output/libOpenXLSX.a
+output/OpenXLSXTests: output/libOpenXLSXd.a
 output/OpenXLSXTests: lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable ../../../output/OpenXLSXTests"
 	cd /home/obraganca/Documents/IC/optHirrygated/build/lib/OpenXLSX/Tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenXLSXTests.dir/link.txt --verbose=$(VERBOSE)

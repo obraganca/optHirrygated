@@ -6,5 +6,5 @@ CXX_DEFINES = -DIL_STD -DOPENXLSX_STATIC_DEFINE
 
 CXX_INCLUDES = -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/build/lib/OpenXLSX/OpenXLSX
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = -g -std=gnu++17
 

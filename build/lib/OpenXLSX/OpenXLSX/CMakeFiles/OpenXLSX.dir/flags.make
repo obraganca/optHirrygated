@@ -6,5 +6,5 @@ CXX_DEFINES = -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE
 
 CXX_INCLUDES = -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/build/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml
 
-CXX_FLAGS = -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -std=c++17
+CXX_FLAGS = -g -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -std=c++17
 

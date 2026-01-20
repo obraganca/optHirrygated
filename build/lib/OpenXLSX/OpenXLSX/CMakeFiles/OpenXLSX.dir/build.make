@@ -480,41 +480,41 @@ OpenXLSX_OBJECTS = \
 # External object files for target OpenXLSX
 OpenXLSX_EXTERNAL_OBJECTS =
 
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCell.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellIterator.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellRange.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellReference.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellValue.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLColor.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLColumn.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLComments.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLContentTypes.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDateTime.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDocument.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDrawing.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLFormula.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLMergeCells.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLProperties.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRelationships.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRow.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRowData.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLSharedStrings.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLSheet.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLStyles.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLTables.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLWorkbook.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlData.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlFile.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlParser.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLZipArchive.cpp.o
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/build.make
-output/libOpenXLSX.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX static library ../../../output/libOpenXLSX.a"
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCell.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellIterator.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellRange.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellReference.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellValue.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLColor.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLColumn.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLComments.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLContentTypes.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDateTime.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDocument.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDrawing.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLFormula.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLMergeCells.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLProperties.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRelationships.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRow.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRowData.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLSharedStrings.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLSheet.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLStyles.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLTables.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLWorkbook.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlData.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlFile.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlParser.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLZipArchive.cpp.o
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/build.make
+output/libOpenXLSXd.a: lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/obraganca/Documents/IC/optHirrygated/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX static library ../../../output/libOpenXLSXd.a"
 	cd /home/obraganca/Documents/IC/optHirrygated/build/lib/OpenXLSX/OpenXLSX && $(CMAKE_COMMAND) -P CMakeFiles/OpenXLSX.dir/cmake_clean_target.cmake
 	cd /home/obraganca/Documents/IC/optHirrygated/build/lib/OpenXLSX/OpenXLSX && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenXLSX.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/build: output/libOpenXLSX.a
+lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/build: output/libOpenXLSXd.a
 .PHONY : lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/build
 
 lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/clean:

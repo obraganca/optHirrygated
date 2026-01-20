@@ -55,11 +55,11 @@ set_target_properties(OpenXLSX::OpenXLSX PROPERTIES
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:Zippy>;\$<LINK_ONLY:PugiXML>"
 )
 
-# Import target "OpenXLSX::OpenXLSX" for configuration ""
-set_property(TARGET OpenXLSX::OpenXLSX APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "OpenXLSX::OpenXLSX" for configuration "Debug"
+set_property(TARGET OpenXLSX::OpenXLSX APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(OpenXLSX::OpenXLSX PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/home/obraganca/Documents/IC/optHirrygated/build/output/libOpenXLSX.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
+  IMPORTED_LOCATION_DEBUG "/home/obraganca/Documents/IC/optHirrygated/build/output/libOpenXLSXd.a"
   )
 
 # This file does not depend on other imported targets which have
