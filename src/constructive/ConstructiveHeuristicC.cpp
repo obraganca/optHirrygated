@@ -11,6 +11,7 @@ Solution ConstructiveHeuristicC::execute() {
     vector<int> solution;
     vector<float> adfSol;
 
+    float inf_f = std::numeric_limits<float>::infinity();
     float adi = inst.getCad()[0], adf = 0;
 
     size_t numDays = inst.getCicle().size();
@@ -33,7 +34,7 @@ Solution ConstructiveHeuristicC::execute() {
         }
 
         if(adf<inst.getLc()[day]){
-            cout<<"ERROR"<<endl;
+            bestPrice = inf_f;
         }
 
         if (bestPerc != -1) {

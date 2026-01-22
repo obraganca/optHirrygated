@@ -25,9 +25,11 @@ Solution NeighborhoodReduceHighIrrigation::execute(const Solution& s, Instance& 
 
         cand = s;
         cand.updateSolution(day, newLevel);
-        cand.propagate(inst, day);
 
-        if (measurer.isFeasible(cand, 0)) {
+        if (measurer.isFeasible(cand, day, (float)(inst.getLamp()[s.getSolution()[day]] - inst.getLamp()[newLevel]))) {
+            cand.propagate(inst, day);
+            cand.constructCriticalLimitDelt( inst);
+            cand.setScore(s .getScore() + (inst.getCost()[newLevel] - inst.getCost()[s.getSolution()[day]]));
             return cand;
         }
 

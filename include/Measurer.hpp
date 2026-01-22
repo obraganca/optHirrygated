@@ -13,11 +13,11 @@ namespace opthirrygated {
         Measurer(Instance &instance);
 
         float evaluate(Solution& solution);
-        bool validation(Solution& solution);
+        bool validation(Solution solution);
         bool validationRange(Solution& solution, int startIdx, int endIdx);
         float evaluateRange(Solution& solution, int startIdx, int endIdx);
 
-        bool isFeasible(const Solution &solution, int d) const;
+        bool isFeasible(const Solution &solution, int d, float deltAdf=0);
     };
 }
 

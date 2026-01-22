@@ -2,6 +2,7 @@
 #include "../include/Instance.hpp"
 #include "../include/Solution.hpp"
 #include <float.h>
+#include <unordered_map>
 
 using namespace std;
 using namespace opthirrygated;
@@ -12,12 +13,13 @@ Solution ConstructiveHeuristicLookahead::execute() {
     vector<float> adfSol;
 
     float adi = inst.getCad()[0], adf = 0;
+    float inf_f = std::numeric_limits<float>::infinity();
     size_t numDays = inst.getCicle().size();
-
+    float bestTotalScore =0 ;
     for (size_t day = 0; day < numDays; day++) {
-        float bestScore = FLT_MAX;
         int bestPerc = -1;
         float bestAdf = adi;
+        float bestScore = FLT_MAX;
 
         for (int perc : inst.getPerc()) {
             float currAdf = adi - inst.getEtc()[day] + inst.getPrec()[day] + inst.getLamp()[perc];
@@ -37,9 +39,11 @@ Solution ConstructiveHeuristicLookahead::execute() {
 
         if (bestPerc != -1) {
             solution.push_back(bestPerc);
+            bestTotalScore += inst.getCost()[bestPerc]; // <<< acumula aqui
             adf = bestAdf;
         } else {
             adf = adi; // fallback
+            bestTotalScore+=inf_f;
         }
 
         adi = adf;
@@ -48,10 +52,15 @@ Solution ConstructiveHeuristicLookahead::execute() {
 
     objSolution.setSolution(std::move(solution));
     objSolution.setAdfSolution(std::move(adfSol));
-
+    objSolution.constructCriticalLimitDelt(inst);
+    objSolution.setScore(bestTotalScore);
     return objSolution;
 }
 
+unordered_map<long long, float> dp;
+
+
+/*
 float ConstructiveHeuristicLookahead::simulateLookahead( size_t day, float adi, int depth) {
     if (day >= inst.getCicle().size() || depth == 0)
         return 0;
@@ -76,3 +85,42 @@ float ConstructiveHeuristicLookahead::simulateLookahead( size_t day, float adi, 
 
     return bestCost;
 }
+
+
+*/
+
+float ConstructiveHeuristicLookahead::simulateLookahead(
+        size_t day, float adi, int depth
+) {
+    if (day >= inst.getCicle().size() || depth == 0)
+        return 0;
+
+    int keyAdi = (int)(adi * 100);
+    long long key = ((long long)day << 32) ^ ((long long)depth << 16) ^ keyAdi;
+
+
+    if (dp.count(key))
+        return dp[key];
+
+    float preAdf = adi - inst.getEtc()[day] + inst.getPrec()[day];
+    float bestCost = FLT_MAX;
+
+    if (preAdf >= inst.getCad()[day]) {
+        bestCost = simulateLookahead(day + 1, preAdf, depth - 1);
+    }
+
+    for (int perc : inst.getPerc()) {
+        float auxAdf = preAdf + inst.getLamp()[perc];
+        float cost = inst.getCost()[perc];
+
+        if (auxAdf >= inst.getLc()[day]) {
+            float futureCost = simulateLookahead(day + 1, auxAdf, depth - 1);
+            bestCost = min(bestCost, cost + futureCost);
+        }
+    }
+
+    // Salva no memo
+    dp[key] = bestCost;
+    return bestCost;
+}
+

@@ -10,14 +10,16 @@ Solution ConstructiveHeuristicFoward::execute() {
     Solution objSolution;
     vector<int> solution;
     vector<float> adfSol;
+    vector<float> criticalLimit;
 
     float adi = inst.getCad()[0], adf = 0;
     size_t numDays = inst.getCicle().size();
+    float inf_f = std::numeric_limits<float>::infinity();
 
+    float totalBestScore = 0;
     for (size_t day = 0; day < numDays; day++) {
-        float bestPrice = FLT_MAX;
         int bestPerc = -1;
-
+        float bestPrice = FLT_MAX;
         for (int perc : inst.getPerc()) {
             float auxAdf = adi - inst.getEtc()[day] + inst.getPrec()[day] + inst.getLamp()[perc];
             float percCost = inst.getCost()[perc];
@@ -29,6 +31,10 @@ Solution ConstructiveHeuristicFoward::execute() {
             }
         }
 
+        if(adf < inst.getLc()[day]){
+            bestPrice = inf_f;
+        }
+
         if (bestPerc != -1)
             solution.push_back(bestPerc);
         else
@@ -36,9 +42,14 @@ Solution ConstructiveHeuristicFoward::execute() {
 
         adi = adf;
         adfSol.push_back(adf);
+        totalBestScore+=bestPrice;
     }
 
+
+    objSolution.setScore(totalBestScore);
     objSolution.setSolution(std::move(solution));
     objSolution.setAdfSolution(std::move(adfSol));
     return objSolution;
 }
+
+

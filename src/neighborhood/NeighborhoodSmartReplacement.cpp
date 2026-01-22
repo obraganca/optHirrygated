@@ -8,7 +8,6 @@ using namespace opthirrygated;
 Solution NeighborhoodSmartReplacement::execute(const Solution& s, Instance& inst) {
     Measurer measurer(inst);
     Solution bestCand = s;
-    float bestCost = measurer.evaluate(bestCand);
     std::vector<int> highIrrigationDays = bestCand.getHighIrrigationDays();
     if (highIrrigationDays.empty())
         return s;
@@ -21,15 +20,18 @@ Solution NeighborhoodSmartReplacement::execute(const Solution& s, Instance& inst
     for (int newLevel : lowLevels) {
         Solution cand = s;
         cand.updateSolution(day, newLevel);
-        cand.propagate(inst, day);
 
-        if (!measurer.isFeasible(cand, day))
+        if (!measurer.isFeasible(cand, day, (float)(inst.getLamp()[s.getSolution()[day]] - inst.getLamp()[newLevel])))
             continue;
-        float cost = measurer.evaluate(cand);
-        if (cost < bestCost) {
-            bestCost = cost;
+
+        cand.setScore(s.getScore() + (inst.getCost()[newLevel] - inst.getCost()[bestCand.getSolution()[day]]));
+
+        if (cand.getScore() - bestCand.getScore() < 0) {
             bestCand = cand;
         }
     }
+
+    bestCand.propagate(inst, day);
+    bestCand.constructCriticalLimitDelt( inst);
     return bestCand;
 }

@@ -1,23 +1,22 @@
-#ifndef REFINEMENT_HEURISTIC_VND_HPP
-#define REFINEMENT_HEURISTIC_VND_HPP
+#ifndef OPTHIRRYGATED_REFINEMENTHEURISTICVND_HPP
+#define OPTHIRRYGATED_REFINEMENTHEURISTICVND_HPP
 
-#include "AbstractRefinementHeuristic.hpp"
-#include "interface/INeighborhood.hpp"
+#include "refinement/AbstractRefinementHeuristic.hpp"
 #include "interface/ILocalSearch.hpp"
-#include <vector>
 #include <memory>
-
+#include <vector>
 
 namespace opthirrygated {
 
     class RefinementHeuristicVND : public AbstractRefinementHeuristic {
     public:
-        explicit RefinementHeuristicVND(Instance &instance)
-                : AbstractRefinementHeuristic(instance) {}
+        RefinementHeuristicVND(Instance& inst) : AbstractRefinementHeuristic(inst) {}
 
-        Solution execute(Solution &solution,  std::vector<std::unique_ptr<opthirrygated::INeighborhood>> neighborhoods, ILocalSearch& localSearch) override;
+        virtual Solution execute(Solution& solution,
+                                std::vector<std::shared_ptr<INeighborhood>>& neighborhoods,
+                                ILocalSearch& localSearch) override;
     };
 
 } // namespace opthirrygated
 
-#endif // CONSTRUCTIVE_HEURISTIC_VND_HPP
+#endif // OPTHIRRYGATED_REFINEMENTHEURISTICVND_HPP

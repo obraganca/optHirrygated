@@ -2,6 +2,8 @@
 #define I_CONSTRUCTIVE_HEURISTIC_HPP
 
 #include "Solution.hpp"
+
+#include <limits>
 namespace opthirrygated{
     class IConstructiveHeuristic{
     public:

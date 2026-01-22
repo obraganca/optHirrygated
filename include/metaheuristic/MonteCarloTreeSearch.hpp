@@ -23,7 +23,7 @@ namespace opthirrygated {
                     : sol(s), parent(p) {}
         };
 
-        vector<unique_ptr<INeighborhood>>neighborhoods;
+        vector<shared_ptr<INeighborhood>>neighborhoods;
 
         double mctsC;
         int mctsIters;
@@ -49,15 +49,17 @@ namespace opthirrygated {
 
         MonteCarloTreeSearch(Instance &instance,
                 Measurer& measurer,
-                vector<unique_ptr<INeighborhood>>nh,
+                vector<shared_ptr<INeighborhood>>&nh,
                 double C = 1.4142,
                 int iter = 1000,
                 int rollout_d = 20
-        ): AbstractMetaheuristic(instance, measurer), mctsC(C), mctsIters(iter), mctsRolloutDepth(rollout_d), neighborhoods(std::move(nh)){};
+        ): AbstractMetaheuristic(instance, measurer), mctsC(C), mctsIters(iter), mctsRolloutDepth(rollout_d), neighborhoods(nh){};
 
         Solution execute(Solution& solution) override;
 
-        const std::vector<std::unique_ptr<INeighborhood>>& getNeighborhoods() const {
+        Solution executeSolo(opthirrygated::Solution &rootSolution);
+
+        const std::vector<std::shared_ptr<INeighborhood>>& getNeighborhoods() const {
             return neighborhoods;
         }
     };

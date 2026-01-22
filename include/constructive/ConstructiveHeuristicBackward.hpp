@@ -6,7 +6,7 @@
 namespace opthirrygated {
 
     class ConstructiveHeuristicBackward : public AbstractConstructiveHeuristic {
-        void normalizerAdf(vector<int> &solution, vector<float> &solutionAdf);
+        void normalizerAdf(vector<int> &solution, vector<float> &solutionAdf, float &score);
     public:
         explicit ConstructiveHeuristicBackward(Instance &instance)
                 : AbstractConstructiveHeuristic(instance) {}

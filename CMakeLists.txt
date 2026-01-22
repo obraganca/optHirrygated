@@ -45,7 +45,9 @@ add_definitions(-DIL_STD)
 file(GLOB_RECURSE SOURCES "${SRC_DIR}/*.cpp")
 
 # Add executable
-add_executable(${PROJECT_NAME} ${SOURCES})
+add_executable(${PROJECT_NAME} ${SOURCES}
+        src/metaheuristic/ParticleSwarmOptimization.cpp
+        include/metaheuristic/ParticleSwarmOptimization.hpp)
 
 # Link OpenXLSX library
 target_link_libraries(${PROJECT_NAME}

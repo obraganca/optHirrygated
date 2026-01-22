@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector>
-#include <memory>
+#include <float.h>
 
+#include <memory>
 #include "../include/Instance.hpp"
 #include "../include/Measurer.hpp"
 #include "../include/Solution.hpp"
 #include "../include/constructive/ConstructiveHeuristicBackward.hpp"
-#include "../include/constructive/ConstructiveHeuristicSemiGreedy.hpp"
 #include "../include/constructive/ConstructiveHeuristicFoward.hpp"
 #include "../include/constructive/ConstructiveHeuristicLookahead.hpp"
 #include "../include/refinement/RefinementHeuristicVND.hpp"
@@ -20,18 +20,9 @@
 #include "neighborhood/NeighborhoodPatternBased.hpp"
 #include "local_search/BestImprovementLocalSearch.hpp"
 #include "metaheuristic/MonteCarloTreeSearch.hpp"
+#include "metaheuristic/ParticleSwarmOptimization.hpp"
 using namespace std;
 using namespace opthirrygated;
-
-std::vector<std::unique_ptr<INeighborhood>> getNeighborhoods() {
-    std::vector<std::unique_ptr<INeighborhood>> vNeighborhood;
-    vNeighborhood.push_back(make_unique<NeighborhoodGradualReduction>());
-    vNeighborhood.push_back(make_unique<NeighborhoodSmartReplacement>());
-    vNeighborhood.push_back(make_unique<NeighborhoodReduceHighIrrigation>());
-    vNeighborhood.push_back(make_unique<NeighborhoodPatternBased>());
-    return vNeighborhood;
-}
-
 
 int main() {
     Instance instance("../datasource/planilha.xlsx");
@@ -65,19 +56,25 @@ int main() {
     }
     cout<<"]"<<endl;
 
-
     cout << "---------------------------------------------------------------"<<endl;
 
-    ConstructiveHeuristicFoward constructiveHeuristic(instance);
+    std::vector<std::shared_ptr<INeighborhood>> neighborhoods;
+    neighborhoods.push_back(std::make_shared<NeighborhoodGradualReduction>());
+    neighborhoods.push_back(std::make_shared<NeighborhoodSmartReplacement>());
+    neighborhoods.push_back(std::make_shared<NeighborhoodReduceHighIrrigation>());
+    neighborhoods.push_back(std::make_shared<NeighborhoodPatternBased>());
+
+
+    //ConstructiveHeuristicLookahead constructiveHeuristic(instance, 10);
+    ConstructiveHeuristicBackward constructiveHeuristic(instance);
     BestImprovementLocalSearch bestLocalSearch;
     RefinementHeuristicVND refinementHeuristic(instance);
-    MonteCarloTreeSearch metaheuristic(instance, measurer, getNeighborhoods());
-
+    //MonteCarloTreeSearch metaheuristic(instance, measurer, neighborhoods);
+    ParticleSwarmOptimization metaheuristic(instance, measurer);
     solution = constructiveHeuristic.execute();
-    //solution = refinementHeuristic.execute(solution, getNeighborhoods(), bestLocalSearch);
-    //for(int i =0; i<36; i++)
-        //solution = refinementHeuristic.execute(solution, getNeighborhoods(), bestLocalSearch);
-        // solution = metaheuristic.execute(solution);
+
+    solution = refinementHeuristic.execute(solution, neighborhoods, bestLocalSearch);
+    solution = metaheuristic.execute(solution);
 
 
     cout << "Solution validation: " << (measurer.validation(solution) ? "is valid": "is invalid") << endl;
@@ -91,38 +88,6 @@ int main() {
     cout<<"]"<<endl;
 
     cout << "---------------------------------------------------------------"<<endl;
-
-
-/*
-    CSVExporter exporter;
-    SolutionProcessor sp;
-    exporter.exportToCSV(sp.processSolution(instance, solution), "result.csv");
-    Measurer measurer(instance);
-    std::vector<int> validationSolution = {
-        10, 10, 10,  1, 10, 10, 10,  0,  1,  1,
-         0,  1,  1,  1,  1,  1,  1,  1,  1,  1,
-         1,  1,  1,  1,  1,  1,  1,  1,  1,  1,
-         1,  1,  0,  1,  1,  1,  0,  1,  1,  1,
-         1,  1,  1,  1,  1,  1,  1,  1,  1,  1,
-         1,  1,  1,  1,  1, 10,  1,  0, 10,  1,
-        10, 10, 10, 10,  1, 10, 10,  1, 10,  0,
-         0,  0, 10, 10, 10, 10,  1, 10,  1,  1,
-        10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
-        10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
-        10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
-        10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
-        10, 10, 10
-    };
-
-    solution.setSolution(validationSolution);
-
-    cout << "Validating the solution exact "<< endl;
-    if (measurer.validation(exactSol)) {
-        cout << "Valid solution" <<endl;
-    }else {
-        cout << "Solution not valid" <<endl;
-    }
-    */
 
     return 0;
 }

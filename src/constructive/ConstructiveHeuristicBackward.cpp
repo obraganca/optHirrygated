@@ -14,9 +14,10 @@ Solution ConstructiveHeuristicBackward::execute() {Solution objSolution;
     float adi=0 , adf = 0;
 
     int numDays = inst.getCicle().size();
+    float totalBestScore = 0;
     for (int day = numDays-1; day >= 0; day--) {
-        float bestScore = FLT_MAX;
         int bestPerc = -1;
+        float bestScore = FLT_MAX;
 
         if(day == 0){
             adi = inst.getCad()[0];
@@ -37,36 +38,50 @@ Solution ConstructiveHeuristicBackward::execute() {Solution objSolution;
 
         if(bestPerc == -1){
             bestPerc = inst.getPerc()[inst.getPerc().size()-2];
+
             adf = adi - inst.getEtc()[day] + inst.getPrec()[day] + inst.getLamp()[bestPerc];
+
+            bestScore = inst.getCost()[bestPerc];
         }
 
         solution.push_back(bestPerc);
         adi = adf;
         adfSol.push_back(adf);
+        totalBestScore+=bestScore;
     }
     reverse(solution.begin(), solution.end());
     reverse(adfSol.begin(), adfSol.end());
 
-    normalizerAdf(solution, adfSol);
+    normalizerAdf(solution, adfSol, totalBestScore);
 
+
+
+    objSolution.setScore(totalBestScore);
     objSolution.setSolution(move(solution));
     objSolution.setAdfSolution(move(adfSol));
+    objSolution.constructCriticalLimitDelt(inst);
+
     return objSolution;
 }
 
 void ConstructiveHeuristicBackward::normalizerAdf(
         vector<int> &solution,
-        vector<float> &solutionAdf
+        vector<float> &solutionAdf,
+        float &score
 ) {
 
     vector<int> auxSolution = solution;
     vector<float> auxSolutionAdf = solutionAdf;
+    float inf_f = std::numeric_limits<float>::infinity();
 
     for(int day =0; day< solution.size(); day++){
 
         float adi = day == 0 ? inst.getCad()[0] : auxSolutionAdf[day-1];
         float auxAdf = adi - inst.getEtc()[day] + inst.getPrec()[day] + inst.getLamp()[auxSolution[day]];
         auxSolutionAdf[day] = auxAdf;
+        if (auxAdf < inst.getLc()[day]) {
+            score = inf_f;
+        }
     }
     solution    = move(auxSolution);
     solutionAdf = move(auxSolutionAdf);

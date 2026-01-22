@@ -36,7 +36,7 @@ float Measurer::evaluate(Solution& solution) {
     return costSolution;
 }
 
-bool Measurer::validation(Solution& solution) {
+bool Measurer::validation(Solution solution) {
     float adi = inst.getCad()[0], adf = 0;
 
     size_t numDays = solution.getSolution().size();
@@ -119,6 +119,7 @@ float Measurer::evaluateRange(Solution& solution, int startIdx, int endIdx) {
     return costSolution;
 }
 
+/*
 bool Measurer::isFeasible(const Solution &solution, int d) const {
     auto adfSolutions = solution.getAdfSolutions();
     const auto& solutionVec = solution.getSolution();
@@ -135,6 +136,7 @@ bool Measurer::isFeasible(const Solution &solution, int d) const {
     }
 
     // Fixed loop condition - should be < not <=
+
     for (int day = d; day < static_cast<int>(adfSolutions.size()); day++) {
         // Safety checks for array access
         if (day >= static_cast<int>(inst.getEtc().size()) ||
@@ -160,6 +162,23 @@ bool Measurer::isFeasible(const Solution &solution, int d) const {
         adi = auxAdf;
     }
     return true;
+}
+
+*/
+
+bool Measurer::isFeasible(const Solution &solution, int d, float deltAdf) {
+    auto adfSolutions = solution.getAdfSolutions();
+    const auto& solutionVec = solution.getSolution();
+
+    // Safety checks
+    if (d < 0 || adfSolutions.empty() || solutionVec.empty() || adfSolutions.size() < d) {
+        return false;
+    }
+
+    if(0.0f <= solution.getCriticalSolutions()[d]-deltAdf) {
+        return true;
+    }
+    return false;
 }
 
 

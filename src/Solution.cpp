@@ -1,5 +1,7 @@
 #include <stdio.h>
+#include <float.h>
 #include <iostream>
+#include <algorithm>
 #include "../include/Solution.hpp"
 #include "../include/Instance.hpp"
 
@@ -17,6 +19,23 @@ namespace opthirrygated{
             float auxAdf = adi - inst.getEtc()[day] + inst.getPrec()[day] + inst.getLamp()[this->getSolution()[day]];
             this->updateAdfSolution(day, auxAdf);
         }
+    }
+
+    void Solution::constructCriticalLimitDelt(const Instance inst){
+        vector<float> vc;
+        float delt = FLT_MAX;
+        for (int day =inst.getCicle().size()-1; day>=0; day--) {
+            float auxDelt = getAdfSolutions()[day] - inst.getLc()[day];
+            if(auxDelt < delt){
+                vc.push_back(auxDelt);
+                delt = auxDelt;
+            }else{
+                vc.push_back(delt);
+            }
+        }
+
+        reverse(vc.begin(), vc.end());
+        setCriticalSolution(vc);
     }
 
     std::vector<int> Solution::getHighIrrigationDays() {

@@ -8,6 +8,8 @@ using namespace opthirrygated;
 
 
 Solution ConstructiveHeuristicB::execute() {
+
+    float inf_f = std::numeric_limits<float>::infinity();
     Solution objSolution;
     vector<int> solution;
     vector<float> adfSolution;
@@ -15,6 +17,7 @@ Solution ConstructiveHeuristicB::execute() {
     float adi = inst.getCad()[0], adf = 0;
 
     size_t numDays = inst.getCicle().size();
+    float totalBestScore = 0;
     for (size_t day = 0; day < numDays; day++) {
         float bestPrice = FLT_MAX;
         int bestPerc = 10;
@@ -40,7 +43,7 @@ Solution ConstructiveHeuristicB::execute() {
         }
 
         if(adf<inst.getLc()[day]){
-            cout<<auxAdf << "ERROR"<<endl;
+            bestPrice = inf_f;
         }
 
         if (bestPerc != -1) {
@@ -51,9 +54,12 @@ Solution ConstructiveHeuristicB::execute() {
 
         adi = adf;
         adfSolution.push_back(adf);
+        totalBestScore+=bestPrice;
     }
 
     objSolution.setSolution(std::move(solution));
     objSolution.setAdfSolution(std::move(adfSolution));
+    objSolution.constructCriticalLimitDelt(inst);
+    objSolution.setScore(totalBestScore);
     return objSolution;
 }

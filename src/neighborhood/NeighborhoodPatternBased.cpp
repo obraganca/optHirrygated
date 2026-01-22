@@ -3,6 +3,7 @@
 
 using namespace opthirrygated;
 
+
 Solution NeighborhoodPatternBased::execute(const Solution& s, Instance& inst) {
     Solution cand = s;
     int D = cand.getSolution().size();
@@ -14,24 +15,44 @@ Solution NeighborhoodPatternBased::execute(const Solution& s, Instance& inst) {
 
     while (attempts < max_attempts) {
         cand = s;
-        std::uniform_int_distribution<int> dayDist(0, D - 5);
+        std::uniform_int_distribution<int> dayDist(0, std::max(0, D -1));
         int startDay = dayDist(rng);
 
         std::vector<int> lowLevels = {0, 1, 2, 10};
-        std::uniform_int_distribution<int> levelDist(0, lowLevels.size() - 1);
-        int level = lowLevels[levelDist(rng)];
+        int level = lowLevels[ std::uniform_int_distribution<int>(0, lowLevels.size()-1)(rng) ];
 
         int seqLength = std::uniform_int_distribution<int>(3, 5)(rng);
-        for (int i = 0; i < seqLength && (startDay + i) < D; ++i) {
-            cand.updateSolution(startDay + i, level);
+        int endDay = std::min(startDay + seqLength, D);
+
+        float deltaScore = 0.0f;
+
+        float lampDiff = 0.0f;
+        bool ok = true;
+        for (int i = startDay; i < endDay; ++i) {
+            cand.updateSolution(i, level);
+
+            lampDiff += inst.getLamp()[s.getSolution()[i]] - inst.getLamp()[level];
+
+            deltaScore += (inst.getCost()[level] - inst.getCost()[s.getSolution()[i]]);
+
+            if (!measurer.isFeasible(s, i, lampDiff)) {
+                ok = false;
+                break;
+            }
         }
 
+        if (!ok) { attempts++; continue; }
+
+        // Agora sim, atualizar tudo
         cand.propagate(inst, startDay);
-        if (measurer.isFeasible(cand, startDay)) {
-            return cand;
-        }
+        cand.constructCriticalLimitDelt(inst);
 
-        attempts++;
+        // Score deve ser s.score + delta
+        cand.setScore( s.getScore() + deltaScore );
+
+        return cand;
     }
+
     return s;
 }
+

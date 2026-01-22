@@ -8,22 +8,20 @@
 using namespace std;
 using namespace opthirrygated;
 
-
-Solution RefinementHeuristicVND::execute(Solution &solution,  std::vector<std::unique_ptr<opthirrygated::INeighborhood>> neighborhoods, ILocalSearch& localSearch) {
+Solution RefinementHeuristicVND::execute(Solution& solution,
+                                        std::vector<std::shared_ptr<INeighborhood>>& neighborhoods,
+                                        ILocalSearch& localSearch) {
     if (solution.getSolution().size() == 0) return solution;
-    Measurer measurer(inst);
 
-    int k =0;
 
+    int k = 0;
     while (k < neighborhoods.size()) {
-
         Solution aux = localSearch.run(solution, inst, *neighborhoods[k]);
-
-        if (measurer.evaluate(aux) < measurer.evaluate(solution)) {
+        if (aux.getScore() < solution.getScore()) {
             solution = aux;
-            k = 0; // reinicia quando há melhora
+            k = 0; // restart when improvement found
         } else {
-            k++; // só incrementa quando não melhora
+            k++; // move to next neighborhood
         }
     }
     return solution;

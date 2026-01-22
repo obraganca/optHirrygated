@@ -12,7 +12,9 @@ namespace opthirrygated{
     class IRefinementHeuristic{
     public:
         virtual ~IRefinementHeuristic()=default;
-        virtual Solution execute(Solution &solution,  std::vector<std::unique_ptr<opthirrygated::INeighborhood>> neighborhoods, ILocalSearch& localSearch) = 0;
+        virtual Solution execute(Solution &solution,
+                        std::vector<std::shared_ptr<INeighborhood>>& neighborhoods,
+                        ILocalSearch& localSearch) = 0;
     };
 }
 

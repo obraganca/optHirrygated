@@ -54,14 +54,17 @@ namespace opthirrygated {
         Measurer measurer(inst);
         int k = 1;
 
+        float bestScore = measurer.evaluate(solution);
         while (k <= maxBlocks) {
             int startIdx = k - 1; // Starts at 0, then 1, then 2, etc.
             int endIdx = startIdx + LEN - 1;
 
             Solution aux = findBestNeighbor(solution, startIdx, endIdx);
 
-            if (measurer.evaluate(aux) < measurer.evaluate(solution)) {
+            float potentialScore = measurer.evaluate(aux);
+            if ( potentialScore < bestScore) {
                 solution = aux;
+                bestScore = potentialScore;
                 k = 1; // Reset to first block when improvement found
             } else {
                 ++k;

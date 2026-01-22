@@ -5,7 +5,23 @@ using namespace opthirrygated;
 
 Solution MonteCarloTreeSearch::execute(opthirrygated::Solution &rootSolution) {
 
-    float initialCost = measurer.evaluate(const_cast<Solution &>(rootSolution));
+    int maxIterations = 150, k=0;
+    while (k < maxIterations) {
+        Solution solution = executeSolo(rootSolution);
+        if (solution.getScore() < rootSolution.getScore()) {
+            rootSolution = solution;
+            k=0;
+            continue;
+        }
+        k++;
+    }
+
+    return rootSolution;
+}
+
+Solution MonteCarloTreeSearch::executeSolo(opthirrygated::Solution &rootSolution) {
+
+    float initialCost = rootSolution.getScore();
 
     // Initialize the root node
     MCTSNode root(rootSolution, nullptr);
@@ -16,10 +32,6 @@ Solution MonteCarloTreeSearch::execute(opthirrygated::Solution &rootSolution) {
     std::unordered_map<std::string, double> patternRewards;
 
     for (int it = 0; it < mctsIters; ++it) {
-        if ((it + 1) % 500 == 0) {
-            std::cout << "Iteration " << (it + 1) << "/" << mctsIters
-                      << " - Best cost: " << globalBestCost << std::endl;
-        }
 
         MCTSNode* node = treePolicy(&root);
         if (!node) break;
@@ -28,22 +40,17 @@ Solution MonteCarloTreeSearch::execute(opthirrygated::Solution &rootSolution) {
         backup(node, reward);
 
         // Update global best
-        float currentCost = measurer.evaluate(node->sol);
+        float currentCost = node->sol.getScore();
         if (currentCost < globalBestCost) {
             globalBestCost = currentCost;
             globalBest = node->sol;
-            //std::cout << "*** NEW GLOBAL BEST: " << globalBestCost << " at iteration " << (it + 1) << std::endl;
         }
 
         // Adaptive exploration: increase exploration if no improvement for a while
         if (it > 0 && it % 1000 == 0) {
-            mctsC = std::min(mctsC * 1.1, 3.0); // Increase exploration
+            mctsC = std::min(mctsC * 2.1, 3.0); // Increase exploration
         }
     }
-
-    for (const auto& [level, freq] : irrigationFrequency) {
-    }
-
     return globalBest;
 }
 
@@ -81,7 +88,7 @@ bool MonteCarloTreeSearch::isValidCandidate(const Solution& candidate, const Sol
     if (!isDifferent) return false;
 
     // Quick feasibility check
-    return measurer.isFeasible(candidate, 0);
+    return measurer.validation(candidate);
 }
 
 /*
@@ -110,18 +117,18 @@ MonteCarloTreeSearch::MCTSNode* MonteCarloTreeSearch::bestChild(MCTSNode* node, 
 }
 
 
+/*  Simulation */
 double MonteCarloTreeSearch::defaultPolicy(const Solution& sol,
                                           std::unordered_map<int, int>& irrigationFreq,
                                           std::unordered_map<std::string, double>& patternRewards) {
     Solution sim = sol;
     Measurer measurer(inst);
-    float initialCost = measurer.evaluate(sim);
+    float initialCost = sim.getScore();
 
     // Focused rollout strategies
     int D = sim.getAdfSolutions().size();
     if (D == 0) return -initialCost;
 
-    // Strategy: Aggressive reduction of high irrigation (>= 3 and < 10)
     std::vector<int> highIrrigationDays;
     for (int day = 0; day < D; ++day) {
         if (sol.getSolution()[day] >= 3 && sol.getSolution()[day] < 10) {
@@ -131,7 +138,6 @@ double MonteCarloTreeSearch::defaultPolicy(const Solution& sol,
 
     int improvements = 0;
 
-    //Max Moves: Minimal default = 20, Maximal = quantity of high irrigation perc
     int maxMoves = std::min(mctsRolloutDepth, static_cast<int>(highIrrigationDays.size()));
 
     for (int move = 0; move < maxMoves; ++move) {
@@ -155,9 +161,11 @@ double MonteCarloTreeSearch::defaultPolicy(const Solution& sol,
 
             candidate.updateSolution(day, newLevel);
             candidate.propagate( inst, day);
-            if (measurer.isFeasible(candidate, day)) {
-                float newCost = measurer.evaluate(candidate);
-                if (newCost <= initialCost * 1.05) { // Allow slight cost increase for exploration
+            if (measurer.isFeasible(candidate, day, (float)(inst.getLamp()[sol.getSolution()[day]] - inst.getLamp()[newLevel]))) {
+                candidate.setScore(sim.getScore() + inst.getCost()[newLevel] - inst.getCost()[sim.getSolution()[day]]);
+                float newCost = candidate.getScore();
+
+                if (newCost <= initialCost * 1.75) { // Allow slight cost increase for exploration
                     sim = candidate;
                     improvements++;
                     irrigationFreq[newLevel]++;
@@ -176,7 +184,7 @@ double MonteCarloTreeSearch::defaultPolicy(const Solution& sol,
         }
     }
 
-    float finalCost = measurer.evaluate(sim);
+    float finalCost = sim.getScore();
 
     // Enhanced reward function
     double costImprovement = (initialCost - finalCost) / initialCost;
@@ -265,15 +273,10 @@ MonteCarloTreeSearch::MCTSNode* MonteCarloTreeSearch::expand(MCTSNode* node) {
 }
 
 void MonteCarloTreeSearch::backup(MCTSNode* node, double reward) {
-    //std::cout << "    Backup: propagating reward=" << reward << std::endl;
-
     int level = 0;
     while (node) {
         node->N += 1;
         node->W += reward;
-        //std::cout << "    Backup level " << level << ": N=" << node->N
-        //<< ", W=" << node->W
-        //<< ", avg=" << (node->W / node->N) << std::endl;
         node = node->parent;
         level++;
     }

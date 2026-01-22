@@ -16,7 +16,10 @@ namespace opthirrygated{
         Instance &inst;
     public:
         AbstractRefinementHeuristic(Instance &instance):inst(instance){}
-        virtual Solution execute(Solution &solution,  std::vector<std::unique_ptr<opthirrygated::INeighborhood>> neighborhoods, ILocalSearch& localSearch) = 0;
+
+        virtual Solution execute(Solution& solution,
+                                std::vector<std::shared_ptr<INeighborhood>>& neighborhoods,
+                                ILocalSearch& localSearch) = 0;
     };
 }
 
