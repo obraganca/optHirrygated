@@ -60,7 +60,6 @@ Solution ConstructiveHeuristicLookahead::execute() {
 unordered_map<long long, float> dp;
 
 
-/*
 float ConstructiveHeuristicLookahead::simulateLookahead( size_t day, float adi, int depth) {
     if (day >= inst.getCicle().size() || depth == 0)
         return 0;
@@ -87,7 +86,7 @@ float ConstructiveHeuristicLookahead::simulateLookahead( size_t day, float adi, 
 }
 
 
-*/
+/*
 
 float ConstructiveHeuristicLookahead::simulateLookahead(
         size_t day, float adi, int depth
@@ -124,3 +123,4 @@ float ConstructiveHeuristicLookahead::simulateLookahead(
     return bestCost;
 }
 
+*/

@@ -10,7 +10,7 @@ Solution BestImprovementLocalSearch::run(Solution& s, Instance& inst, INeighborh
         cand.constructCriticalLimitDelt(inst);
 
         if (cand.getScore() - best.getScore()<0) { // minimização
-            best = cand;
+            return cand;
         }
     }
     return best;

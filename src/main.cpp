@@ -65,17 +65,16 @@ int main() {
     neighborhoods.push_back(std::make_shared<NeighborhoodPatternBased>());
 
 
-    //ConstructiveHeuristicLookahead constructiveHeuristic(instance, 10);
-    ConstructiveHeuristicBackward constructiveHeuristic(instance);
+    ConstructiveHeuristicLookahead constructiveHeuristic(instance, 2);
+    //ConstructiveHeuristicBackward constructiveHeuristic(instance);
+    //ConstructiveHeuristicFoward constructiveHeuristic(instance);
     BestImprovementLocalSearch bestLocalSearch;
     RefinementHeuristicVND refinementHeuristic(instance);
-    //MonteCarloTreeSearch metaheuristic(instance, measurer, neighborhoods);
-    ParticleSwarmOptimization metaheuristic(instance, measurer);
+    MonteCarloTreeSearch metaheuristic(instance, measurer, neighborhoods);
+    //ParticleSwarmOptimization metaheuristic(instance, measurer);
     solution = constructiveHeuristic.execute();
-
     solution = refinementHeuristic.execute(solution, neighborhoods, bestLocalSearch);
     solution = metaheuristic.execute(solution);
-
 
     cout << "Solution validation: " << (measurer.validation(solution) ? "is valid": "is invalid") << endl;
 

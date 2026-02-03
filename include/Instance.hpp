@@ -18,6 +18,9 @@ namespace opthirrygated {
         vector<float> etc;
         vector<float> cad;
         vector<float> lc;
+        vector<int> lowLevels;
+        vector<int> highLevels;
+        int maxLowLevel;
         string path;
 
     public:
@@ -57,6 +60,18 @@ namespace opthirrygated {
         // Getter and Setter for lc
         vector<float> getLc() const { return lc; }
         void setLc(const vector<float>& newLc) { lc = newLc; }
+
+        // Getter and Setter for lowLevels
+        vector<int> getLowLevels() const { return lowLevels; }
+        void setLowLevels(const vector<int>& newLowLevels) { lowLevels = newLowLevels; }
+
+        // Getter and Setter for highLevels
+        vector<int> getHighLevels() const { return highLevels; }
+        void setHighLevels(const vector<int>& newHighLevels) { highLevels = newHighLevels; }
+
+        // Getter and Setter for maxLowLevel
+        int getMaxLowLevel() const { return maxLowLevel; }
+        void setMaxLowLevel(const int& newMaxLowLevel) { maxLowLevel = newMaxLowLevel; }
 
         // Getter and Setter for path
         string getPath() const { return path; }

@@ -45,14 +45,15 @@ namespace opthirrygated {
         double calculatePatternBonus(const Solution& sol);
 
 
+        int childrenSize=10;
     public:
 
         MonteCarloTreeSearch(Instance &instance,
                 Measurer& measurer,
                 vector<shared_ptr<INeighborhood>>&nh,
-                double C = 1.4142,
-                int iter = 1000,
-                int rollout_d = 20
+                double C = 1.2,
+                int iter = 50,
+                int rollout_d = 10
         ): AbstractMetaheuristic(instance, measurer), mctsC(C), mctsIters(iter), mctsRolloutDepth(rollout_d), neighborhoods(nh){};
 
         Solution execute(Solution& solution) override;

@@ -33,13 +33,11 @@ Solution ConstructiveHeuristicFoward::execute() {
 
         if(adf < inst.getLc()[day]){
             bestPrice = inf_f;
+            adf = adi;
         }
 
-        if (bestPerc != -1)
-            solution.push_back(bestPerc);
-        else
-            adf = adi;
 
+        solution.push_back(bestPerc);
         adi = adf;
         adfSol.push_back(adf);
         totalBestScore+=bestPrice;
@@ -49,6 +47,7 @@ Solution ConstructiveHeuristicFoward::execute() {
     objSolution.setScore(totalBestScore);
     objSolution.setSolution(std::move(solution));
     objSolution.setAdfSolution(std::move(adfSol));
+    objSolution.constructCriticalLimitDelt(inst);
     return objSolution;
 }
 

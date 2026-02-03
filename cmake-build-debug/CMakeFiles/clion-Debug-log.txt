@@ -1,4 +1,4 @@
-/snap/clion/411/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/obraganca/Documents/IC/optHirrygated -B /home/obraganca/Documents/IC/optHirrygated/cmake-build-debug
+/snap/clion/415/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/obraganca/Documents/IC/optHirrygated -B /home/obraganca/Documents/IC/optHirrygated/cmake-build-debug
 -- The C compiler identification is GNU 12.2.0
 -- The CXX compiler identification is GNU 12.2.0
 -- Detecting C compiler ABI info
@@ -21,6 +21,6 @@
 -- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
 -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
 Doxygen need to be installed to generate the doxygen documentation
--- Configuring done (3.4s)
--- Generating done (0.2s)
+-- Configuring done (3.5s)
+-- Generating done (0.1s)
 -- Build files have been written to: /home/obraganca/Documents/IC/optHirrygated/cmake-build-debug

@@ -39,6 +39,23 @@ void Instance::exec() {
         setLamp(loadColumn<float>(wks, "C", 2, 12));
 
 
+        double minLam = *min_element(lamp.begin(), lamp.end());
+        double maxLam = *max_element(lamp.begin(), lamp.end());
+
+
+        int lowThreshold = minLam+0.2*(maxLam-minLam);
+        int maxLowLam = 0;
+        for (int i=0; i<lamp.size(); i++) {
+            if (lamp[i] <= lamp[lowThreshold]) {
+                maxLowLam = lamp[i] > lamp[maxLowLam] ? i : maxLowLam ;
+                lowLevels.push_back(i);
+                continue;
+            }
+            highLevels.push_back(i);
+        }
+
+
+        setMaxLowLevel(maxLowLam);
 
     } catch (const std::exception& e) {
         cerr << "Error: " << e.what() << endl;

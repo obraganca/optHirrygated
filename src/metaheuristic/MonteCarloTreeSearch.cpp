@@ -5,7 +5,7 @@ using namespace opthirrygated;
 
 Solution MonteCarloTreeSearch::execute(opthirrygated::Solution &rootSolution) {
 
-    int maxIterations = 150, k=0;
+    int maxIterations = 100, k=0;
     while (k < maxIterations) {
         Solution solution = executeSolo(rootSolution);
         if (solution.getScore() < rootSolution.getScore()) {
@@ -130,8 +130,9 @@ double MonteCarloTreeSearch::defaultPolicy(const Solution& sol,
     if (D == 0) return -initialCost;
 
     std::vector<int> highIrrigationDays;
+
     for (int day = 0; day < D; ++day) {
-        if (sol.getSolution()[day] >= 3 && sol.getSolution()[day] < 10) {
+        if (inst.getLamp()[sol.getSolution()[day]] >= inst.getLamp()[inst.getMaxLowLevel()]) {
             highIrrigationDays.push_back(day);
         }
     }
@@ -139,6 +140,8 @@ double MonteCarloTreeSearch::defaultPolicy(const Solution& sol,
     int improvements = 0;
 
     int maxMoves = std::min(mctsRolloutDepth, static_cast<int>(highIrrigationDays.size()));
+
+    std::vector<int> reductionLevels = inst.getLowLevels();
 
     for (int move = 0; move < maxMoves; ++move) {
         if (highIrrigationDays.empty()) break;
@@ -149,7 +152,6 @@ double MonteCarloTreeSearch::defaultPolicy(const Solution& sol,
         int day = highIrrigationDays[dayIdx];
 
         // Try reducing to minimal irrigation levels (including ID 10 = no irrigation)
-        std::vector<int> reductionLevels = {0, 1, 2, 10};
         std::shuffle(reductionLevels.begin(), reductionLevels.end(), rng);
 
         bool foundValidMove = false;
@@ -241,16 +243,7 @@ MonteCarloTreeSearch::MCTSNode* MonteCarloTreeSearch::expand(MCTSNode* node) {
     int D = s.getAdfSolutions().size();
     if (D == 0) return node;
 
-    // Strategy 1: Focus on days with high irrigation (>= 3 and < 10)
-    std::vector<int> highIrrigationDays;
-    for (int day = 0; day < D; ++day) {
-        if (s.getSolution()[day] >= 3 && s.getSolution()[day] < 10) {
-            highIrrigationDays.push_back(day);
-        }
-    }
-
-
-    for (int attempt = 0; attempt < 10 && node->children.size() < 8; ++attempt) {
+    for (int attempt = 0; attempt < 10 && node->children.size() < childrenSize; ++attempt) {
         std::uniform_int_distribution<int> strategyDist(0, getNeighborhoods().size() - 1);
         int strategyIdx = strategyDist(rng);
 
@@ -261,7 +254,7 @@ MonteCarloTreeSearch::MCTSNode* MonteCarloTreeSearch::expand(MCTSNode* node) {
             auto child = std::make_unique<MCTSNode>(candidate, node);
             node->children.push_back(std::move(child));
 
-            if (node->children.size() >= 8) {
+            if (node->children.size() >= childrenSize) {
                 node->fullyExpanded = true;
             }
             return node->children.back().get();

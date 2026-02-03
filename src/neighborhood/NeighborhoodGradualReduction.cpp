@@ -7,6 +7,10 @@ using namespace opthirrygated;
 
 Solution NeighborhoodGradualReduction::execute(const Solution& s, Instance& inst) {
     Measurer measurer(inst);
+    if (s.getSolution().empty()) return s;
+    if (inst.getLowLevels().empty()) return s;
+
+    auto lowLevels = inst.getLowLevels();
 
     int D = s.getSolution().size();
     static std::mt19937 rng(std::random_device{}());
@@ -15,13 +19,11 @@ Solution NeighborhoodGradualReduction::execute(const Solution& s, Instance& inst
     int day = dayDist(rng);
     int current = s.getSolution()[day];
 
-    bool feasible=false;
-    if (current >= 3 && current <   10) {
-        std::vector<int> reductionOptions = {0, 1, 2, 10};
+    if (inst.getLamp()[current] > inst.getLamp()[inst.getMaxLowLevel()]) {
 
-        std::shuffle(reductionOptions.begin(), reductionOptions.end(), rng);
+        std::shuffle(lowLevels.begin(), lowLevels.end(), rng);
 
-        for (int newLevel : reductionOptions) {
+        for (int newLevel : lowLevels) {
             Solution cand = s;
             cand.updateSolution(day, newLevel);
 
@@ -33,6 +35,7 @@ Solution NeighborhoodGradualReduction::execute(const Solution& s, Instance& inst
                 cand.setScore(s.getScore() + (inst.getCost()[newLevel] - inst.getCost()[s.getSolution()[day]]));
                 return cand;
             }
+            break;
         }
     }
     return s;

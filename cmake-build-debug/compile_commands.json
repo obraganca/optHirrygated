@@ -1,0 +1,422 @@
+[
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/CSVExporter.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/CSVExporter.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/CSVExporter.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/CSVExporter.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/Exact.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/Exact.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/Exact.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/Exact.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/Instance.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/Instance.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/Instance.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/Instance.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/Measurer.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/Measurer.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/Measurer.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/Measurer.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/RefinementHeuristic.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/RefinementHeuristic.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/RefinementHeuristic.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/RefinementHeuristic.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/Solution.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/Solution.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/Solution.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/Solution.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/SolutionProcessor.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/SolutionProcessor.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/SolutionProcessor.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/SolutionProcessor.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicB.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicB.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicB.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicB.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicBackward.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicBackward.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicBackward.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicBackward.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicC.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicC.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicC.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicC.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicFoward.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicFoward.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicFoward.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicFoward.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicLookahead.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/constructive/ConstructiveHeuristicLookahead.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/local_search/BestImprovementLocalSearch.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/local_search/BestImprovementLocalSearch.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/main.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/main.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/main.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/metaheuristic/MonteCarloTreeSearch.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/metaheuristic/MonteCarloTreeSearch.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/metaheuristic/MonteCarloTreeSearch.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/metaheuristic/ParticleSwarmOptimization.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/metaheuristic/ParticleSwarmOptimization.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/metaheuristic/ParticleSwarmOptimization.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/metaheuristic/ParticleSwarmOptimization.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodGradualReduction.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodGradualReduction.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodGradualReduction.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodPatternBased.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodPatternBased.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodPatternBased.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodReduceHighIrrigation.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodSmartReplacement.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/neighborhood/NeighborhoodSmartReplacement.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug",
+  "command": "/usr/bin/c++ -DIL_STD -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/include -I/opt/ibm/ILOG/CPLEX_Studio2211/cplex/include -I/opt/ibm/ILOG/CPLEX_Studio2211/concert/include -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/src/refinement/RefinementHeuristicVND.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/src/refinement/RefinementHeuristicVND.cpp",
+  "output": "CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicVND.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLCell.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLCell.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLCell.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCell.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLCellIterator.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLCellIterator.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLCellIterator.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellIterator.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLCellRange.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLCellRange.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLCellRange.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellRange.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLCellReference.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLCellReference.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLCellReference.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellReference.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLCellValue.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLCellValue.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLCellValue.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLCellValue.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLColor.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLColor.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLColor.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLColor.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLColumn.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLColumn.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLColumn.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLColumn.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLComments.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLComments.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLComments.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLComments.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLContentTypes.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLContentTypes.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLContentTypes.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLContentTypes.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLDateTime.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLDateTime.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLDateTime.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDateTime.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLDocument.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLDocument.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLDocument.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDocument.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLDrawing.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLDrawing.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLDrawing.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLDrawing.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLFormula.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLFormula.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLFormula.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLFormula.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLMergeCells.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLMergeCells.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLMergeCells.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLMergeCells.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLProperties.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLProperties.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLProperties.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLProperties.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLRelationships.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLRelationships.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLRelationships.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRelationships.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLRow.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLRow.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLRow.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRow.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLRowData.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLRowData.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLRowData.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLRowData.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLSharedStrings.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLSharedStrings.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLSharedStrings.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLSharedStrings.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLSheet.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLSheet.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLSheet.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLSheet.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLStyles.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLStyles.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLStyles.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLStyles.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLTables.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLTables.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLTables.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLTables.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLWorkbook.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLWorkbook.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLWorkbook.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLWorkbook.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLXmlData.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLXmlData.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLXmlData.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlData.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLXmlFile.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLXmlFile.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLXmlFile.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlFile.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLXmlParser.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLXmlParser.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLXmlParser.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLXmlParser.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX",
+  "command": "/usr/bin/c++ -DCHARCONV_ENABLED -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml -g -std=c++17 -fPIC -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -o CMakeFiles/OpenXLSX.dir/sources/XLZipArchive.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLZipArchive.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/sources/XLZipArchive.cpp",
+  "output": "lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/sources/XLZipArchive.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/Demo1.dir/Demo1.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo1.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo1.cpp",
+  "output": "lib/OpenXLSX/Examples/CMakeFiles/Demo1.dir/Demo1.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/Demo2.dir/Demo2.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo2.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo2.cpp",
+  "output": "lib/OpenXLSX/Examples/CMakeFiles/Demo2.dir/Demo2.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/Demo3.dir/Demo3.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo3.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo3.cpp",
+  "output": "lib/OpenXLSX/Examples/CMakeFiles/Demo3.dir/Demo3.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/Demo4.dir/Demo4.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo4.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo4.cpp",
+  "output": "lib/OpenXLSX/Examples/CMakeFiles/Demo4.dir/Demo4.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/Demo5.dir/Demo5.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo5.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo5.cpp",
+  "output": "lib/OpenXLSX/Examples/CMakeFiles/Demo5.dir/Demo5.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/Demo6.dir/Demo6.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo6.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo6.cpp",
+  "output": "lib/OpenXLSX/Examples/CMakeFiles/Demo6.dir/Demo6.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/Demo7.dir/Demo7.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo7.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo7.cpp",
+  "output": "lib/OpenXLSX/Examples/CMakeFiles/Demo7.dir/Demo7.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/Demo8.dir/Demo8.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo8.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo8.cpp",
+  "output": "lib/OpenXLSX/Examples/CMakeFiles/Demo8.dir/Demo8.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/Demo9.dir/Demo9.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo9.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo9.cpp",
+  "output": "lib/OpenXLSX/Examples/CMakeFiles/Demo9.dir/Demo9.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/Demo10.dir/Demo10.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo10.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples/Demo10.cpp",
+  "output": "lib/OpenXLSX/Examples/CMakeFiles/Demo10.dir/Demo10.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/OpenXLSXTests.dir/main.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/main.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/main.cpp",
+  "output": "lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/main.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/OpenXLSXTests.dir/testXLDocument.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLDocument.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLDocument.cpp",
+  "output": "lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLDocument.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/OpenXLSXTests.dir/testXLCell.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLCell.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLCell.cpp",
+  "output": "lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCell.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/OpenXLSXTests.dir/testXLCellRange.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLCellRange.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLCellRange.cpp",
+  "output": "lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCellRange.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/OpenXLSXTests.dir/testXLCellReference.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLCellReference.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLCellReference.cpp",
+  "output": "lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCellReference.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/OpenXLSXTests.dir/testXLCellValue.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLCellValue.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLCellValue.cpp",
+  "output": "lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCellValue.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/OpenXLSXTests.dir/testXLCellValueProxy.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLCellValueProxy.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLCellValueProxy.cpp",
+  "output": "lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLCellValueProxy.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/OpenXLSXTests.dir/testXLColor.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLColor.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLColor.cpp",
+  "output": "lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLColor.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/OpenXLSXTests.dir/testXLDateTime.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLDateTime.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLDateTime.cpp",
+  "output": "lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLDateTime.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/OpenXLSXTests.dir/testXLFormula.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLFormula.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLFormula.cpp",
+  "output": "lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLFormula.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/OpenXLSXTests.dir/testXLRow.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLRow.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLRow.cpp",
+  "output": "lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLRow.cpp.o"
+},
+{
+  "directory": "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX -I/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers -I/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX -isystem /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch -g -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden -fdiagnostics-color=always -o CMakeFiles/OpenXLSXTests.dir/testXLSheet.cpp.o -c /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLSheet.cpp",
+  "file": "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/testXLSheet.cpp",
+  "output": "lib/OpenXLSX/Tests/CMakeFiles/OpenXLSXTests.dir/testXLSheet.cpp.o"
+}
+]

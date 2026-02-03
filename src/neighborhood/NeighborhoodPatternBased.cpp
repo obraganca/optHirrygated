@@ -5,6 +5,10 @@ using namespace opthirrygated;
 
 
 Solution NeighborhoodPatternBased::execute(const Solution& s, Instance& inst) {
+    if (s.getSolution().empty()) return s;
+    if (inst.getLowLevels().empty()) return s;
+
+    auto lowLevels = inst.getLowLevels();
     Solution cand = s;
     int D = cand.getSolution().size();
     static std::mt19937 rng(std::random_device{}());
@@ -18,10 +22,9 @@ Solution NeighborhoodPatternBased::execute(const Solution& s, Instance& inst) {
         std::uniform_int_distribution<int> dayDist(0, std::max(0, D -1));
         int startDay = dayDist(rng);
 
-        std::vector<int> lowLevels = {0, 1, 2, 10};
         int level = lowLevels[ std::uniform_int_distribution<int>(0, lowLevels.size()-1)(rng) ];
 
-        int seqLength = std::uniform_int_distribution<int>(3, 5)(rng);
+        int seqLength = std::uniform_int_distribution<int>(3, 8)(rng);
         int endDay = std::min(startDay + seqLength, D);
 
         float deltaScore = 0.0f;
@@ -35,7 +38,7 @@ Solution NeighborhoodPatternBased::execute(const Solution& s, Instance& inst) {
 
             deltaScore += (inst.getCost()[level] - inst.getCost()[s.getSolution()[i]]);
 
-            if (!measurer.isFeasible(s, i, lampDiff)) {
+            if (!measurer.isFeasible(cand, i, lampDiff)) {
                 ok = false;
                 break;
             }
@@ -49,7 +52,6 @@ Solution NeighborhoodPatternBased::execute(const Solution& s, Instance& inst) {
 
         // Score deve ser s.score + delta
         cand.setScore( s.getScore() + deltaScore );
-
         return cand;
     }
 

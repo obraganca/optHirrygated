@@ -44,16 +44,13 @@ Solution ConstructiveHeuristicB::execute() {
 
         if(adf<inst.getLc()[day]){
             bestPrice = inf_f;
-        }
-
-        if (bestPerc != -1) {
-            solution.push_back(bestPerc);
-        } else {
             adf = adi;
         }
 
-        adi = adf;
+
+        solution.push_back(bestPerc);
         adfSolution.push_back(adf);
+        adi = adf;
         totalBestScore+=bestPrice;
     }
 

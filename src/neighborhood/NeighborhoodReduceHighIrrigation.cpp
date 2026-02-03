@@ -5,6 +5,10 @@ using namespace opthirrygated;
 #include "Measurer.hpp"
 
 Solution NeighborhoodReduceHighIrrigation::execute(const Solution& s, Instance& inst) {
+    if (s.getSolution().empty()) return s;
+    if (inst.getLowLevels().empty()) return s;
+
+    auto lowLevels = inst.getLowLevels();
     Solution cand = s;
     std::vector<int> highIrrigationDays = cand.getHighIrrigationDays();
     if (highIrrigationDays.empty()) return cand;
@@ -13,27 +17,22 @@ Solution NeighborhoodReduceHighIrrigation::execute(const Solution& s, Instance& 
     std::uniform_int_distribution<int> dayDist(0, highIrrigationDays.size() - 1);
     int day = highIrrigationDays[dayDist(rng)];
 
-    std::vector<int> lowLevels = {0, 1, 2, 10};
     std::uniform_int_distribution<int> levelDist(0, lowLevels.size() - 1);
 
     Measurer measurer(inst);
     int tries = 0;
     const int maxTries = 10;
 
-    while (tries < maxTries) {
-        int newLevel = lowLevels[levelDist(rng)];
+    int newLevel = lowLevels[levelDist(rng)];
 
-        cand = s;
-        cand.updateSolution(day, newLevel);
+    cand = s;
+    cand.updateSolution(day, newLevel);
 
-        if (measurer.isFeasible(cand, day, (float)(inst.getLamp()[s.getSolution()[day]] - inst.getLamp()[newLevel]))) {
-            cand.propagate(inst, day);
-            cand.constructCriticalLimitDelt( inst);
-            cand.setScore(s .getScore() + (inst.getCost()[newLevel] - inst.getCost()[s.getSolution()[day]]));
-            return cand;
-        }
-
-        ++tries;
+    if (measurer.isFeasible(cand, day, (float)(inst.getLamp()[s.getSolution()[day]] - inst.getLamp()[newLevel]))) {
+        cand.propagate(inst, day);
+        cand.constructCriticalLimitDelt( inst);
+        cand.setScore(s .getScore() + (inst.getCost()[newLevel] - inst.getCost()[s.getSolution()[day]]));
+        return cand;
     }
 
     return s;
