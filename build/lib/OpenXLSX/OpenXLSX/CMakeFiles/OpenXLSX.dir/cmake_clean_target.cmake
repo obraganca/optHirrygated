@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "../../../output/libOpenXLSXd.a"
+  "../../../output/libOpenXLSX.a"
 )
