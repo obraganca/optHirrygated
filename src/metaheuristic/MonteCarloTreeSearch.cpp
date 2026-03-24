@@ -57,7 +57,7 @@ Solution MonteCarloTreeSearch::executeSolo(opthirrygated::Solution &rootSolution
 
 
 MonteCarloTreeSearch::MCTSNode* MonteCarloTreeSearch::treePolicy(MCTSNode* node) {
-    int maxDepth = 50;
+    int maxDepth = 10;
     int depth = 0;
 
     while (node && depth < maxDepth) {

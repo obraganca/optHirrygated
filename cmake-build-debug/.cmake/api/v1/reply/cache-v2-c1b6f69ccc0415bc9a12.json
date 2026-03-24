@@ -67,7 +67,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -143,7 +143,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/415/bin/cmake/linux/x64/bin/cmake"
+			"value" : "/snap/clion/435/bin/cmake/linux/x64/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/415/bin/cmake/linux/x64/bin/cpack"
+			"value" : "/snap/clion/435/bin/cmake/linux/x64/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -167,7 +167,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/415/bin/cmake/linux/x64/bin/ctest"
+			"value" : "/snap/clion/435/bin/cmake/linux/x64/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -199,7 +199,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-12"
+			"value" : "/usr/bin/gcc-ar-14"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -215,7 +215,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-12"
+			"value" : "/usr/bin/gcc-ranlib-14"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -327,7 +327,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-12"
+			"value" : "/usr/bin/gcc-ar-14"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -343,7 +343,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-12"
+			"value" : "/usr/bin/gcc-ranlib-14"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -571,7 +571,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -631,7 +631,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1259,7 +1259,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/415/bin/cmake/linux/x64/share/cmake-4.1"
+			"value" : "/snap/clion/435/bin/cmake/linux/x64/share/cmake-4.1"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1591,7 +1591,19 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "DOXYGEN_EXECUTABLE-NOTFOUND"
+			"value" : "/usr/bin/doxygen"
+		},
+		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Doxygen",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding Doxygen"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[/usr/bin/doxygen][found components: doxygen dot ][v1.9.8()]"
 		},
 		{
 			"name" : "OPENXLSX_BUILD_BENCHMARKS",
@@ -1666,6 +1678,18 @@
 			"value" : "OFF"
 		},
 		{
+			"name" : "OPENXLSX_ENABLE_LTO",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enables Link-Time Optimization (LTO)"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
+		},
+		{
 			"name" : "OPENXLSX_LIBRARY_TYPE",
 			"properties" : 
 			[
@@ -1687,7 +1711,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Documentation"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug/lib/OpenXLSX/Documentation"
 		},
 		{
 			"name" : "OpenXLSX.Documentation_IS_TOP_LEVEL",
@@ -1711,7 +1735,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Documentation"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/Documentation"
 		},
 		{
 			"name" : "OpenXLSX.Examples_BINARY_DIR",
@@ -1723,7 +1747,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples"
 		},
 		{
 			"name" : "OpenXLSX.Examples_IS_TOP_LEVEL",
@@ -1747,7 +1771,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/Examples"
 		},
 		{
 			"name" : "OpenXLSX.Library_BINARY_DIR",
@@ -1759,7 +1783,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX"
 		},
 		{
 			"name" : "OpenXLSX.Library_IS_TOP_LEVEL",
@@ -1783,7 +1807,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/OpenXLSX"
 		},
 		{
 			"name" : "OpenXLSX.Tests_BINARY_DIR",
@@ -1795,7 +1819,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug/lib/OpenXLSX/Tests"
 		},
 		{
 			"name" : "OpenXLSX.Tests_IS_TOP_LEVEL",
@@ -1819,7 +1843,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/Tests"
 		},
 		{
 			"name" : "OpenXLSX_BINARY_DIR",
@@ -1831,7 +1855,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug/lib/OpenXLSX"
 		},
 		{
 			"name" : "OpenXLSX_IS_TOP_LEVEL",
@@ -1855,7 +1879,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX"
 		},
 		{
 			"name" : "_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX",
@@ -1879,7 +1903,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug"
 		},
 		{
 			"name" : "optHirrygated_IS_TOP_LEVEL",
@@ -1903,7 +1927,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/obraganca/Documents/IC/optHirrygated"
+			"value" : "/home/obraganca/Documentos/Projects/optHirrygated"
 		}
 	],
 	"kind" : "cache",

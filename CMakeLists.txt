@@ -1,10 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(optHirrygated)
 
-# Use C++17 standard
+# Configurações gerais
 set(CMAKE_CXX_STANDARD 17)
-
-# Add source directory
 set(SRC_DIR src)
 set(INCLUDE_DIR include)
 
@@ -18,46 +16,48 @@ set(CONCERT_INCLUDE_DIR "${CONCERTDIR}/include")
 set(CPLEX_LIB_DIR "${CPLEXDIR}/lib/${SYSTEM}/${LIBFORMAT}")
 set(CONCERT_LIB_DIR "${CONCERTDIR}/lib/${SYSTEM}/${LIBFORMAT}")
 
-# Find OpenXLSX in lib/OpenXLSX
+# Subdiretórios externos
 add_subdirectory(lib/OpenXLSX)
-
 
 # Include directories
 include_directories(
         ${INCLUDE_DIR}
         lib/OpenXLSX/include
         ${CPLEX_INCLUDE_DIR}
-        ${CONCERT_INCLUDE_DIR}       
-        )
-
-
-# Diretórios de link
-link_directories(
-    ${CPLEX_LIB_DIR}
-    ${CONCERT_LIB_DIR}
+        ${CONCERT_INCLUDE_DIR}
 )
 
+# Link directories
+link_directories(
+        #${CPLEX_LIB_DIR}
+        #${CONCERT_LIB_DIR}
+)
 
-# Define o compilador para aceitar ILOG CPLEX padrão C++
+# Define macro padrão CPLEX
 add_definitions(-DIL_STD)
 
-# Find all .cpp files in src/
-file(GLOB_RECURSE SOURCES "${SRC_DIR}/*.cpp")
+# Fonte principal
+# Gera lista de todos os .cpp
+file(GLOB_RECURSE ALL_SOURCES "${SRC_DIR}/*.cpp")
 
-# Add executable
-add_executable(${PROJECT_NAME} ${SOURCES}
-        src/metaheuristic/ParticleSwarmOptimization.cpp
-        include/metaheuristic/ParticleSwarmOptimization.hpp)
+# Cria lista filtrada ignorando arquivos Exact*
+set(SOURCES "")
+foreach(F ${ALL_SOURCES})
+    get_filename_component(NAME ${F} NAME_WE)
+    if(NOT NAME MATCHES "^Exact")  # ignora Exact.cpp
+        list(APPEND SOURCES ${F})
+    endif()
+endforeach()
 
-# Link OpenXLSX library
+# Cria o executável
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+# Link das bibliotecas
 target_link_libraries(${PROJECT_NAME}
-    OpenXLSX
-    ilocplex
-    cplex
-    concert
-    pthread
-    dl    
-    )
-
-
-
+        OpenXLSX
+        #ilocplex
+        #cplex
+        #concert
+        pthread
+        dl
+)

@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/415/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/435/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/415/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/435/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/obraganca/Documents/IC/optHirrygated
+CMAKE_SOURCE_DIR = /home/obraganca/Documentos/Projects/optHirrygated
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/obraganca/Documents/IC/optHirrygated/cmake-build-debug
+CMAKE_BINARY_DIR = /home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/obraganca/Documents/IC/optHirrygated/cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	/snap/clion/415/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/435/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/snap/clion/415/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/435/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,44 +97,44 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/snap/clion/415/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+	/snap/clion/435/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/snap/clion/415/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+	/snap/clion/435/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/snap/clion/415/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/snap/clion/435/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/snap/clion/415/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/snap/clion/435/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/snap/clion/415/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/snap/clion/435/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/snap/clion/415/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/snap/clion/435/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/CMakeFiles /home/obraganca/Documents/IC/optHirrygated/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug/CMakeFiles /home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -186,6 +186,19 @@ OpenXLSX: cmake_check_build_system
 OpenXLSX/fast:
 	$(MAKE) $(MAKESILENT) -f lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/build.make lib/OpenXLSX/OpenXLSX/CMakeFiles/OpenXLSX.dir/build
 .PHONY : OpenXLSX/fast
+
+#=============================================================================
+# Target rules for targets named Documentation
+
+# Build rule for target.
+Documentation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Documentation
+.PHONY : Documentation
+
+# fast build rule for target.
+Documentation/fast:
+	$(MAKE) $(MAKESILENT) -f lib/OpenXLSX/Documentation/CMakeFiles/Documentation.dir/build.make lib/OpenXLSX/Documentation/CMakeFiles/Documentation.dir/build
+.PHONY : Documentation/fast
 
 #=============================================================================
 # Target rules for targets named Demo1
@@ -353,30 +366,6 @@ src/CSVExporter.s: src/CSVExporter.cpp.s
 src/CSVExporter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/CSVExporter.cpp.s
 .PHONY : src/CSVExporter.cpp.s
-
-src/Exact.o: src/Exact.cpp.o
-.PHONY : src/Exact.o
-
-# target to build an object file
-src/Exact.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/Exact.cpp.o
-.PHONY : src/Exact.cpp.o
-
-src/Exact.i: src/Exact.cpp.i
-.PHONY : src/Exact.i
-
-# target to preprocess a source file
-src/Exact.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/Exact.cpp.i
-.PHONY : src/Exact.cpp.i
-
-src/Exact.s: src/Exact.cpp.s
-.PHONY : src/Exact.s
-
-# target to generate assembly for a file
-src/Exact.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/Exact.cpp.s
-.PHONY : src/Exact.cpp.s
 
 src/Instance.o: src/Instance.cpp.o
 .PHONY : src/Instance.o
@@ -666,6 +655,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/metaheuristic/ILS.o: src/metaheuristic/ILS.cpp.o
+.PHONY : src/metaheuristic/ILS.o
+
+# target to build an object file
+src/metaheuristic/ILS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/metaheuristic/ILS.cpp.o
+.PHONY : src/metaheuristic/ILS.cpp.o
+
+src/metaheuristic/ILS.i: src/metaheuristic/ILS.cpp.i
+.PHONY : src/metaheuristic/ILS.i
+
+# target to preprocess a source file
+src/metaheuristic/ILS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/metaheuristic/ILS.cpp.i
+.PHONY : src/metaheuristic/ILS.cpp.i
+
+src/metaheuristic/ILS.s: src/metaheuristic/ILS.cpp.s
+.PHONY : src/metaheuristic/ILS.s
+
+# target to generate assembly for a file
+src/metaheuristic/ILS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/metaheuristic/ILS.cpp.s
+.PHONY : src/metaheuristic/ILS.cpp.s
+
 src/metaheuristic/MonteCarloTreeSearch.o: src/metaheuristic/MonteCarloTreeSearch.cpp.o
 .PHONY : src/metaheuristic/MonteCarloTreeSearch.o
 
@@ -810,6 +823,30 @@ src/neighborhood/NeighborhoodSmartReplacement.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/neighborhood/NeighborhoodSmartReplacement.cpp.s
 .PHONY : src/neighborhood/NeighborhoodSmartReplacement.cpp.s
 
+src/refinement/RefinementHeuristicRVND.o: src/refinement/RefinementHeuristicRVND.cpp.o
+.PHONY : src/refinement/RefinementHeuristicRVND.o
+
+# target to build an object file
+src/refinement/RefinementHeuristicRVND.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicRVND.cpp.o
+.PHONY : src/refinement/RefinementHeuristicRVND.cpp.o
+
+src/refinement/RefinementHeuristicRVND.i: src/refinement/RefinementHeuristicRVND.cpp.i
+.PHONY : src/refinement/RefinementHeuristicRVND.i
+
+# target to preprocess a source file
+src/refinement/RefinementHeuristicRVND.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicRVND.cpp.i
+.PHONY : src/refinement/RefinementHeuristicRVND.cpp.i
+
+src/refinement/RefinementHeuristicRVND.s: src/refinement/RefinementHeuristicRVND.cpp.s
+.PHONY : src/refinement/RefinementHeuristicRVND.s
+
+# target to generate assembly for a file
+src/refinement/RefinementHeuristicRVND.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optHirrygated.dir/build.make CMakeFiles/optHirrygated.dir/src/refinement/RefinementHeuristicRVND.cpp.s
+.PHONY : src/refinement/RefinementHeuristicRVND.cpp.s
+
 src/refinement/RefinementHeuristicVND.o: src/refinement/RefinementHeuristicVND.cpp.o
 .PHONY : src/refinement/RefinementHeuristicVND.o
 
@@ -846,6 +883,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... Documentation"
 	@echo "... Demo1"
 	@echo "... Demo10"
 	@echo "... Demo2"
@@ -862,9 +900,6 @@ help:
 	@echo "... src/CSVExporter.o"
 	@echo "... src/CSVExporter.i"
 	@echo "... src/CSVExporter.s"
-	@echo "... src/Exact.o"
-	@echo "... src/Exact.i"
-	@echo "... src/Exact.s"
 	@echo "... src/Instance.o"
 	@echo "... src/Instance.i"
 	@echo "... src/Instance.s"
@@ -901,6 +936,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/metaheuristic/ILS.o"
+	@echo "... src/metaheuristic/ILS.i"
+	@echo "... src/metaheuristic/ILS.s"
 	@echo "... src/metaheuristic/MonteCarloTreeSearch.o"
 	@echo "... src/metaheuristic/MonteCarloTreeSearch.i"
 	@echo "... src/metaheuristic/MonteCarloTreeSearch.s"
@@ -919,6 +957,9 @@ help:
 	@echo "... src/neighborhood/NeighborhoodSmartReplacement.o"
 	@echo "... src/neighborhood/NeighborhoodSmartReplacement.i"
 	@echo "... src/neighborhood/NeighborhoodSmartReplacement.s"
+	@echo "... src/refinement/RefinementHeuristicRVND.o"
+	@echo "... src/refinement/RefinementHeuristicRVND.i"
+	@echo "... src/refinement/RefinementHeuristicRVND.s"
 	@echo "... src/refinement/RefinementHeuristicVND.o"
 	@echo "... src/refinement/RefinementHeuristicVND.i"
 	@echo "... src/refinement/RefinementHeuristicVND.s"

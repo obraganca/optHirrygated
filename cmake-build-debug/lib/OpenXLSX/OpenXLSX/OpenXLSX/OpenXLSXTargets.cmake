@@ -51,7 +51,7 @@ add_library(OpenXLSX::OpenXLSX STATIC IMPORTED)
 
 set_target_properties(OpenXLSX::OpenXLSX PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "OPENXLSX_STATIC_DEFINE"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX;/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers;/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/OpenXLSX;/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/OpenXLSX/headers;/home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX"
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:Zippy>;\$<LINK_ONLY:PugiXML>"
 )
 
@@ -59,7 +59,7 @@ set_target_properties(OpenXLSX::OpenXLSX PROPERTIES
 set_property(TARGET OpenXLSX::OpenXLSX APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(OpenXLSX::OpenXLSX PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/output/libOpenXLSXd.a"
+  IMPORTED_LOCATION_DEBUG "/home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug/output/libOpenXLSXd.a"
   )
 
 # This file does not depend on other imported targets which have

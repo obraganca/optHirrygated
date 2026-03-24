@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+41e32b287af00e33978e6dd1b0adfa07 lib/OpenXLSX/Documentation/CMakeFiles/Documentation

@@ -63,20 +63,20 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX"
+					"path" : "/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/OpenXLSX"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers"
+					"path" : "/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/OpenXLSX/headers"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX"
+					"path" : "/home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX"
 				},
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
-					"path" : "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Tests/catch"
+					"path" : "/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/Tests/catch"
 				}
 			],
 			"language" : "CXX",

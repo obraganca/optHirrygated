@@ -1,4 +1,4 @@
-# Install script for directory: /home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/Examples
+# Install script for directory: /home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/Examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,6 +45,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples/install_local_manifest.txt"
+  file(WRITE "/home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug/lib/OpenXLSX/Examples/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -51,7 +51,7 @@ void ParticleSwarmOptimization::initializeParticles(Solution& solution) {
 
     // Other particles = perturbed versions (increasing perturbation)
     for (int i = 1; i < nParticles; ++i) {
-        double rate = 0.1 + 0.15 * i; // more gradual
+        double rate = 0.1 + 0.9 * i; // more gradual
         Solution perturbed = perturbSolution(solution, rate);
         perturbed.setScore(measurer.evaluate(perturbed));
         particles.emplace_back(perturbed, perturbed);

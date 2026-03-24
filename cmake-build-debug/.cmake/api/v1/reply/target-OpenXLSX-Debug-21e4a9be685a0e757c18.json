@@ -32,49 +32,49 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 134,
+				"line" : 135,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 304,
+				"line" : 307,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 259,
+				"line" : 262,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 83,
+				"line" : 84,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 153,
+				"line" : 154,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 137,
+				"line" : 138,
 				"parent" : 0
 			},
 			{
 				"command" : 6,
 				"file" : 0,
-				"line" : 142,
+				"line" : 143,
 				"parent" : 0
 			},
 			{
 				"command" : 7,
 				"file" : 0,
-				"line" : 136,
+				"line" : 137,
 				"parent" : 0
 			}
 		]
@@ -123,25 +123,25 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX"
+					"path" : "/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/OpenXLSX"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/headers"
+					"path" : "/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/OpenXLSX/headers"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/home/obraganca/Documents/IC/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX"
+					"path" : "/home/obraganca/Documentos/Projects/optHirrygated/cmake-build-debug/lib/OpenXLSX/OpenXLSX"
 				},
 				{
 					"backtrace" : 7,
 					"isSystem" : true,
-					"path" : "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy"
+					"path" : "/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/OpenXLSX/external/zippy"
 				},
 				{
 					"backtrace" : 7,
 					"isSystem" : true,
-					"path" : "/home/obraganca/Documents/IC/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml"
+					"path" : "/home/obraganca/Documentos/Projects/optHirrygated/lib/OpenXLSX/OpenXLSX/external/pugixml"
 				}
 			],
 			"language" : "CXX",
