@@ -50,6 +50,8 @@ Solution ConstructiveHeuristicLookahead::execute() {
         adfSol.push_back(adf);
     }
 
+
+    cout<<bestTotalScore<<endl;
     objSolution.setSolution(std::move(solution));
     objSolution.setAdfSolution(std::move(adfSol));
     objSolution.constructCriticalLimitDelt(inst);

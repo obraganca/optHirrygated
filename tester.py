@@ -28,7 +28,17 @@ from typing import Optional
 #  Edite esta lista para adicionar/remover suítes de testes.
 # ─────────────────────────────────────────────────────────────────────────────
 EXPERIMENT_SUITES = [
-    # ── Apenas construção ────────────────────────────────────────────────────
+    {
+        "name": "Lookahead_RVND_ILS",
+        "constructive": "lookahead",
+        "refinement": "rvnd",
+        "metaheuristic": "ils",
+        "ils_iterations": 100,
+        "ils_perturb": 5,
+        "lookahead_depth": 3,
+    },
+]
+"""EXPERIMENT_SUITES =[  
     {
         "name": "ForwardA_Apenas",
         "constructive": "forwardA",
@@ -218,6 +228,7 @@ EXPERIMENT_SUITES = [
         "lookahead_depth": 3,
     },
 ]
+"""
 # ─────────────────────────────────────────────────────────────────────────────
 #  Argument parsing
 # ─────────────────────────────────────────────────────────────────────────────
@@ -231,7 +242,7 @@ def build_parser() -> argparse.ArgumentParser:
                    help="Número de execuções por suíte")
     p.add_argument("--binary", type=str, default="./build/optHirrygated",
                    help="Caminho para o binário compilado")
-    p.add_argument("--datasource", type=str, default="./datasource/planilha.xlsx",
+    p.add_argument("--datasource", type=str, default="./datasource/planilha_milho.xlsx",
                    help="Caminho para o arquivo .xlsx de dados")
     p.add_argument("--timeout", type=float, default=3000.0,
                    help="Timeout por execução em segundos")
