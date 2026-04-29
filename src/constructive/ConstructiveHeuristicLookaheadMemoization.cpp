@@ -1,13 +1,12 @@
-#include "constructive/ConstructiveHeuristicLookahead.hpp"
+#include "constructive/ConstructiveHeuristicLookaheadMemoization.hpp"
 #include "../include/Instance.hpp"
 #include "../include/Solution.hpp"
 #include <float.h>
-#include <unordered_map>
 
 using namespace std;
 using namespace opthirrygated;
 
-Solution ConstructiveHeuristicLookahead::execute() {
+Solution ConstructiveHeuristicLookaheadMemoization::execute() {
     Solution objSolution;
     vector<int> solution;
     vector<float> adfSol;
@@ -59,12 +58,20 @@ Solution ConstructiveHeuristicLookahead::execute() {
 
 
 
-float ConstructiveHeuristicLookahead::simulateLookahead( size_t day, float adi, int depth) {
+float ConstructiveHeuristicLookaheadMemoization::simulateLookahead(
+        size_t day, float adi, int depth
+) {
     if (day >= inst.getCicle().size() || depth == 0)
         return 0;
 
-    float preAdf = adi - inst.getEtc()[day] + inst.getPrec()[day];
+    int keyAdi = (int)(adi * 100);
+    long long key = ((long long)day << 32) ^ ((long long)depth << 16) ^ keyAdi;
 
+
+    if (dp.count(key))
+        return dp[key];
+
+    float preAdf = adi - inst.getEtc()[day] + inst.getPrec()[day];
     float bestCost = FLT_MAX;
 
     if (preAdf >= inst.getCad()[day]) {
@@ -77,11 +84,11 @@ float ConstructiveHeuristicLookahead::simulateLookahead( size_t day, float adi, 
 
         if (auxAdf >= inst.getLc()[day]) {
             float futureCost = simulateLookahead(day + 1, auxAdf, depth - 1);
-            bestCost = std::min(bestCost, cost + futureCost);
+            bestCost = min(bestCost, cost + futureCost);
         }
     }
 
+    // Salva no memo
+    dp[key] = bestCost;
     return bestCost;
 }
-
-

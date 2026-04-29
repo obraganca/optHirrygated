@@ -1,7 +1,7 @@
-CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicFoward.cpp.o: \
- /home/obraganca/Documentos/Projects/optHirrygated/src/constructive/ConstructiveHeuristicFoward.cpp \
+CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicForwardA.cpp.o: \
+ /home/obraganca/Documentos/Projects/optHirrygated/src/constructive/ConstructiveHeuristicForwardA.cpp \
  /usr/include/stdc-predef.h \
- /home/obraganca/Documentos/Projects/optHirrygated/include/constructive/ConstructiveHeuristicFoward.hpp \
+ /home/obraganca/Documentos/Projects/optHirrygated/include/constructive/ConstructiveHeuristicForwardA.hpp \
  /home/obraganca/Documentos/Projects/optHirrygated/include/constructive/AbstractConstructiveHeuristic.hpp \
  /home/obraganca/Documentos/Projects/optHirrygated/include/../include/Instance.hpp \
  /usr/include/c++/14/vector /usr/include/c++/14/bits/requires_hosted.h \

@@ -194,7 +194,17 @@ CMakeFiles/optHirrygated.dir/src/main.cpp.o: \
  /home/obraganca/Documentos/Projects/optHirrygated/include/Solution.hpp \
  /home/obraganca/Documentos/Projects/optHirrygated/include/interface/IConstructiveHeuristic.hpp \
  /usr/include/c++/14/limits \
- /home/obraganca/Documentos/Projects/optHirrygated/src/../include/constructive/ConstructiveHeuristicFoward.hpp \
+ /home/obraganca/Documentos/Projects/optHirrygated/src/../include/constructive/ConstructiveHeuristicForwardA.hpp \
+ /home/obraganca/Documentos/Projects/optHirrygated/src/../include/constructive/ConstructiveHeuristicForwardB.hpp \
+ /home/obraganca/Documentos/Projects/optHirrygated/src/../include/constructive/ConstructiveHeuristicForwardC.hpp \
+ /home/obraganca/Documentos/Projects/optHirrygated/src/../include/constructive/ConstructiveHeuristicLookaheadMemoization.hpp \
+ /usr/include/c++/14/unordered_map \
+ /usr/include/c++/14/bits/unordered_map.h \
+ /usr/include/c++/14/bits/hashtable.h \
+ /usr/include/c++/14/bits/hashtable_policy.h \
+ /usr/include/c++/14/bits/enable_special_members.h \
+ /usr/include/c++/14/bits/node_handle.h \
+ /usr/include/c++/14/bits/erase_if.h \
  /home/obraganca/Documentos/Projects/optHirrygated/src/../include/constructive/ConstructiveHeuristicLookahead.hpp \
  /home/obraganca/Documentos/Projects/optHirrygated/src/../include/refinement/RefinementHeuristicVND.hpp \
  /home/obraganca/Documentos/Projects/optHirrygated/include/refinement/AbstractRefinementHeuristic.hpp \
@@ -237,15 +247,8 @@ CMakeFiles/optHirrygated.dir/src/main.cpp.o: \
  /usr/include/c++/14/bits/random.tcc /usr/include/c++/14/numeric \
  /usr/include/c++/14/bits/stl_numeric.h \
  /usr/include/c++/14/pstl/glue_numeric_defs.h \
- /usr/include/c++/14/unordered_map \
- /usr/include/c++/14/bits/unordered_map.h \
- /usr/include/c++/14/bits/hashtable.h \
- /usr/include/c++/14/bits/hashtable_policy.h \
- /usr/include/c++/14/bits/enable_special_members.h \
- /usr/include/c++/14/bits/node_handle.h \
- /usr/include/c++/14/bits/erase_if.h /usr/include/c++/14/functional \
- /usr/include/c++/14/bits/std_function.h /usr/include/c++/14/array \
- /usr/include/c++/14/compare \
+ /usr/include/c++/14/functional /usr/include/c++/14/bits/std_function.h \
+ /usr/include/c++/14/array /usr/include/c++/14/compare \
  /home/obraganca/Documentos/Projects/optHirrygated/src/../include/SolutionProcessor.hpp \
  /home/obraganca/Documentos/Projects/optHirrygated/src/../include/CSVExporter.hpp \
  /usr/include/c++/14/fstream /usr/include/c++/14/bits/codecvt.h \
@@ -270,5 +273,4 @@ CMakeFiles/optHirrygated.dir/src/main.cpp.o: \
  /home/obraganca/Documentos/Projects/optHirrygated/include/metaheuristic/AbstractMetaheuristic.hpp \
  /home/obraganca/Documentos/Projects/optHirrygated/include/refinement/RefinementHeuristicVND.hpp \
  /usr/include/c++/14/cfloat \
- /home/obraganca/Documentos/Projects/optHirrygated/include/metaheuristic/ILS.hpp \
- /home/obraganca/Documentos/Projects/optHirrygated/include/refinement/RefinementHeuristicRVND.hpp
+ /home/obraganca/Documentos/Projects/optHirrygated/include/metaheuristic/ILS.hpp

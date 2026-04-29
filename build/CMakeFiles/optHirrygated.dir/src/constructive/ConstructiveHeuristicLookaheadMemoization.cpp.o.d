@@ -1,7 +1,7 @@
-CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicC.cpp.o: \
- /home/obraganca/Documentos/Projects/optHirrygated/src/constructive/ConstructiveHeuristicC.cpp \
+CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookaheadMemoization.cpp.o: \
+ /home/obraganca/Documentos/Projects/optHirrygated/src/constructive/ConstructiveHeuristicLookaheadMemoization.cpp \
  /usr/include/stdc-predef.h \
- /home/obraganca/Documentos/Projects/optHirrygated/include/constructive/ConstructiveHeuristicC.hpp \
+ /home/obraganca/Documentos/Projects/optHirrygated/include/constructive/ConstructiveHeuristicLookaheadMemoization.hpp \
  /home/obraganca/Documentos/Projects/optHirrygated/include/constructive/AbstractConstructiveHeuristic.hpp \
  /home/obraganca/Documentos/Projects/optHirrygated/include/../include/Instance.hpp \
  /usr/include/c++/14/vector /usr/include/c++/14/bits/requires_hosted.h \
@@ -168,6 +168,13 @@ CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicC.cpp.o: \
  /home/obraganca/Documentos/Projects/optHirrygated/include/Solution.hpp \
  /home/obraganca/Documentos/Projects/optHirrygated/include/Instance.hpp \
  /home/obraganca/Documentos/Projects/optHirrygated/include/interface/IConstructiveHeuristic.hpp \
- /usr/include/c++/14/limits \
+ /usr/include/c++/14/limits /usr/include/c++/14/unordered_map \
+ /usr/include/c++/14/bits/unordered_map.h \
+ /usr/include/c++/14/bits/hashtable.h \
+ /usr/include/c++/14/bits/hashtable_policy.h \
+ /usr/include/c++/14/ext/aligned_buffer.h \
+ /usr/include/c++/14/bits/enable_special_members.h \
+ /usr/include/c++/14/bits/node_handle.h \
+ /usr/include/c++/14/bits/erase_if.h \
  /home/obraganca/Documentos/Projects/optHirrygated/include/../include/Solution.hpp \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/float.h

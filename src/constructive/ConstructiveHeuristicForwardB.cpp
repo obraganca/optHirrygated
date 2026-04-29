@@ -1,4 +1,4 @@
-#include "constructive/ConstructiveHeuristicB.hpp"
+#include "constructive/ConstructiveHeuristicForwardB.hpp"
 #include "../include/Instance.hpp"
 #include "../include/Solution.hpp"
 #include <float.h>
@@ -7,7 +7,7 @@ using namespace std;
 using namespace opthirrygated;
 
 
-Solution ConstructiveHeuristicB::execute() {
+Solution ConstructiveHeuristicForwardB::execute() {
 
     float inf_f = std::numeric_limits<float>::infinity();
     Solution objSolution;

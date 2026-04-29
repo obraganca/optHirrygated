@@ -8,11 +8,12 @@ optHirrygated: \
   CMakeFiles/optHirrygated.dir/src/RefinementHeuristic.cpp.o \
   CMakeFiles/optHirrygated.dir/src/Solution.cpp.o \
   CMakeFiles/optHirrygated.dir/src/SolutionProcessor.cpp.o \
-  CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicB.cpp.o \
   CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicBackward.cpp.o \
-  CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicC.cpp.o \
-  CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicFoward.cpp.o \
+  CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicForwardA.cpp.o \
+  CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicForwardB.cpp.o \
+  CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicForwardC.cpp.o \
   CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp.o \
+  CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookaheadMemoization.cpp.o \
   CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o \
   CMakeFiles/optHirrygated.dir/src/main.cpp.o \
   CMakeFiles/optHirrygated.dir/src/metaheuristic/ILS.cpp.o \
@@ -73,15 +74,17 @@ CMakeFiles/optHirrygated.dir/src/Solution.cpp.o:
 
 CMakeFiles/optHirrygated.dir/src/SolutionProcessor.cpp.o:
 
-CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicB.cpp.o:
-
 CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicBackward.cpp.o:
 
-CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicC.cpp.o:
+CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicForwardA.cpp.o:
 
-CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicFoward.cpp.o:
+CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicForwardB.cpp.o:
+
+CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicForwardC.cpp.o:
 
 CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookahead.cpp.o:
+
+CMakeFiles/optHirrygated.dir/src/constructive/ConstructiveHeuristicLookaheadMemoization.cpp.o:
 
 CMakeFiles/optHirrygated.dir/src/local_search/BestImprovementLocalSearch.cpp.o:
 

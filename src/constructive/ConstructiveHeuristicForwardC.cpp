@@ -1,4 +1,4 @@
-#include "constructive/ConstructiveHeuristicC.hpp"
+#include "constructive/ConstructiveHeuristicForwardC.hpp"
 #include "../include/Instance.hpp"
 #include "../include/Solution.hpp"
 #include <float.h>
@@ -6,7 +6,7 @@
 using namespace std;
 using namespace opthirrygated;
 
-Solution ConstructiveHeuristicC::execute() {
+Solution ConstructiveHeuristicForwardC::execute() {
     Solution objSolution;
     vector<int> solution;
     vector<float> adfSol;
