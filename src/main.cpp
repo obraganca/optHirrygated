@@ -87,7 +87,7 @@ int main(int argc, char* argv[]) {
     int    ilsIterations      = stoi(getArg(argc, argv, "--ils-iterations", "100"));
     int    ilsPerturb         = stoi(getArg(argc, argv, "--ils-perturb", "5"));
     double timelimit          = stod(getArg(argc, argv, "--timelimit", "3600"));
-    string datasource         = getArg(argc, argv, "--datasource", "../datasource/planilha_milho.xlsx");
+    string datasource         = getArg(argc, argv, "--datasource", "../datasource/planilha_soja.xlsx");
     bool   quiet              = hasFlag(argc, argv, "--quiet");
     bool   csvMode            = hasFlag(argc, argv, "--csv");
 
@@ -195,12 +195,10 @@ int main(int argc, char* argv[]) {
                 // Cria o refinement fora dos blocos internos
                 std::unique_ptr<IRefinementHeuristic> ref;
 
-                if (refinementMethod == "vnd") {
-                    RefinementHeuristicVND ref(instance);
-                } else if (refinementMethod == "rvnd") {
-                    RefinementHeuristicRVND ref(instance);
+                if (refinementMethod == "rvnd") {    
+                    ref = std::make_unique<RefinementHeuristicRVND>(instance);
                 } else {
-                    RefinementHeuristicVND ref(instance);
+                    ref = std::make_unique<RefinementHeuristicVND>(instance);  // default: vnd
                 }
 
                 // Aplica o refinement inicial antes do ILS
