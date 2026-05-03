@@ -195,10 +195,10 @@ int main(int argc, char* argv[]) {
                 // Cria o refinement fora dos blocos internos
                 std::unique_ptr<IRefinementHeuristic> ref;
 
-                if (refinementMethod == "rvnd") {    
-                    ref = std::make_unique<RefinementHeuristicRVND>(instance);
+                if (refinementMethod == "vnd") {
+                    ref = std::make_unique<RefinementHeuristicVND>(instance);    
                 } else {
-                    ref = std::make_unique<RefinementHeuristicVND>(instance);  // default: vnd
+                    ref = std::make_unique<RefinementHeuristicRVND>(instance);
                 }
 
                 // Aplica o refinement inicial antes do ILS

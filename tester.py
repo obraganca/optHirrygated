@@ -27,7 +27,61 @@ from typing import Optional
 #  CONFIGURAÇÃO DOS EXPERIMENTOS
 #  Edite esta lista para adicionar/remover suítes de testes.
 # ─────────────────────────────────────────────────────────────────────────────
-EXPERIMENT_SUITES = [
+EXPERIMENT_SUITES=[  
+    {
+        "name": "ForwardA_Apenas",
+        "constructive": "forwardA",
+        "refinement": "none",
+        "metaheuristic": "none",
+    },
+    {
+        "name": "Lookahead_Apenas",
+        "constructive": "lookahead",
+        "refinement": "none",
+        "metaheuristic": "none",
+        "lookahead_depth": 2,
+    },
+    {
+        "name": "ForwardA_RVND",
+        "constructive": "forwardA",
+        "refinement": "rvnd",
+        "metaheuristic": "none",
+    },
+    {
+        "name": "Lookahead_RVND",
+        "constructive": "lookahead",
+        "refinement": "rvnd",
+        "metaheuristic": "none",
+        "lookahead_depth": 2,
+    },
+    {
+        "name": "ForwardA_RVND_ILS",
+        "constructive": "forwardA",
+        "refinement": "rvnd",
+        "metaheuristic": "ils",
+        "ils_iterations": 100,
+        "ils_perturb": 5,
+    },
+    {
+        "name": "ForwardA_RVND_PSO",
+        "constructive": "forwardA",
+        "refinement": "rvnd",
+        "metaheuristic": "pso",
+    },
+    {
+        "name": "ForwardA_ILS",
+        "constructive": "forwardA",
+        "refinement": "none",
+        "metaheuristic": "ils",
+        "ils_iterations": 100,
+        "ils_perturb": 5,
+    },
+    {
+        "name": "ForwardA_PSO",
+        "constructive": "forwardA",
+        "refinement": "none",
+        "metaheuristic": "pso",
+    },
     {
         "name": "Lookahead_RVND_ILS",
         "constructive": "lookahead",
@@ -35,10 +89,36 @@ EXPERIMENT_SUITES = [
         "metaheuristic": "ils",
         "ils_iterations": 100,
         "ils_perturb": 5,
-        "lookahead_depth": 3,
+        "lookahead_depth": 2,
+    },
+    {
+        "name": "Lookahead_RVND_PSO",
+        "constructive": "lookahead",
+        "refinement": "rvnd",
+        "metaheuristic": "pso",
+        "lookahead_depth": 2,
+    },
+
+    {
+        "name": "Lookahead_ILS",
+        "constructive": "lookahead",
+        "refinement": "none",
+        "metaheuristic": "ils",
+        "ils_iterations": 100,
+        "ils_perturb": 5,
+        "lookahead_depth": 2,
+    },
+    {
+        "name": "Lookahead_PSO",
+        "constructive": "lookahead",
+        "refinement": "none",
+        "metaheuristic": "pso",
+        "lookahead_depth": 2,
     },
 ]
-"""EXPERIMENT_SUITES =[  
+
+"""
+EXPERIMENT_SUITES =[  
     {
         "name": "ForwardA_Apenas",
         "constructive": "forwardA",
@@ -229,6 +309,7 @@ EXPERIMENT_SUITES = [
     },
 ]
 """
+
 # ─────────────────────────────────────────────────────────────────────────────
 #  Argument parsing
 # ─────────────────────────────────────────────────────────────────────────────
@@ -242,7 +323,7 @@ def build_parser() -> argparse.ArgumentParser:
                    help="Número de execuções por suíte")
     p.add_argument("--binary", type=str, default="./build/optHirrygated",
                    help="Caminho para o binário compilado")
-    p.add_argument("--datasource", type=str, default="./datasource/planilha_milho.xlsx",
+    p.add_argument("--datasource", type=str, default="./datasource/planilha_soja.xlsx",
                    help="Caminho para o arquivo .xlsx de dados")
     p.add_argument("--timeout", type=float, default=3000.0,
                    help="Timeout por execução em segundos")
@@ -384,6 +465,17 @@ def compute_stats(values: list[float]) -> dict:
                 std=std, median=median, cv=cv)
 
 
+def best_result_time(rows: list[dict]) -> Optional[float]:
+    """Retorna o tempo da execução com o menor custo."""
+    valid_rows = [r for r in rows if r["valid"]]
+    if not valid_rows:
+        valid_rows = rows  # fallback: considera todas se nenhuma for válida
+    if not valid_rows:
+        return None
+    best_row = min(valid_rows, key=lambda r: r["cost"])
+    return best_row["elapsed"]
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 #  Excel export
 # ─────────────────────────────────────────────────────────────────────────────
@@ -421,6 +513,7 @@ def create_excel(output_path: str, suite_results: list[tuple[dict, list[dict], i
     C_ALT_ROW    = "EBF5FB"   # azul muito claro (linhas alternadas)
     C_INVALID_BG = "FFE599"   # amarelo (execução inválida)
     C_BORDER     = "BFC9CA"   # cinza claro
+    C_BEST_TIME  = "E2EFDA"   # verde suave (tempo mais rápido)
 
     thin_side = Side(style="thin", color=C_BORDER)
     thin_border = Border(left=thin_side, right=thin_side,
@@ -457,7 +550,7 @@ def create_excel(output_path: str, suite_results: list[tuple[dict, list[dict], i
     summary_ws = wb.create_sheet("Resumo")
 
     # Título
-    summary_ws.merge_cells("A1:I1")
+    summary_ws.merge_cells("A1:L1")
     title_cell = summary_ws["A1"]
     title_cell.value     = "Resumo dos Experimentos – OptHirrygated"
     title_cell.font      = Font(bold=True, color=C_HEADER_FG, name="Arial", size=13)
@@ -465,21 +558,25 @@ def create_excel(output_path: str, suite_results: list[tuple[dict, list[dict], i
     title_cell.alignment = Alignment(horizontal="center", vertical="center")
     summary_ws.row_dimensions[1].height = 28
 
-    summary_ws.merge_cells("A2:I2")
+    summary_ws.merge_cells("A2:L2")
     import datetime
     summary_ws["A2"].value     = f"Gerado em {datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
     summary_ws["A2"].font      = Font(italic=True, color="666666", name="Arial", size=9)
     summary_ws["A2"].alignment = Alignment(horizontal="center")
 
-    # Cabeçalho resumo
-    sum_headers = ["Suíte", "Construtiva", "Refinamento", "Metaheurística",
-                   "Execuções", "Melhor (R$)", "Pior (R$)", "Média (R$)", "Desv. Padrão (R$)"]
+    # Cabeçalho resumo — agora com 3 colunas de tempo extras
+    sum_headers = [
+        "Suíte", "Construtiva", "Refinamento", "Metaheurística",
+        "Execuções",
+        "Melhor (R$)", "Pior (R$)", "Média (R$)", "Desv. Padrão (R$)",
+        "Tempo Médio (s)", "Tempo Mínimo (s)", "Tempo do Melhor (s)",
+    ]
     for c, h in enumerate(sum_headers, 1):
         cell = summary_ws.cell(row=4, column=c, value=h)
         hdr_style(cell)
     summary_ws.row_dimensions[4].height = 20
 
-    sum_col_widths = [22, 14, 14, 16, 10, 14, 14, 14, 16]
+    sum_col_widths = [22, 14, 14, 16, 10, 14, 14, 14, 16, 16, 16, 18]
     for i, w in enumerate(sum_col_widths, 1):
         summary_ws.column_dimensions[get_column_letter(i)].width = w
 
@@ -492,9 +589,11 @@ def create_excel(output_path: str, suite_results: list[tuple[dict, list[dict], i
         times   = [r["elapsed"] for r in rows]
         c_stats = compute_stats(costs)
         t_stats = compute_stats(times)
+        brt     = best_result_time(rows)  # tempo do melhor resultado
 
         best_cost  = min(costs)  if costs else None
         worst_cost = max(costs)  if costs else None
+        min_time   = min(times)  if times else None
 
         # ── Título da aba ────────────────────────────────────────────────────
         ws.merge_cells("A1:H1")
@@ -564,7 +663,7 @@ def create_excel(output_path: str, suite_results: list[tuple[dict, list[dict], i
             cost_cell.number_format  = 'R$ #,##0.0000'
             cost_cell.alignment      = Alignment(horizontal="right")
 
-            # Destaque melhor/pior
+            # Destaque melhor/pior custo
             if best_cost is not None and abs(row["cost"] - best_cost) < 1e-9:
                 cost_cell.fill = PatternFill("solid", start_color=C_BEST_BG)
             elif worst_cost is not None and abs(row["cost"] - worst_cost) < 1e-9:
@@ -574,6 +673,10 @@ def create_excel(output_path: str, suite_results: list[tuple[dict, list[dict], i
             time_cell.value         = row["elapsed"]
             time_cell.number_format = '0.00"s"'
             time_cell.alignment     = Alignment(horizontal="right")
+
+            # Destaque tempo mais rápido
+            if min_time is not None and abs(row["elapsed"] - min_time) < 1e-9:
+                time_cell.fill = PatternFill("solid", start_color=C_BEST_TIME)
 
             valid_cell = ws.cell(row=r, column=4)
             valid_cell.value     = "Sim" if row["valid"] else "Não"
@@ -622,10 +725,11 @@ def create_excel(output_path: str, suite_results: list[tuple[dict, list[dict], i
         ws.row_dimensions[time_stats_start].height = 20
 
         time_stat_rows = [
-            ("Tempo Mínimo",  t_stats.get("best"),   '0.00"s"'),
-            ("Tempo Máximo",  t_stats.get("worst"),  '0.00"s"'),
-            ("Tempo Médio",   t_stats.get("mean"),   '0.00"s"'),
-            ("Desvio Padrão", t_stats.get("std"),    '0.00"s"'),
+            ("Tempo Mínimo (mais rápido)",  t_stats.get("best"),   '0.00"s"'),
+            ("Tempo Máximo",                t_stats.get("worst"),  '0.00"s"'),
+            ("Tempo Médio",                 t_stats.get("mean"),   '0.00"s"'),
+            ("Desvio Padrão",               t_stats.get("std"),    '0.00"s"'),
+            ("Tempo do Melhor Resultado",   brt,                   '0.00"s"'),
         ]
 
         for j, (lbl, val, fmt) in enumerate(time_stat_rows):
@@ -635,9 +739,13 @@ def create_excel(output_path: str, suite_results: list[tuple[dict, list[dict], i
             ws.merge_cells(f"B{r}:D{r}")
             stat_label(lc)
             stat_value(vc, fmt)
+            # Destaque especial para as novas métricas
+            if lbl in ("Tempo Mínimo (mais rápido)", "Tempo Médio", "Tempo do Melhor Resultado"):
+                lc.fill = PatternFill("solid", start_color="D9EAD3")
+                vc.fill = PatternFill("solid", start_color="D9EAD3")
 
         # ── Larguras das colunas ─────────────────────────────────────────────
-        ws.column_dimensions["A"].width = 20
+        ws.column_dimensions["A"].width = 26
         ws.column_dimensions["B"].width = 18
         ws.column_dimensions["C"].width = 14
         ws.column_dimensions["D"].width = 10
@@ -646,17 +754,17 @@ def create_excel(output_path: str, suite_results: list[tuple[dict, list[dict], i
         legend_row = time_stats_start + len(time_stat_rows) + 2
         ws.merge_cells(f"A{legend_row}:D{legend_row}")
         lg = ws[f"A{legend_row}"]
-        lg.value     = "🟢 Melhor custo   🔴 Pior custo   🟡 Execução inválida"
+        lg.value     = "🟢 Melhor custo   🔴 Pior custo   🟡 Execução inválida   🌿 Tempo mais rápido"
         lg.font      = Font(italic=True, color="444444", name="Arial", size=9)
         lg.alignment = Alignment(horizontal="left")
 
         # ── Adiciona linha no resumo ─────────────────────────────────────────
         sum_row = 4 + suite_idx + 1
-        summary_ws.cell(row=sum_row, column=1, value=suite["name"])
-        summary_ws.cell(row=sum_row, column=2, value=suite.get("constructive","forward"))
-        summary_ws.cell(row=sum_row, column=3, value=suite.get("refinement","none"))
-        summary_ws.cell(row=sum_row, column=4, value=suite.get("metaheuristic","none"))
-        summary_ws.cell(row=sum_row, column=5, value=c_stats.get("n", 0))
+        summary_ws.cell(row=sum_row, column=1,  value=suite["name"])
+        summary_ws.cell(row=sum_row, column=2,  value=suite.get("constructive","forward"))
+        summary_ws.cell(row=sum_row, column=3,  value=suite.get("refinement","none"))
+        summary_ws.cell(row=sum_row, column=4,  value=suite.get("metaheuristic","none"))
+        summary_ws.cell(row=sum_row, column=5,  value=c_stats.get("n", 0))
 
         for col_idx, key in enumerate(["best","worst","mean","std"], 6):
             cell = summary_ws.cell(row=sum_row, column=col_idx,
@@ -664,16 +772,29 @@ def create_excel(output_path: str, suite_results: list[tuple[dict, list[dict], i
             cell.number_format = 'R$ #,##0.0000'
             cell.alignment     = Alignment(horizontal="right")
 
+        # Novas colunas de tempo no resumo
+        time_cols = [
+            (10, t_stats.get("mean")),   # Tempo Médio
+            (11, t_stats.get("best")),   # Tempo Mínimo (mais rápido)
+            (12, brt),                   # Tempo do Melhor Resultado
+        ]
+        for col_idx, val in time_cols:
+            cell = summary_ws.cell(row=sum_row, column=col_idx, value=val)
+            cell.number_format = '0.00"s"'
+            cell.alignment     = Alignment(horizontal="right")
+
         # Estilo alternado no resumo
         row_bg = C_ALT_ROW if suite_idx % 2 == 1 else "FFFFFF"
-        for col in range(1, 10):
+        for col in range(1, 13):
             c = summary_ws.cell(row=sum_row, column=col)
             if c.fill.start_color.rgb in ("00000000", "FFFFFFFF", "00FFFFFF"):
                 c.fill = PatternFill("solid", start_color=row_bg)
             c.font   = Font(name="Arial", size=10)
             c.border = thin_border
-            c.alignment = Alignment(horizontal="center" if col in (1,2,3,4,5) else "right",
-                                    vertical="center")
+            c.alignment = Alignment(
+                horizontal="center" if col in (1,2,3,4,5) else "right",
+                vertical="center"
+            )
 
     # ── Salva ────────────────────────────────────────────────────────────────
     wb.save(output_path)
@@ -724,16 +845,23 @@ def main() -> None:
         )
 
         costs = [r["cost"] for r in rows]
+        times = [r["elapsed"] for r in rows]
         if not costs:
             print(f"  ⚠  Suíte '{suite['name']}': nenhuma execução bem-sucedida.")
         else:
-            s = compute_stats(costs)
+            s  = compute_stats(costs)
+            ts = compute_stats(times)
+            brt = best_result_time(rows)
             print(f"\n  Resumo '{suite['name']}':")
-            print(f"    Melhor  : R$ {s['best']:.4f}")
-            print(f"    Média   : R$ {s['mean']:.4f}")
-            print(f"    Desvio  : R$ {s['std']:.4f}")
+            print(f"    Melhor custo    : R$ {s['best']:.4f}")
+            print(f"    Média custo     : R$ {s['mean']:.4f}")
+            print(f"    Desvio custo    : R$ {s['std']:.4f}")
+            print(f"    Tempo médio     : {ts['mean']:.2f}s")
+            print(f"    Tempo mínimo    : {ts['best']:.2f}s")
+            if brt is not None:
+                print(f"    Tempo do melhor : {brt:.2f}s")
             if errors:
-                print(f"    Falhas  : {errors}")
+                print(f"    Falhas          : {errors}")
 
         suite_results.append((suite, rows, errors))
 
