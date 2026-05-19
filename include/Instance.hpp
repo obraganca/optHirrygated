@@ -22,10 +22,11 @@ namespace opthirrygated {
         vector<int> highLevels;
         int maxLowLevel;
         string path;
+        int size;
 
     public:
         // Constructor
-        Instance(string path);
+        Instance(string path, int size);
 
         virtual void exec();
 
@@ -76,6 +77,9 @@ namespace opthirrygated {
         // Getter and Setter for path
         string getPath() const { return path; }
         void setPath(const string& newPath) { path = newPath; }
+
+        int getSize() const { return size; }
+        void setSize(const int& newSize) { size = newSize; }
     };
 }
 

@@ -82,6 +82,7 @@ int main(int argc, char* argv[]) {
     string constructiveMethod = getArg(argc, argv, "--constructive", "forwardA");
     string method = getArg(argc, argv, "--method", "heuristic");
     int    lookaheadDepth     = stoi(getArg(argc, argv, "--lookahead-depth", "2"));
+    int    sizeInstance     = stoi(getArg(argc, argv, "--size", "120"));
     string refinementMethod   = getArg(argc, argv, "--refinement",   "none");
     string metaheuristicMethod= getArg(argc, argv, "--metaheuristic","mcts");
     int    ilsIterations      = stoi(getArg(argc, argv, "--ils-iterations", "100"));
@@ -103,7 +104,7 @@ int main(int argc, char* argv[]) {
     validate(method, {"heuristic","exact"}, "--method");
 
     // ── Instance & Measurer ──────────────────
-    Instance instance(datasource);
+    Instance instance(datasource,sizeInstance);
     Measurer measurer(instance);
     Solution solution;
 
@@ -168,7 +169,7 @@ int main(int argc, char* argv[]) {
             if (refinementMethod == "vnd") {
                 RefinementHeuristicVND ref(instance);
                 solution = ref.execute(solution, neighborhoods, bestLocalSearch);
-            } else if (refinementMethod == "rvnd") {
+            } else{
                 RefinementHeuristicRVND ref(instance);
                 solution = ref.execute(solution, neighborhoods, bestLocalSearch);
             }
@@ -200,9 +201,6 @@ int main(int argc, char* argv[]) {
                 } else {
                     ref = std::make_unique<RefinementHeuristicRVND>(instance);
                 }
-
-                // Aplica o refinement inicial antes do ILS
-                solution = ref->execute(solution, neighborhoods, bestLocalSearch);
 
                 ILS meta(instance, measurer, neighborhoods, bestLocalSearch, *ref,
                         ilsIterations, ilsPerturb);

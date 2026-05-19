@@ -7,9 +7,9 @@ Solution BestImprovementLocalSearch::run(Solution& s, Instance& inst, INeighborh
 
     for (int i = 0; i < s.getSolution().size(); ++i) {
         Solution cand = nh.execute(best, inst); // chama o execute da vizinhança
-        cand.constructCriticalLimitDelt(inst);
 
         if (cand.getScore() - best.getScore()<0) { // minimização
+            cand.constructCriticalLimitDelt(inst);
             return cand;
         }
     }

@@ -29,58 +29,11 @@ from typing import Optional
 # ─────────────────────────────────────────────────────────────────────────────
 EXPERIMENT_SUITES=[  
     {
-        "name": "ForwardA_Apenas",
-        "constructive": "forwardA",
-        "refinement": "none",
-        "metaheuristic": "none",
-    },
-    {
         "name": "Lookahead_Apenas",
         "constructive": "lookahead",
         "refinement": "none",
         "metaheuristic": "none",
         "lookahead_depth": 2,
-    },
-    {
-        "name": "ForwardA_RVND",
-        "constructive": "forwardA",
-        "refinement": "rvnd",
-        "metaheuristic": "none",
-    },
-    {
-        "name": "Lookahead_RVND",
-        "constructive": "lookahead",
-        "refinement": "rvnd",
-        "metaheuristic": "none",
-        "lookahead_depth": 2,
-    },
-    {
-        "name": "ForwardA_RVND_ILS",
-        "constructive": "forwardA",
-        "refinement": "rvnd",
-        "metaheuristic": "ils",
-        "ils_iterations": 100,
-        "ils_perturb": 5,
-    },
-    {
-        "name": "ForwardA_RVND_PSO",
-        "constructive": "forwardA",
-        "refinement": "rvnd",
-        "metaheuristic": "pso",
-    },
-    {
-        "name": "ForwardA_ILS",
-        "constructive": "forwardA",
-        "refinement": "none",
-        "metaheuristic": "ils",
-        "ils_iterations": 100,
-        "ils_perturb": 5,
-    },
-    {
-        "name": "ForwardA_PSO",
-        "constructive": "forwardA",
-        "refinement": "none",
-        "metaheuristic": "pso",
     },
     {
         "name": "Lookahead_RVND_ILS",
@@ -91,13 +44,6 @@ EXPERIMENT_SUITES=[
         "ils_perturb": 5,
         "lookahead_depth": 2,
     },
-    {
-        "name": "Lookahead_RVND_PSO",
-        "constructive": "lookahead",
-        "refinement": "rvnd",
-        "metaheuristic": "pso",
-        "lookahead_depth": 2,
-    },
 
     {
         "name": "Lookahead_ILS",
@@ -106,13 +52,6 @@ EXPERIMENT_SUITES=[
         "metaheuristic": "ils",
         "ils_iterations": 100,
         "ils_perturb": 5,
-        "lookahead_depth": 2,
-    },
-    {
-        "name": "Lookahead_PSO",
-        "constructive": "lookahead",
-        "refinement": "none",
-        "metaheuristic": "pso",
         "lookahead_depth": 2,
     },
 ]
@@ -323,7 +262,7 @@ def build_parser() -> argparse.ArgumentParser:
                    help="Número de execuções por suíte")
     p.add_argument("--binary", type=str, default="./build/optHirrygated",
                    help="Caminho para o binário compilado")
-    p.add_argument("--datasource", type=str, default="./datasource/planilha_soja.xlsx",
+    p.add_argument("--datasource", type=str, default="./datasource/planilha_cana.xlsx",
                    help="Caminho para o arquivo .xlsx de dados")
     p.add_argument("--timeout", type=float, default=3000.0,
                    help="Timeout por execução em segundos")
@@ -334,6 +273,9 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--suites", type=str, default=None,
                    help="Nomes das suítes a executar (separados por vírgula). "
                         "Omitir para executar todas.")
+    p.add_argument("--size", type=str, default="540",
+                   help="Nomes das suítes a executar (separados por vírgula). "
+                        "Omitir para executar todas.")
     return p
 
 
@@ -341,7 +283,7 @@ def build_parser() -> argparse.ArgumentParser:
 #  Build solver command
 # ─────────────────────────────────────────────────────────────────────────────
 
-def build_cmd(binary: str, datasource: str, suite: dict) -> list[str]:
+def build_cmd(binary: str, datasource: str, suite: dict, size: str) -> list[str]:
     cmd = [
         binary,
         "--constructive",    suite.get("constructive", "forward"),
@@ -351,10 +293,10 @@ def build_cmd(binary: str, datasource: str, suite: dict) -> list[str]:
         "--ils-iterations",  str(suite.get("ils_iterations", 100)),
         "--ils-perturb",     str(suite.get("ils_perturb", 5)),
         "--datasource",      datasource,
+        "--size",            size,
         "--csv",
     ]
     return cmd
-
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  Runner
@@ -419,9 +361,9 @@ def run_once(cmd: list[str], timeout: float, verbose: bool) -> Optional[dict]:
 
 
 def run_suite(suite: dict, runs: int, binary: str, datasource: str,
-              timeout: float, verbose: bool) -> tuple[list[dict], int]:
+              timeout: float, verbose: bool, size:str) -> tuple[list[dict], int]:
     """Executa uma suíte completa. Retorna (rows, errors)."""
-    cmd = build_cmd(binary, datasource, suite)
+    cmd = build_cmd(binary, datasource, suite, size)
     rows = []
     errors = 0
     sep = "─" * 56
@@ -842,6 +784,7 @@ def main() -> None:
             datasource=args.datasource,
             timeout=args.timeout,
             verbose=args.verbose,
+            size=args.size,
         )
 
         costs = [r["cost"] for r in rows]
